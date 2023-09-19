@@ -1,0 +1,5 @@
+fx_version 'cerulean'
+this_is_a_map 'yes'
+game 'gta5'
+lua54 'yes'
+data_file 'DLC_ITYP_REQUEST' 'stream/patoche_cyber_list.ytyp'
