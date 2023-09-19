@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/web/build/static/css/main.5e0ef430.css",
+    "main.js": "/web/build/static/js/main.1b4161c0.js",
+    "static/media/bg.png": "/web/build/static/media/bg.5f9d1f25941311d71e22.png",
+    "static/media/plate.ttf": "/web/build/static/media/plate.b0e75e4508e0d61f7db5.ttf",
+    "static/media/motorbike.png": "/web/build/static/media/motorbike.1321f15f3b66ad8366cf.png",
+    "static/media/plane.png": "/web/build/static/media/plane.a780ce6f194348196cbd.png",
+    "static/media/user.png": "/web/build/static/media/user.98fb2155d0c1738f9bbe.png",
+    "static/media/Adventure.ttf": "/web/build/static/media/Adventure.93911ab167c943140756.ttf",
+    "static/media/sport-car.png": "/web/build/static/media/sport-car.19be252807da6a4854b0.png",
+    "static/media/location.png": "/web/build/static/media/location.d5e870a9b09b958bd55a.png",
+    "static/media/boat.png": "/web/build/static/media/boat.69717c4e32c43a3a7e1e.png",
+    "static/media/helicopter.png": "/web/build/static/media/helicopter.51639f23e36c81f9511c.png",
+    "static/media/accept.mp3": "/web/build/static/media/accept.5340170e0b872c210c7d.mp3",
+    "static/media/warning.mp3": "/web/build/static/media/warning.13396567e9ccd753e263.mp3",
+    "static/media/AXON.png": "/web/build/static/media/AXON.44cd700eb0f41267771b.png",
+    "static/media/location_target.png": "/web/build/static/media/location_target.dcf44b6df112184f67d9.png",
+    "static/media/gtav_tone_new_call.mp3": "/web/build/static/media/gtav_tone_new_call.c5f40b702131ab83f83f.mp3",
+    "static/media/cli.mp3": "/web/build/static/media/cli.0cebe07e6df198e2b205.mp3",
+    "index.html": "/web/build/index.html",
+    "main.5e0ef430.css.map": "/web/build/static/css/main.5e0ef430.css.map",
+    "main.1b4161c0.js.map": "/web/build/static/js/main.1b4161c0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e0ef430.css",
+    "static/js/main.1b4161c0.js"
+  ]
+}
