@@ -1,0 +1,19 @@
+Inserisci l'sql.
+
+Se usi ox_inventory inserisci questo item:
+
+	['kq_outfitbag'] = {
+        label = 'Borsone Vestiti',
+        weight = 0.05,
+        stack = false,
+        close = false,
+        consume = 0
+    },
+
+
+https://discord.gg/taticaleaks
+https://discord.gg/taticaleaks
+https://discord.gg/taticaleaks
+https://discord.gg/taticaleaks
+https://discord.gg/taticaleaks
+https://discord.gg/taticaleaks
