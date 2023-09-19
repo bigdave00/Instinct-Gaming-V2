@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+html,
+body {
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.notification-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end; 
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  max-width: 400px;
+  z-index: 9999;
+}
+
+.notification {
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  background-color: rgba(242, 242, 242, 0.8);
+  color: #5d5b5b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-height: 220px;
+  flex: 0 0 auto;
+  width: fit-content;
+  opacity: 0;
+}
+
+.title {
+  font-size: 16px; 
+  font-weight: bold;
+  margin-bottom: -5px;
+  color: #333333;
+}
+
+.notification.active {
+  animation: fadeIn 0.7s ease;
+  animation-fill-mode: forwards;
+}
+
+.notification.remove {
+  animation: fadeOut 0.7s ease;
+  animation-fill-mode: forwards;
+}
+
+.notification i {
+  position: absolute;
+  left: -24.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--icon-color, #333333);
+}
+
+.notification.primary i {
+  --icon-color: #395579;
+}
+
+.notification.success i {
+  --icon-color: #46733c;
+}
+
+.notification.error i {
+  --icon-color: #b7212b; 
+}
+
+.notification.ambulance i {
+  --icon-color: #FF9999;
+}
+
+.notification.police i {
+  --icon-color: #99CCFF;
+}
+
+.notification.primary {
+  border-left: 32px solid rgba(182, 229, 244, 0.8);
+}
+
+.notification.success {
+  border-left: 32px solid rgba(168, 221, 158, 0.8);
+}
+
+.notification.error {
+  border-left: 32px solid rgb(242, 151, 155, 0.8);
+}
+
+.notification.ambulance {
+  border-left: 32px solid rgba(170, 0, 0, 0.8);
+}
+
+.notification.police {
+  border-left: 32px solid rgba(0, 48, 143, 0.8);
+}
+
+.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 0 3px 0 0;
+  animation: timerFill linear;
+}
+
+@keyframes timerFill {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
