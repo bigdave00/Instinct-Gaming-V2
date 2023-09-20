@@ -46,6 +46,21 @@ CREATE TABLE IF NOT EXISTS `dispatch_vehicle_database` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+
+CREATE TABLE `dispatch_jail_database` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`player_identifier` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
+	`jail_reason` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
+	`jail_time` INT(11) NOT NULL,
+	`jail_start` TIMESTAMP NOT NULL DEFAULT current_timestamp(),
+	`jail_end` TIMESTAMP NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+
+
 -- La exportación de datos fue deseleccionada.
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;

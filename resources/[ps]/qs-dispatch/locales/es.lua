@@ -106,6 +106,31 @@ Locales = {
     ['EXITING_BODYCAM_ZONE'] = "You are exiting a zone to use bodycam viewer",
     ['DEPARTMENT_NAME'] = "Los Santos Police Department",
     ['OPTIONS'] = "Options",
+    ['CLOSETS_CITIZEN'] = 'Ciudadanos Cerca',
+    ['PENAL_CODE'] = 'Codigo Penal',
+    ['ADD_CHARGES'] = 'Añadir Cargos',
+    ['TIME_IS_UP'] = 'Tu tiempo aqui ha acabado, En unos instantes la policia te sacara de este lugar.',
+    ['TIME_TO_OUT'] = 'Tiempo para salir: ',
+    ['FINE'] = 'Multa',
+    ['JAIL_TIME'] = 'Tiempo de Carcel',
+    
+    ['ENTER_IN_JAIL_TITLE'] = '¡Has sido Arrestado!',
+    ['ENTER_IN_JAIL_DESCRIPT'] = '¡Cumple tu condena y seras libre!',
+    ['EXIT_FROM_JAIL_TITLE'] = '¡Has sido liberado por la LSPD!',
+    ['EXIT_FROM_JAIL_DESCRIPT'] = '¡Eres libre de irte!',
+
+    ['NO_CLOSETS_CITIZEN'] = 'No Closets Citizen',
+    ['SEND_NEAR_TO_JAIL'] = 'To send the near criminals to the jail, To JailZone',
+
+    ['DAY'] = 'Dia',
+    ['DAYS'] = 'Dias',
+    ['HOUR'] = 'Hora',
+    ['HOURS'] = 'Horas',
+    ['MINUTE'] = 'Minuto',
+    ['MINUTES'] = 'Minutos',
+    ['SECOND'] = 'Segundo',
+    ['SECONDS'] = 'Segundos',
+
 
     -- IMAGES
     ['POLICE_LOGO_URL'] = "https://cdn.discordapp.com/attachments/922342042082902026/1097030789750853833/LSPD.webp"

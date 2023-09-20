@@ -288,7 +288,7 @@ function Casino_AnimateBalance()
         if PLAYER_CHIPS_ANIMATED == -1 then
             PLAYER_CHIPS_ANIMATED = PLAYER_CHIPS
             BeginScaleformScriptHudMovieMethod(21, "SET_PLAYER_CHIPS")
-            ScaleformMovieMethodAddParamInt(PLAYER_CHIPS)
+            PushScaleformMovieMethodParameterString(CommaValue(PLAYER_CHIPS))
             EndScaleformMovieMethod()
             return
         end
@@ -301,7 +301,7 @@ function Casino_AnimateBalance()
         PLAYER_CHIPS_ANIMATED = PLAYER_CHIPS
 
         BeginScaleformScriptHudMovieMethod(22, "SET_PLAYER_CHIP_CHANGE")
-        ScaleformMovieMethodAddParamInt(math.ceil(diff))
+        PushScaleformMovieMethodParameterString(CommaValue(math.ceil(diff)))
         ScaleformMovieMethodAddParamBool(append)
         EndScaleformMovieMethod()
 
@@ -312,13 +312,13 @@ function Casino_AnimateBalance()
             local i = actualStep < 0.5 and 0 or math.floor(actualStep)
 
             BeginScaleformScriptHudMovieMethod(21, "SET_PLAYER_CHIPS")
-            ScaleformMovieMethodAddParamInt(math.ceil(i))
+            PushScaleformMovieMethodParameterString(CommaValue(math.ceil(i)))
             EndScaleformMovieMethod()
             Wait(0)
         end
 
         BeginScaleformScriptHudMovieMethod(21, "SET_PLAYER_CHIPS")
-        ScaleformMovieMethodAddParamInt(PLAYER_CHIPS)
+        PushScaleformMovieMethodParameterString(CommaValue(PLAYER_CHIPS))
         EndScaleformMovieMethod()
 
         Wait(1000)
@@ -471,6 +471,7 @@ function StopFromPlaying()
         -- leave chairs
         CAN_INTERACT = true
         LeaveKeyPressed()
+        LAST_STARTED_GAME_TYPE = nil
     end
 end
 
@@ -493,6 +494,16 @@ function InfoPanel_UpdateNotification(newNotification)
         return
     end
     DebugStart("InfoPanel_UpdateNotification")
+
+    if Config.NotifySystem then
+        if Config.NotifySystem == 2 and newNotification and newNotification ~= "" then
+            exports['okokNotify']:Alert("", removePlaceholderText(newNotification), 3000, 'info', true)
+            return
+        elseif Config.NotifySystem == 3 and newNotification and newNotification ~= "" then
+            exports['esx_notify']:Notify("info", 3000, removePlaceholderText(newNotification))
+            return
+        end
+    end
 
     if Config.UIFontName and newNotification then
         newNotification = "<font face=\"" .. Config.UIFontName .. "\">" .. newNotification .. "</font>"
@@ -1408,6 +1419,8 @@ function OnEnterCasino()
             ActivateInteriorEntitySet(interiorid, "horse_bettings")
             RefreshInterior(interiorid)
         end
+    elseif Config.MapType == 6 then
+        ReplaceMap6Props()
     end
 
     -- get initial drunk level
@@ -1417,6 +1430,13 @@ function OnEnterCasino()
     if Config.RestrictControls then
         SetCurrentPedWeapon(PlayerPedId(), GetHashKey("weapon_unarmed"), true)
     end
+
+    -- prepare Inside Track black wall
+    if IsNamedRendertargetRegistered("casinoscreen_02") then
+        ReleaseNamedRendertarget("casinoscreen_02")
+    end
+    screenTargetGlobal = CreateScaleformHandle("casinoscreen_02", (Config.MapType == 5 and
+        "rcore_vw_vwint01_betting_screen" or "vw_vwint01_betting_screen"))
 
     -- hide exterior icon
     RemoveBlip(CASINO_BLIP)
@@ -1641,6 +1661,14 @@ end
 function OnLeaveCasino()
     DebugStart("OnLeaveCasino")
     Debug("Left casino. Unloading stuff")
+
+    -- unload Inside Track wall
+    if IsNamedRendertargetRegistered("casinoscreen_02") then
+        ReleaseNamedRendertarget("casinoscreen_02")
+    end
+
+    -- stop inside track
+    InsideTrackDestroy()
 
     -- stop scene
     NewLoadSceneStop()
@@ -2471,13 +2499,13 @@ if Config.MapType ~= 5 then
                 if dc then
                     -- dc.Ipl.Building.Remove()
                     dc.Ipl.Main.Remove()
-                    dc.Ipl.Carpark.Remove()
-                    dc.Ipl.Garage.Remove()
+                    -- dc.Ipl.Carpark.Remove()
+                    -- dc.Ipl.Garage.Remove()
                 end
                 local dm = exports["bob74_ipl"]:GetBikerGangObject()
                 if dm then
-                    dm.Clubhouse.MissionsWall.Clear()
-                    dm.Clubhouse.ClearAll()
+                    --  dm.Clubhouse.MissionsWall.Clear()
+                    --  dm.Clubhouse.ClearAll()
                 end
             end)
         end

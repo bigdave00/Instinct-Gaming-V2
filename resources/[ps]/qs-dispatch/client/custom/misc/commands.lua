@@ -24,7 +24,7 @@ RegisterCommand("police", function(source, args, rawCommand)
     last911Time = currentTime
     local playerData = exports['qs-dispatch']:GetPlayerInfo()
 
-    TriggerServerEvent("qs-dispatch:server:CreateDiapatchCall",
+    TriggerServerEvent("qs-dispatch:server:CreateDispatchCall",
         {
             job = "police",
             callLocation = playerData.coords,
@@ -69,7 +69,7 @@ RegisterCommand("ambulance", function(source, args, rawCommand)
     lastEMSTime = currentTime
     local playerData = exports['qs-dispatch']:GetPlayerInfo()
 
-    TriggerServerEvent("qs-dispatch:server:CreateDiapatchCall",
+    TriggerServerEvent("qs-dispatch:server:CreateDispatchCall",
         {
             job = "ambulance",
             callLocation = playerData.coords,
@@ -108,7 +108,7 @@ RegisterCommand("mechanic", function(source, args, rawCommand)
     lastMECANICTime = currentTime
     local playerData = exports['qs-dispatch']:GetPlayerInfo()
 
-    TriggerServerEvent("qs-dispatch:server:CreateDiapatchCall",
+    TriggerServerEvent("qs-dispatch:server:CreateDispatchCall",
         {
             job = "mechanic",
             callLocation = playerData.coords,
@@ -148,7 +148,7 @@ RegisterCommand("panic", function(source, args, rawCommand)
     lastPANICime = currentTime
     local playerData = exports['qs-dispatch']:GetPlayerInfo()
 
-    TriggerServerEvent("qs-dispatch:server:CreateDiapatchCall",
+    TriggerServerEvent("qs-dispatch:server:CreateDispatchCall",
         {
             job = "police",
             callLocation = playerData.coords,

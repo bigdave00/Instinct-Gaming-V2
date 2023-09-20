@@ -32,6 +32,15 @@ function RegisterUsableItem(name, cb)
     QBCore.Functions.CreateUseableItem(name, cb)
 end
 
+function GetPlayerFromIdentifier(citizenid)
+    local data = QBCore.Functions.GetPlayerByCitizenId(citizenid)
+    local id = QBCore.Functions.GetSource(citizenid)
+    return {
+        data = data,
+        id = id
+    }
+end
+
 function GetPlayerFromId(player)
     local Player = QBCore.Functions.GetPlayer(player)
     if Player then
@@ -103,7 +112,7 @@ function GetPlayers()
 end
 
 function GetPlayerIdentifier(id)
-    return QBCore.Functions.GetPlayer(id).PlayerData.citizenid
+    return QBCore.Functions.GetPlayer(id)?.PlayerData?.citizenid
 end
 
 function GetMoney(source)
@@ -134,6 +143,15 @@ end
 function RemoveBankMoney(source, price)
     local xPlayer = GetPlayerFromId(source)
     xPlayer.Functions.RemoveMoney("bank", price)
+end
+
+
+function CreateUseableItem(name, cb)
+    QBCore.Functions.CreateUseableItem(name, function(source, item)
+        local Player = QBCore.Functions.GetPlayer(source)
+        if not Player.Functions.GetItemByName(item.name) then return end
+        cb(source)
+    end)
 end
 
 function getPlayersByNameAndLastName(source, cb, data)

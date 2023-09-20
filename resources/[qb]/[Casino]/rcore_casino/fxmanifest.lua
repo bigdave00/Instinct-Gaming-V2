@@ -5,10 +5,11 @@ dependencies {
     '/server:4752',
     '/onesync',
     '/gameBuild:2060',
-    --'rcore_casino_interior'
+    'rcore_casino_assets',
+    'rcore_casino_interior'
 }
 
-version '1.0.42'
+version '1.0.49'
 
 client_scripts {
     -- Rage UI
@@ -128,4 +129,4 @@ files {
 
 lua54 "yes"
 
-dependency '/assetpacks'server_scripts { '@mysql-async/lib/MySQL.lua' }server_scripts { '@mysql-async/lib/MySQL.lua' }server_scripts { '@mysql-async/lib/MySQL.lua' }server_scripts { '@mysql-async/lib/MySQL.lua' }server_scripts { '@mysql-async/lib/MySQL.lua' }
+dependency '/assetpacks'

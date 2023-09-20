@@ -4,7 +4,7 @@ game "gta5"
 
 author "quasar-store.com"
 
-version "1.4.4"
+version "1.5.0"
 
 lua54 "yes"
 
@@ -27,8 +27,14 @@ client_scripts {
     "client/custom/framework/*.lua",
     "client/custom/billing/*.lua",
     "client/custom/exports/*.lua",
-    "client/*.lua",
+    -- main client folder
+    "client/globals.lua",
+    "client/utils.lua",
+    "client/main.lua",
     "client/modules/*.lua",
+    "client/modules/penitencial/utils/*.lua",
+    "client/modules/penitencial/*.lua",
+    "client/modules/penitencial/modules/*.lua",
     "client/custom/misc/*.lua"
 }
 
@@ -39,10 +45,15 @@ server_scripts {
     "server/custom/framework/*.lua",
     "server/modules/webhooks.lua",
     "server/custom/events/onCallEvent.lua",
-    "server/*.lua",
+    "server/globals.lua",
+    "server/utils.lua",
+    "server/main.lua",
+    "server/version.lua",
     "server/modules/*.lua",
+    "server/modules/penitencial/*.lua",
     "server/custom/billing/*.lua",
-    "server/custom/vehicles/*.lua"
+    "server/custom/vehicles/*.lua",
+    "server/custom/inventory/*.lua"
 }
 
 exports {
@@ -57,13 +68,17 @@ exports {
 escrow_ignore {
     "config/*.lua",
     "locales/*.lua",
+    
     "client/custom/misc/*.lua",
     "client/custom/billing/*.lua",
     "client/custom/framework/*.lua",
+    "client/custom/exports/*.lua",
+
     "server/custom/framework/*.lua",
     "server/custom/billing/*.lua",
     "server/custom/vehicles/*.lua",
     "server/modules/webhooks.lua",
+    "server/custom/inventory/*.lua",
     "server/custom/events/onCallEvent.lua"
 }
 

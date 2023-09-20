@@ -12,7 +12,7 @@ if Framework.Active == 3 then
         ---------
         xPlayer.license = GetPlayerIdentifierType(source, "license:")
         ---------
-        local pCache = Cache:GetNow(xPlayer.identifier)
+        local pCache = Cache:GetNow(xPlayer.identifier) or {}
         if not pCache.fakeInventory then
             pCache.fakeInventory = {
                 [Config.ChipsInventoryItem] = Framework.STANDALONE_INITIAL_CHIPS

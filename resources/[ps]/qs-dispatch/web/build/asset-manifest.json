@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/build/static/css/main.5e0ef430.css",
-    "main.js": "/web/build/static/js/main.1b4161c0.js",
+    "main.css": "/web/build/static/css/main.c19e22d1.css",
+    "main.js": "/web/build/static/js/main.aaef5eb9.js",
     "static/media/bg.png": "/web/build/static/media/bg.5f9d1f25941311d71e22.png",
     "static/media/plate.ttf": "/web/build/static/media/plate.b0e75e4508e0d61f7db5.ttf",
     "static/media/motorbike.png": "/web/build/static/media/motorbike.1321f15f3b66ad8366cf.png",
@@ -19,11 +19,11 @@
     "static/media/gtav_tone_new_call.mp3": "/web/build/static/media/gtav_tone_new_call.c5f40b702131ab83f83f.mp3",
     "static/media/cli.mp3": "/web/build/static/media/cli.0cebe07e6df198e2b205.mp3",
     "index.html": "/web/build/index.html",
-    "main.5e0ef430.css.map": "/web/build/static/css/main.5e0ef430.css.map",
-    "main.1b4161c0.js.map": "/web/build/static/js/main.1b4161c0.js.map"
+    "main.c19e22d1.css.map": "/web/build/static/css/main.c19e22d1.css.map",
+    "main.aaef5eb9.js.map": "/web/build/static/js/main.aaef5eb9.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e0ef430.css",
-    "static/js/main.1b4161c0.js"
+    "static/css/main.c19e22d1.css",
+    "static/js/main.aaef5eb9.js"
   ]
 }

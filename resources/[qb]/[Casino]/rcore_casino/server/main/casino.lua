@@ -21,6 +21,12 @@ DAY_OF_WEEK = 0 -- *fake* day of the week inside casino
 FORCE_CLOSED = false
 GetPlayerIdentifier_ = GetPlayerIdentifier
 
+function GetServerTime()
+    local currentTimestamp = os.time()
+    local modifiedTimestamp = currentTimestamp + ((Config.ServerTimezoneOffsetHours or 0) * 60 * 60)
+    return modifiedTimestamp
+end
+
 function GetPlayerIdentifierType(playerId, idType)
     for i = 0, 10, 1 do
         local idData = GetPlayerIdentifier_(playerId, i)
@@ -614,14 +620,14 @@ end)
 
 -- player wants to refresh his balance
 RegisterNetEvent("Casino:DailyBonus")
-AddEventHandler("Casino:DailyBonus", function(chips)
+AddEventHandler("Casino:DailyBonus", function()
     local playerId = source
     local identifier = GetPlayerIdentifier(playerId)
     Cache:Get(identifier, function(p)
         if not p then
             return
         end
-        local today = os.date("%x")
+        local today = os.date("%x", GetServerTime())
         if p.lastDailyBonus and p.lastDailyBonus == today then
             return
         end
@@ -654,7 +660,7 @@ AddEventHandler("Casino:BecomeVIP", function()
         if Config.CASHIER_VIP_PASS_ITEM and Config.CASHIER_VIP_PASS_ITEM ~= "" and Config.CASHIER_VIP_PASS_ITEM ~= 0 then
             -- RemoveCasinoItem(playerId, Config.CASHIER_VIP_PASS_ITEM, 1)
         end
-        local vipUntil = os.time() + (Config.CASHIER_VIP_DURATION or 2147483647)
+        local vipUntil = GetServerTime() + (Config.CASHIER_VIP_DURATION or 2147483647)
         p.vipUntil = vipUntil
         BroadcastCasino("Casino:BecomeVIP", playerId, vipUntil)
     end)
@@ -762,7 +768,7 @@ function Casino_ResendPlayerProgress(playerId)
         end
         -- transfer old vips to new 
         if p.vip and not p.vipUntil then
-            local vipUntil = os.time() + Config.CASHIER_VIP_DURATION
+            local vipUntil = GetServerTime() + Config.CASHIER_VIP_DURATION
             p.vipUntil = vipUntil
             p.vip = nil
         end
@@ -772,7 +778,8 @@ function Casino_ResendPlayerProgress(playerId)
             chips = GetPlayerChips(playerId)
         }
         local playerAdmin = IsPlayerAdmin(playerId)
-        TriggerClientEvent("Casino:Progress", playerId, playerBalance, os.time(), os.date("%x"), p, GameStates,
+        local osTime = GetServerTime()
+        TriggerClientEvent("Casino:Progress", playerId, playerBalance, osTime, os.date("%x", osTime), p, GameStates,
             playerAdmin)
         p.firstTime = false
         SendPlayerInventory(playerId)
@@ -858,14 +865,18 @@ function PrintInfo()
     elseif Config.Ghmattimysql then
         mysqlRes = "ghmattimysql"
     end
+    local frameworks = {"ESX", "QB", "Standalone", "Custom"}
     local mapNames = {"DLCiplLoader", "Gabz Casino", "NoPixel Casino", "k4mb1", "GTA:O Interior"}
+    local dateTime = os.date("%d.%m.%Y, %I:%M %p", GetServerTime())
 
     print("^3")
     print("rcore_casino")
+    print(string.format("^7framework: ^3%s", frameworks[Framework.Active]))
     print(string.format("^7version: ^3%s", GetResourceMetadata(GetCurrentResourceName(), "version")))
     print(string.format("^7database: ^3%s", mysqlRes))
     print(string.format("^7map: ^3%s", mapNames[Config.MapType]))
     print(string.format("^7society: ^3%s", Config.SocietyName))
+    print(string.format("^7casino time: ^3%s", dateTime))
     print("https://documentation.rcore.cz/paid-resources/rcore_casino")
     print("^7")
 end
@@ -903,8 +914,10 @@ function IsCasinoOpenAtCurrentTime()
         return true
     end
 
-    local currentDay = os.date("%w") + 1
-    local currentHour = math.ceil(os.date("%H"))
+    local osTime = GetServerTime()
+    local currentDay = os.date("%w", osTime) + 1
+    local currentHour = math.ceil(os.date("%H", osTime))
+
     local hours = Config.OpeningHours[currentDay]
 
     if not hours then
@@ -931,12 +944,16 @@ function GetCasinoNextOpenTime()
         return Translation.Get("OPENINGHOURS_OPEN")
     end
 
-    local currentDay = math.ceil(os.date("%w"))
-    local currentHour = math.ceil(os.date("%H"))
+    local osTime = GetServerTime()
+    local currentDay = os.date("%w", osTime) + 1
+    local currentHour = math.ceil(os.date("%H", osTime))
     local inDays = 0
 
     function CasinoOpenSoon(cDay, cHour)
         local h = Config.OpeningHours[cDay]
+        if not h then
+            return false
+        end
         local hF = false
 
         for k, v in pairs(h) do
@@ -953,12 +970,17 @@ function GetCasinoNextOpenTime()
         local day = Repeat(currentDay, 7) + 1
         local hours = Config.OpeningHours[day]
 
+        local openHour = hours and hours[1] or ""
+        if openHour == -1 then
+            openHour = "00"
+        end
+
         if inDays == 0 and hours and openSoon then
             return string.format(Translation.Get("OPENINGHOURS_TODAY"), openSoon .. ":00")
         elseif inDays == 1 and hours then
-            return string.format(Translation.Get("OPENINGHOURS_TOMORROW"), hours[1] .. ":00")
+            return string.format(Translation.Get("OPENINGHOURS_TOMORROW"), openHour .. ":00")
         elseif inDays > 1 and hours then
-            return string.format(Translation.Get("OPENINGHOURS_INXDAYS"), inDays, hours[1] .. ":00")
+            return string.format(Translation.Get("OPENINGHOURS_INXDAYS"), inDays, openHour .. ":00")
         end
 
         inDays = inDays + 1
@@ -1114,6 +1136,9 @@ end)
 -- player gets casino info after joining the server
 RegisterNetEvent("Casino:GetInfo")
 AddEventHandler("Casino:GetInfo", function()
+    if not ESX then
+        return
+    end
     local playerId = source
     local isAdmin = IsPlayerAdmin(playerId)
     TriggerClientEvent("Casino:InitialInfo", playerId, GameStates, isAdmin, playerId)

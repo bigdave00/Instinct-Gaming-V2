@@ -1,15 +1,20 @@
 Config = {}
 
-Config.Framework = "qb"  -- Place here the framework either esx or qb
-Config.Language = 'en' -- Set the language in which you want to have the script [en, en].
-Config.Debug = false  -- Enable debug mode by setting this to true (Multiple console prints showing debug information and enabling color shapes for zones). -- true make the script very slow
+Config.Framework = "qb"                      -- Place here the framework either esx or qb
+Config.Language = 'en'                      -- Set the language in which you want to have the script [en, en].
+Config.Debug = false       -- Enable debug mode by setting this to true (Multiple console prints showing debug information and enabling color shapes for zones). -- true make the script very slow
 Config.AllowImages = true -- this option can delay the alert
-Config.DiscordWebHook = 'https://discord.com/api/webhooks/1139312215917334651/zeGNXKe3X1BPud42LTt9Ah6O1WhnbOwFQaxt7nZUmU-9OqmU1RmSOxIL0D9ElWqQbAWn' -- Discord webhook to upload new images
+Config.DiscordWebHook = 'https://discord.com/api/webhooks/1139312215917334651/zeGNXKe3X1BPud42LTt9Ah6O1WhnbOwFQaxt7nZUmU-9OqmU1RmSOxIL0D9ElWqQbAWn'                        -- Discord webhook to upload new images
 Config.vehiclesTable = "player_vehicles"
-Config.useLogo = true -- Use logo in the Dispatch
+Config.useLogo = true     -- Use logo in the Dispatch
 Config.plateImage = 'https://www.quasar-store.com/static/5012-AT_6_x_12.png'
-Config.logoURL = 'https://cdn.discordapp.com/attachments/1139312190340485210/1144970448803745792/pngwing.com_1.png' -- or false if you dont want use logo
-Config.useVehicleIconsInDispatchLargueMap = false -- if you set it to true the Dispatch icons for the people will be the vehicle icons instead of the player icons (Common blip map)
+Config.logoURL = 'https://cdn.discordapp.com/attachments/1128391235393048636/1129711671888330752/quasar_logo.png' -- or false if you dont want use logo
+Config.useVehicleIconsInDispatchLargueMap = false                                                -- if you set it to true the Dispatch icons for the people will be the vehicle icons instead of the player icons (Common blip map)
+
+
+
+Config.InventorySystem = "qb-inventory" -- qb-inventory or qs-inventory or esx-default you can select ox-inventory but this is not fully tested
+
 --[[
     Billing configuration, choose between the options that we bring by default
     or configure more in client/custom/billing/*.lua.
@@ -22,7 +27,7 @@ Config.useVehicleIconsInDispatchLargueMap = false -- if you set it to true the D
 ]]
 
 Config.Billing = 'jim-payments'
-Config.showBillsInMDT = false -- configure your billing system in server/custom/misc/players.lua (Edit getBills function) prefer turn false if you using jim-payments
+Config.showBillsInMDT = true -- configure your billing system in server/custom/misc/players.lua (Edit getBills function) prefer turn false if you using jim-payments
 
 --[[
     vehicles configuration, choose between the options that we bring by default
@@ -34,7 +39,7 @@ Config.showBillsInMDT = false -- configure your billing system in server/custom/
         'qs-garages'
 ]]
 
-Config.VehicleGarages = 'cd_garages'
+Config.VehicleGarages = 'qb_garages'
 
 Config.Keys = {
     --Basic keys
@@ -65,12 +70,18 @@ Config.DefaultSpeedLimit = 100 -- radar freeze if the vehicle > this velocity
 Config.TimeToFreeze = 2000
 
 Config.JobsAllowed = { -- Jobs allowed to use the Dispatch
-    "police",
-    "ambulance",
-    "firefighterjob",
+"police",
+"ambulance",
+"firefighterjob",
 }
 
-Config.PlayerLocationTick = 2     -- The time in seconds it takes to update the player's location (preferable not to touch).
+Config.PlayerLocationTick = 5     -- The time in seconds it takes to update the player's location (preferable not to touch).
+
+--[[
+    WARNING: IF YOU REDUCE THE TIME OF THE PLAYER LOCATION TICK, THE DISPATCH WILL BE MORE SLOW AND WILL BE GENERATE CRASHES TO YOUR PLAYERS
+    EVERY RECOMENDED USE THE PATREON FIVEM AND ACTIVATE THE ONESYNC INFINITY
+]]
+
 Config.JobsBlips = {              -- Blips for players depending on their job
     ['police'] = {                --JOB
         show = true,              -- Enable or disable
@@ -84,9 +95,9 @@ Config.JobsBlips = {              -- Blips for players depending on their job
             ['plane'] = 307,      -- sprite
         },
         showJobs = {
-            'ambulance'           -- need Exist Blip config in this section
+            'ambulance' -- need Exist Blip config in this section
         },
-        scale = 1.0,              -- Scale
+        scale = 1.0,    -- Scale
         showConeOfView = true,
     },
     ['ambulance'] = {             --JOB
@@ -101,9 +112,9 @@ Config.JobsBlips = {              -- Blips for players depending on their job
             ['plane'] = 307,      -- sprite
         },
         showJobs = {
-            'police'              -- need Exist Blip config in this section
+            'police' -- need Exist Blip config in this section
         },
-        scale = 1.0,              -- Scale
+        scale = 1.0, -- Scale
         showConeOfView = false,
     },
     ['mechanic'] = {              --JOB
@@ -139,6 +150,61 @@ Config.JobsAllowedToMDT = { -- Jobs allowed to use police MDT
     "ambulance"
 }
 
+Config.NeedItemForMDT = false -- Use item for open MDT
+Config.MDTItemName = 'mdt'  -- Item name for open MDT
+
+
+Config.Penitencial = {
+    keyForSendToJail = 'E',
+    JobsAllowedToSendToJail = {
+        "police",
+        -- "fbi"
+    },
+    TimeToRemoveCodes = {
+        [1] = 1,  -- remove is out of camera view past 3 minutes
+        [2] = 5,  -- remove is out of camera view past 5 minutes
+        [3] = 10, -- remove is out of camera view past 10 minutes
+        [4] = 15, -- remove is out of camera view past 15 minutes
+        [5] = 20, -- remove is out of camera view past 20 minutes
+        [6] = 25, -- remove is out of camera view past 25 minutes
+    },
+    IlegalItems = {
+        'weapon_pistol',
+        'pistol_ammo'
+    },
+    jai = true,
+    AbleToSelectWhetherToPardonJail = true,
+    CanSendToJailIfNotInPoint = false,
+    SendToJailPoints = {
+        {
+            title = 'Mission Row PD',
+            coords = vector3(460.0216, -1001.5779, 24.9149),
+        },
+        {
+            title = 'Mission Row PD',
+            coords = vector3(459.1117, -997.9485, 24.9149),
+        },
+        {
+            title = 'Mission Row PD',
+            coords = vector3(460.0694, -994.2761, 24.9149),
+        }
+    },
+    Jail = {
+        name = 'Jail of paleto',
+        -- coords = vector3(1684.7609, 2598.2549, 45.5649),
+        radius = 50,
+        spawnPoints = { -- sure this points is inside the zone
+            vector4(1678.5844, 2541.4470, 45.5645, 267.97),
+            vector4(1678.5844, 2541.4470, 45.5645, 267.97),
+            vector4(1678.5844, 2541.4470, 45.5645, 267.97)
+        },
+        exitPoints = {
+            vector4(1850.7671, 2586.0156, 45.6720, 274.4039)
+        },
+
+    },
+}
+
 Config.VelocityRadar = { -- Velocity Radar Config
     enabled = true,      -- Enable velocity Radars in the map
     activateFXFlash = true,
@@ -150,7 +216,7 @@ Config.VelocityRadar = { -- Velocity Radar Config
         DebugPrint('onDispatchCall', playerData)
         exports['qs-dispatch']:getSSURL(function(image)
             DebugPrint('image', image)
-            TriggerServerEvent('qs-dispatch:server:CreateDiapatchCall', {
+            TriggerServerEvent('qs-dispatch:server:CreateDispatchCall', {
                 job = { 'police', 'sheriff', 'traffic', 'patrol' },
                 callLocation = playerData.coords,
                 callCode = { code = 'Hight Speed', snippet = 'Vehicle' },
@@ -295,7 +361,7 @@ Config.ShootingZone = {
         local playerData = exports['qs-dispatch']:GetPlayerInfo()
         SendTextMessage("You are shooting near the camera", 'error')
         exports['qs-dispatch']:getSSURL(function(image)
-            TriggerServerEvent('qs-dispatch:server:CreateDiapatchCall', {
+            TriggerServerEvent('qs-dispatch:server:CreateDispatchCall', {
                 job = { 'police', 'swat', 'sheriff' },
                 callLocation = playerData.coords,
                 callCode = { code = 'Shootings in Zone', snippet = 'Fireeeeee' },
@@ -328,24 +394,8 @@ Config.ShootingZone = {
             sendAlertToPolice = true
         }
     },
-
-    WhitelistedWeapons = {
+    WhitelistedWeapons   = {
         "weapon_stungun"
-    },
-
-    cameraModels = {
-        -- CAM models, do not remove any (you can put your custom camera models here)
-        { model = 548760764 },
-        { model = -354221800 },
-        { model = -1159421424 },
-        { model = 1449155105 },
-        { model = -1095296451 },
-        { model = 1919058329 },
-        { model = -1884701657 },
-        { model = -173206916 },
-        { model = 168901740 },
-        { model = -1340405475 },
-        { model = 1849991131 }
     }
 }
 
@@ -363,4 +413,21 @@ Config.DispatchBodyCamZones = {
             width = 30,
         }
     }
+}
+
+Config.CameraModels = { -- this models will be used in the shoting zones and the convict detection on the map... -- if you need more detects you can use all type of props showed in this web https://gta-objects.xyz/objects
+    GetHashKey('prop_cctv_cam_01a'),
+    GetHashKey('prop_cctv_cam_01b'),
+    GetHashKey('prop_cctv_cam_02a'),
+    GetHashKey('prop_cctv_cam_03a'),
+    GetHashKey('prop_cctv_cam_04a'),
+    GetHashKey('prop_cctv_cam_04b'),
+    GetHashKey('prop_cctv_cam_04c'),
+    GetHashKey('prop_cctv_cam_05a'),
+    GetHashKey('prop_cctv_cam_06a'),
+    GetHashKey('prop_cctv_cam_07a'),
+    GetHashKey('prop_snow_cam_03a'),
+    GetHashKey('prop_snow_cam_03'),
+    GetHashKey('police3'),
+    GetHashKey('polmav'),
 }

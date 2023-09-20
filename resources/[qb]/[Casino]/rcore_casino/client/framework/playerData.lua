@@ -204,9 +204,9 @@ if Framework.Active == 2 then
                 local v = pData.items[slot]
                 if v then
                     if stacked[v.name] then
-                        stacked[v.name] = stacked[v.name] + v.amount
+                        stacked[v.name] = stacked[v.name] + (v.amount or v.count)
                     else
-                        stacked[v.name] = v.amount
+                        stacked[v.name] = (v.amount or v.count)
                     end
                 end
             end

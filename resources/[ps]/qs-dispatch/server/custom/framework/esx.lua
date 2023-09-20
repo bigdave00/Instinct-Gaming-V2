@@ -1,8 +1,8 @@
---[[ 
-    Hi dear customer or developer, here you can fully configure your server's 
+--[[
+    Hi dear customer or developer, here you can fully configure your server's
     framework or you could even duplicate this file to create your own framework.
 
-    If you do not have much experience, we recommend you download the base version 
+    If you do not have much experience, we recommend you download the base version
     of the framework that you use in its latest version and it will work perfectly.
 ]]
 if Config.Framework ~= "esx" then
@@ -11,10 +11,10 @@ end
 
 local legacyEsx =
     pcall(
-    function()
-        ESX = exports["es_extended"]:getSharedObject()
-    end
-)
+        function()
+            ESX = exports["es_extended"]:getSharedObject()
+        end
+    )
 
 if not legacyEsx then
     TriggerEvent(
@@ -46,20 +46,38 @@ function RegisterUsableItem(name, cb)
     ESX.RegisterUsableItem(name, cb)
 end
 
+function GetPlayerFromIdentifier(identifier)
+    return ESX.GetPlayerFromIdentifier(identifier) -- attempt to get player
+end
+
 function GetPlayerFromId(source)
     return ESX.GetPlayerFromId(source)
 end
 
 function GetCharacterRPData(source)
     local xPlayer = GetPlayerFromId(source)
-    if (xPlayer == nil) then return {firstName = Lang('UNKNOWN'), lastName = Lang('UNKNOWN'), callsign = Lang('UNKNOWN'), identifier = Lang('UNKNOWN')} end
-    if (ESX == nil) then return {firstName = Lang('UNKNOWN'), lastName = Lang('UNKNOWN'), callsign = Lang('UNKNOWN'), identifier = Lang('UNKNOWN')} end
+    if (xPlayer == nil) then
+        return {
+            firstName = Lang('UNKNOWN'),
+            lastName = Lang('UNKNOWN'),
+            callsign = Lang('UNKNOWN'),
+            identifier = Lang('UNKNOWN')
+        }
+    end
+    if (ESX == nil) then
+        return {
+            firstName = Lang('UNKNOWN'),
+            lastName = Lang('UNKNOWN'),
+            callsign = Lang('UNKNOWN'),
+            identifier = Lang('UNKNOWN')
+        }
+    end
     local firstName, lastName, callsign
     local callsignres =
         MySQL.Sync.fetchAll(
-        "SELECT `callsign` FROM `dispatch_callsigns` WHERE `identifier` = @identifier;",
-        {["identifier"] = xPlayer.identifier}
-    )
+            "SELECT `callsign` FROM `dispatch_callsigns` WHERE `identifier` = @identifier;",
+            { ["identifier"] = xPlayer.identifier }
+        )
     DebugPrint(callsignres)
     if callsignres[1] then
         callsign = callsignres[1].callsign or "UNK"
@@ -70,19 +88,23 @@ function GetCharacterRPData(source)
         firstName = xPlayer.get("firstName")
         lastName = xPlayer.get("lastName")
     else
-       
         local result =
             MySQL.Sync.fetchAll(
-            "SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = @identifier",
-            {["@identifier"] = xPlayer.identifier}
-        )
+                "SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = @identifier",
+                { ["@identifier"] = xPlayer.identifier }
+            )
         if not result[1] then
-            return {firstName = GetPlayerName(source), lastName = "", callsign = callsign, identifier = xPlayer.identifier}
+            return {
+                firstName = GetPlayerName(source),
+                lastName = "",
+                callsign = callsign,
+                identifier = xPlayer.identifier
+            }
         end
         firstName, lastName = result[1]?.firstname or GetPlayerName(source), result[1]?.lastname or ""
     end
-    DebugPrint({firstName = firstName, lastName = lastName, callsign = callsign, identifier = xPlayer.identifier})
-    return {firstName = firstName, lastName = lastName, callsign = callsign, identifier = xPlayer.identifier}
+    DebugPrint({ firstName = firstName, lastName = lastName, callsign = callsign, identifier = xPlayer.identifier })
+    return { firstName = firstName, lastName = lastName, callsign = callsign, identifier = xPlayer.identifier }
 end
 
 function GetJob(player)
@@ -116,7 +138,7 @@ function GetPlayers()
 end
 
 function GetPlayerIdentifier(id)
-    return ESX.GetPlayerFromIdentifier(id)
+    return ESX.GetPlayerFromId(id)?.identifier
 end
 
 function GetMoney(source)
@@ -149,13 +171,19 @@ function RemoveBankMoney(source, price)
     xPlayer.removeAccountMoney("bank", price)
 end
 
+function CreateUseableItem(name, cb)
+    ESX.RegisterUsableItem(name, function(playerId)
+        cb(playerId)
+    end)
+end
+
 function getPlayersByNameAndLastName(source, cb, data)
     DebugPrint(data)
     local namePattern = "%" .. (data.name or "") .. "%"
     local lastNamePattern = "%" .. (data.lastname or "") .. "%"
     MySQL.Async.fetchAll(
         "SELECT * FROM users WHERE firstname LIKE @name AND lastname LIKE @lastname LIMIT 90;",
-        {["@name"] = namePattern, ["@lastname"] = lastNamePattern},
+        { ["@name"] = namePattern, ["@lastname"] = lastNamePattern },
         function(results)
             playersDatastore = {}
             for key, value in ipairs(results) do
@@ -173,6 +201,7 @@ function getPlayersByNameAndLastName(source, cb, data)
         end
     )
 end
+
 RegisterServerCallback("qs-dispatch:getPlayersByNameAndLastName", getPlayersByNameAndLastName)
 
 function getPlayerByIdentifier(source, cb, data)
@@ -180,7 +209,7 @@ function getPlayerByIdentifier(source, cb, data)
     local playerIdentifier = data.playerID
     MySQL.Async.fetchAll(
         "SELECT * FROM users WHERE identifier = @playerIdentifier LIMIT 1;",
-        {["@playerIdentifier"] = playerIdentifier},
+        { ["@playerIdentifier"] = playerIdentifier },
         function(results)
             if results[1] then
                 cb(
@@ -197,4 +226,5 @@ function getPlayerByIdentifier(source, cb, data)
         end
     )
 end
+
 RegisterServerCallback("qs-dispatch:getPlayerByIdentifier", getPlayerByIdentifier)
