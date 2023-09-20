@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ShopVehicleDataArray>
+	<Vehicles>
+	<Item>
+		<lockHash>CU_VEH_xk21octaviavrs</lockHash>
+		<modelNameHash>xk21octaviavrs</modelNameHash>
+		<cost value="100"/>
+		<textLabel>xk21octaviavrs</textLabel>
+		<textLabel></textLabel>
+	</Item>
+	</Vehicles>
+</ShopVehicleDataArray>
