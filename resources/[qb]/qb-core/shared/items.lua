@@ -10246,12 +10246,24 @@ QBShared.Items = {
   ["label"] = "Lost MC Key",
   ["weight"] = 5,
   ["type"] = "item",
-   ["image"] = "images/keyslostmc.png",
+   ["image"] = "images/keyslostmc.png", 
   ['unique'] = true,
   ['useable'] = true,
   ['shouldClose'] = true,
   ["combinable"] = nil,
   ["description"] = "Lost MC Key" 
+},
+["keysjoey"] = {
+  ["name"] = "keysjoey", 
+  ["label"] = "Joeys Key",
+  ["weight"] = 5,
+  ["type"] = "item",
+   ["image"] = "images/keysjoey.png", 
+  ['unique'] = true,
+  ['useable'] = true,
+  ['shouldClose'] = true,
+  ["combinable"] = nil,
+  ["description"] = "Joeys Key" 
 },
 ["drug_scales"] = { 
   ["name"] = "drug_scales",
