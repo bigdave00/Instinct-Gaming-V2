@@ -169,7 +169,7 @@ Config.BankSystem = 'id'
     'jim-payments'     Free QBCore billing (https://github.com/jimathy/jim-payments)
     'billing_ui'       Works on ESX and QBCore (https://jaksam1074-fivem-scripts.tebex.io/package/5369991)
 ]]
-Config.billingSystem = 'im-payments'
+Config.billingSystem = 'jim-payments'
 --[[
     ESX                     = 'esx_billing:payBill'
     okokBilling             = 'okokBilling:PayInvoice'

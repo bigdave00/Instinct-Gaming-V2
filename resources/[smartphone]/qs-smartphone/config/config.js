@@ -19,9 +19,7 @@ Config.SmartphoneFPSMeter = false // If you enable this, you will be able to see
 Config.DefaultAlbum = 'Album' // This is the prefix for Gallery Albums.
 
 Config.JobsBlockedToContact = [ // Skip this part.
-    "police",
-    "ambulance",
-    "mechanic",
+
 ]
 
 // Safari Favorites
