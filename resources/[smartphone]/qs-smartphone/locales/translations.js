@@ -48,7 +48,7 @@ $(".whatsapp-pers-name-input").attr('placeholder', 'Full name');
 $(".whatsapp-pers-number-input").attr('placeholder', 'Phone number');
 $("#gifinput").attr('placeholder', 'Seach gifs');
 $("#photos-search-bar-input").attr('placeholder', 'Location, album, or date');
-$("#youtube-app-search-page-search").attr('placeholder', 'Youtube URL video');
+$("#youtube-app-search-page-search").attr('placeholder', 'URL video');
 $("#ttr").attr('placeholder', 'Enter title');
 $("#gnc_ttr").attr('placeholder', 'Enter title');
 $("#messages-app-newMessageContentInput").attr('placeholder', 'Message');
@@ -85,7 +85,7 @@ $("#uberDriver-beariderFee").attr('placeholder', 'Price per km...');
 $(".weazel-title").attr('placeholder', 'Set a title');
 $(".weazel-content").attr('placeholder', 'Set a content');
 $("#video-comments-input").attr('placeholder', 'Add comment...');
-$("#spotify-search").attr('placeholder', 'Search YouTube link...');
+$("#spotify-search").attr('placeholder', 'Search link...');
 $("#mail-search").attr('placeholder', 'Search...');
 $("#safari-seatch-placeholder").attr('placeholder', 'Search the web...');
 $("#instagram-description-input").attr('placeholder', 'Description...');
@@ -373,7 +373,7 @@ var app = new Vue({ el: '.container', data: {
     PHONE_CONTACT_MESSAGE: "Messages",
     PHONE_CONTACT_CALL: "Calls",
     PHONE_CONTACT_VIDEO: "Videos",
-    PHONE_CONTACT_WHATSAPP: "Whatsapp",
+    PHONE_CONTACT_WHATSAPP: "ChitChat",
     PHONE_CONTACT_PHONE: "Phone",
     PHONE_CONTACT_NOTE: "Note",
     PHONE_CONTACT_SEND_MESSAGE: "Send Message",
@@ -455,7 +455,7 @@ var app = new Vue({ el: '.container', data: {
     POLICE_NO_ALERTS: "There are no alerts",
     POLICE_CLEAN: "CLEAN",
 
-    YOUTUBE_TITLE: "YouTube",
+    YOUTUBE_TITLE: "YouLink",
 
     RADIO_JOIN: "ENTER",
     RADIO_LEAVE: "LEAVE",

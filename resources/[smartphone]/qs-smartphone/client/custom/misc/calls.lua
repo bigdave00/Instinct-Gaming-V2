@@ -24,13 +24,13 @@ end)
 
 function AnswerCall()
     local callType = PhoneData.CallData.CallType
-    if (PhoneData.CallData.CallType == "incoming" or PhoneData.CallData.CallType == "outgoing") and PhoneData.CallData.InCall and not PhoneData.CallData.AnsweredCall then
-        PhoneData.CallData.CallType = "ongoing"
+    if (PhoneData.CallData.CallType == 'incoming' or PhoneData.CallData.CallType == 'outgoing') and PhoneData.CallData.InCall and not PhoneData.CallData.AnsweredCall then
+        PhoneData.CallData.CallType = 'ongoing'
         PhoneData.CallData.AnsweredCall = true
         PhoneData.CallData.CallTime = 0
 
-        SendNUIMessage({ action = "AnswerCall", CallData = PhoneData.CallData})
-        SendNUIMessage({ action = "SetupHomeCall", CallData = PhoneData.CallData})
+        SendNUIMessage({ action = 'AnswerCall', CallData = PhoneData.CallData })
+        SendNUIMessage({ action = 'SetupHomeCall', CallData = PhoneData.CallData })
 
         TriggerServerEvent('qs-smartphone:server:SetCallState', true)
 
@@ -40,12 +40,12 @@ function AnswerCall()
             DoPhoneAnimation('cellphone_call_listen_base')
         end
 
-        Citizen.CreateThread(function()
+        CreateThread(function()
             while true do
                 if PhoneData.CallData.AnsweredCall then
                     PhoneData.CallData.CallTime = PhoneData.CallData.CallTime + 1
                     SendNUIMessage({
-                        action = "UpdateCallTime",
+                        action = 'UpdateCallTime',
                         Time = PhoneData.CallData.CallTime,
                         Name = PhoneData.CallData.TargetData.name,
                     })
@@ -53,7 +53,7 @@ function AnswerCall()
                     break
                 end
 
-                Citizen.Wait(1000)
+                Wait(1250)
             end
         end)
 
@@ -61,7 +61,7 @@ function AnswerCall()
         if Config.Voice == 'toko' then
             exports.tokovoip_script:addPlayerToRadio(PhoneData.CallData.CallId, 'Phone')
         elseif Config.Voice == 'mumble' then
-            exports[Config.VoiceScriptName]:SetCallChannel(PhoneData.CallData.CallId+1)
+            exports[Config.VoiceScriptName]:SetCallChannel(PhoneData.CallData.CallId + 1)
         elseif Config.Voice == 'pma' then
             exports[Config.VoiceScriptName]:SetCallChannel(PhoneData.CallData.CallId)
         elseif Config.Voice == 'salty' then
@@ -73,11 +73,11 @@ function AnswerCall()
         PhoneData.CallData.AnsweredCall = false
 
         SendNUIMessage({
-            action = "Notification",
+            action = 'Notification',
             PhoneNotify = {
-                title = Lang("PHONE_TITLE"),
-                text = Lang("PHONE_NOINCOMING"),
-                icon = "./img/apps/phone.png",
+                title = Lang('PHONE_TITLE'),
+                text = Lang('PHONE_NOINCOMING'),
+                icon = './img/apps/phone.png',
             },
         })
     end
@@ -86,13 +86,13 @@ end
 RegisterNetEvent('qs-smartphone:client:AnswerCall')
 AddEventHandler('qs-smartphone:client:AnswerCall', function()
     local callType = PhoneData.CallData.CallType
-    if (PhoneData.CallData.CallType == "incoming" or PhoneData.CallData.CallType == "outgoing") and PhoneData.CallData.InCall and not PhoneData.CallData.AnsweredCall then
-        PhoneData.CallData.CallType = "ongoing"
+    if (PhoneData.CallData.CallType == 'incoming' or PhoneData.CallData.CallType == 'outgoing') and PhoneData.CallData.InCall and not PhoneData.CallData.AnsweredCall then
+        PhoneData.CallData.CallType = 'ongoing'
         PhoneData.CallData.AnsweredCall = true
         PhoneData.CallData.CallTime = 0
 
-        SendNUIMessage({ action = "AnswerCall", CallData = PhoneData.CallData})
-        SendNUIMessage({ action = "SetupHomeCall", CallData = PhoneData.CallData})
+        SendNUIMessage({ action = 'AnswerCall', CallData = PhoneData.CallData })
+        SendNUIMessage({ action = 'SetupHomeCall', CallData = PhoneData.CallData })
 
         TriggerServerEvent('qs-smartphone:server:SetCallState', true)
 
@@ -102,12 +102,12 @@ AddEventHandler('qs-smartphone:client:AnswerCall', function()
             DoPhoneAnimation('cellphone_call_listen_base')
         end
 
-        Citizen.CreateThread(function()
+        CreateThread(function()
             while true do
                 if PhoneData.CallData.AnsweredCall then
                     PhoneData.CallData.CallTime = PhoneData.CallData.CallTime + 1
                     SendNUIMessage({
-                        action = "UpdateCallTime",
+                        action = 'UpdateCallTime',
                         Time = PhoneData.CallData.CallTime,
                         Name = PhoneData.CallData.TargetData.name,
                     })
@@ -115,14 +115,14 @@ AddEventHandler('qs-smartphone:client:AnswerCall', function()
                     break
                 end
 
-                Citizen.Wait(1000)
+                Wait(1250)
             end
         end)
 
         if Config.Voice == 'toko' then
             exports.tokovoip_script:addPlayerToRadio(PhoneData.CallData.CallId, 'Phone')
         elseif Config.Voice == 'mumble' then
-            exports[Config.VoiceScriptName]:SetCallChannel(PhoneData.CallData.CallId+1)
+            exports[Config.VoiceScriptName]:SetCallChannel(PhoneData.CallData.CallId + 1)
         elseif Config.Voice == 'pma' then
             exports[Config.VoiceScriptName]:SetCallChannel(PhoneData.CallData.CallId)
         elseif Config.Voice == 'salty' then
@@ -134,11 +134,11 @@ AddEventHandler('qs-smartphone:client:AnswerCall', function()
         PhoneData.CallData.AnsweredCall = false
 
         SendNUIMessage({
-            action = "Notification",
+            action = 'Notification',
             PhoneNotify = {
-                title = Lang("PHONE_TITLE"),
-                text = Lang("PHONE_NOINCOMING"),
-                icon = "./img/apps/phone.png",
+                title = Lang('PHONE_TITLE'),
+                text = Lang('PHONE_NOINCOMING'),
+                icon = './img/apps/phone.png',
             },
         })
     end
@@ -146,7 +146,7 @@ end)
 
 RegisterNUICallback('CallContact', function(data, cb)
     local isJob = numberIsJob(data.ContactData.number)
-    for k,v in pairs(Config.jobCommands) do
+    for k, v in pairs(Config.jobCommands) do
         if tonumber(v) == tonumber(data.ContactData.number) then
             data.ContactData.number = tostring(k)
             isJob = true
@@ -157,7 +157,7 @@ RegisterNUICallback('CallContact', function(data, cb)
         TriggerServerCallback('qs-smartphone:getAvailableJob', function(availableJobs)
             if availableJobs then
                 local finded = false
-                for k,v in pairs(availableJobs) do
+                for k, v in pairs(availableJobs) do
                     if finded then return end
                     local customData = {
                         number = v
@@ -176,36 +176,36 @@ RegisterNUICallback('CallContact', function(data, cb)
                             cb(status)
                             local jobName = data.ContactData.number
                             data.ContactData.number = v
-                            data.ContactData.image = ""
-                            CallContact(data.ContactData, data.Anonymous, jobName.." " ..Lang("PHONE_CALL_EMERGENCY"))
+                            data.ContactData.image = ''
+                            CallContact(data.ContactData, data.Anonymous, jobName .. ' ' .. Lang('PHONE_CALL_EMERGENCY'))
                         end
                     end, customData)
                 end
-                Citizen.Wait(200)
+                Wait(200)
                 if not finded then
                     SendNUIMessage({
-                        action = "Notification",
+                        action = 'Notification',
                         PhoneNotify = {
-                            title = Lang("PHONE_TITLE"),
-                            text = Lang("PHONE_CALL_NO_WORKERS"),
-                            icon = "./img/apps/phone.png",
+                            title = Lang('PHONE_TITLE'),
+                            text = Lang('PHONE_CALL_NO_WORKERS'),
+                            icon = './img/apps/phone.png',
                             timeout = 3500,
                         },
                     })
                 end
             else
                 SendNUIMessage({
-                    action = "Notification",
+                    action = 'Notification',
                     PhoneNotify = {
-                        title = Lang("PHONE_TITLE"),
-                        text = Lang("PHONE_CALL_NO_WORKERS"),
-                        icon = "./img/apps/phone.png",
+                        title = Lang('PHONE_TITLE'),
+                        text = Lang('PHONE_CALL_NO_WORKERS'),
+                        icon = './img/apps/phone.png',
                         timeout = 3500,
                     }
                 })
             end
         end, data.ContactData)
-        DebugPrint("Type: Job, Number: "..json.encode(data.ContactData.number)..", Name: "..json.encode(data.ContactData.name)..", CanCall: "..json.encode(CanCall)..", IsOnline: "..json.encode(IsOnline)..", InCall: "..json.encode(InCall)..", IsAvailable: "..json.encode(IsAvailable))
+        DebugPrint('Type: Job, Number: ' .. json.encode(data.ContactData.number) .. ', Name: ' .. json.encode(data.ContactData.name) .. ', CanCall: ' .. json.encode(CanCall) .. ', IsOnline: ' .. json.encode(IsOnline) .. ', InCall: ' .. json.encode(InCall) .. ', IsAvailable: ' .. json.encode(IsAvailable))
     else
         TriggerServerCallback('qs-smartphone:server:GetCallState', function(CanCall, IsOnline, IsAvailable)
             local status = {
@@ -216,7 +216,7 @@ RegisterNUICallback('CallContact', function(data, cb)
                 image = data.ContactData.image
             }
             cb(status)
-            DebugPrint("Type: Call, Number: "..json.encode(data.ContactData.number)..", Name: "..json.encode(data.ContactData.name)..", CanCall: "..json.encode(CanCall)..", IsOnline: "..json.encode(IsOnline)..", InCall: "..json.encode(InCall)..", IsAvailable: "..json.encode(IsAvailable))
+            DebugPrint('Type: Call, Number: ' .. json.encode(data.ContactData.number) .. ', Name: ' .. json.encode(data.ContactData.name) .. ', CanCall: ' .. json.encode(CanCall) .. ', IsOnline: ' .. json.encode(IsOnline) .. ', InCall: ' .. json.encode(InCall) .. ', IsAvailable: ' .. json.encode(IsAvailable))
             if CanCall and not status.InCall and (data.ContactData.number ~= PhoneData.PlayerData.charinfo.phone) and not IsAvailable then
                 CallContact(data.ContactData, data.Anonymous)
             end
@@ -231,17 +231,17 @@ end
 
 CallContact = function(CallData, AnonymousCall, emergency, booth)
     local RepeatCount = 0
-    PhoneData.CallData.CallType = "outgoing"
+    PhoneData.CallData.CallType = 'outgoing'
     PhoneData.CallData.InCall = true
     PhoneData.CallData.TargetData = CallData
     PhoneData.CallData.AnsweredCall = false
     PhoneData.CallData.CallingWithBooth = booth
-    if not booth then 
+    if not booth then
         PhoneData.CallData.CallId = GenerateCallId(PhoneData.PlayerData.charinfo.phone, CallData.number)
-        DebugPrint("Call in process "..PhoneData.PlayerData.charinfo.phone.." to "..CallData.number)
+        DebugPrint('Call in process ' .. PhoneData.PlayerData.charinfo.phone .. ' to ' .. CallData.number)
     else
-        PhoneData.CallData.CallId = GenerateCallId(math.random(1111,9999), CallData.number)
-        DebugPrint("Call in process "..math.random(1111,9999).." to "..CallData.number)
+        PhoneData.CallData.CallId = GenerateCallId(math.random(1111, 9999), CallData.number)
+        DebugPrint('Call in process ' .. math.random(1111, 9999) .. ' to ' .. CallData.number)
     end
 
 
@@ -256,7 +256,7 @@ CallContact = function(CallData, AnonymousCall, emergency, booth)
                 else
                     break
                 end
-                Citizen.Wait(Config.RepeatTimeout)
+                Wait(Config.RepeatTimeout)
             else
                 CancelCall()
                 break
@@ -271,7 +271,7 @@ CancelCall = function()
     local soundId = GetSoundById('ringtone')
     if soundId then DestroySound(soundId) end
     TriggerServerEvent('qs-smartphone:server:CancelCall', PhoneData.CallData, GetPlayerServerId(PlayerId()))
-    if PhoneData.CallData.CallType == "ongoing" then
+    if PhoneData.CallData.CallType == 'ongoing' then
         if Config.Voice == 'toko' then
             exports.tokovoip_script:removePlayerFromRadio(PhoneData.CallData.CallId)
         elseif Config.Voice == 'mumble' then
@@ -302,7 +302,7 @@ CancelCall = function()
     TriggerServerEvent('qs-smartphone:server:SetCallState', false)
 
     SendNUIMessage({
-        action = "CancelOutgoingCall",
+        action = 'CancelOutgoingCall',
     })
 end
 
@@ -310,9 +310,9 @@ RegisterNetEvent('qs-smartphone:client:CancelCall')
 AddEventHandler('qs-smartphone:client:CancelCall', function()
     local soundId = GetSoundById('ringtone')
     if soundId then DestroySound(soundId) end
-    if PhoneData.CallData.CallType == "ongoing" then
+    if PhoneData.CallData.CallType == 'ongoing' then
         SendNUIMessage({
-            action = "CancelOngoingCall"
+            action = 'CancelOngoingCall'
         })
         if Config.Voice == 'toko' then
             exports.tokovoip_script:removePlayerFromRadio(PhoneData.CallData.CallId)
@@ -342,12 +342,12 @@ AddEventHandler('qs-smartphone:client:CancelCall', function()
     TriggerServerEvent('qs-smartphone:server:SetCallState', false)
 
     SendNUIMessage({
-        action = "SetupHomeCall",
+        action = 'SetupHomeCall',
         CallData = PhoneData.CallData,
     })
 
     SendNUIMessage({
-        action = "CancelOutgoingCall",
+        action = 'CancelOutgoingCall',
     })
 end)
 
@@ -362,14 +362,14 @@ AddEventHandler('qs-smartphone:client:GetCalled', function(CallerNumber, CallId,
     }
 
     if AnonymousCall then
-        CallData.name = Lang("PHONE_PRIVATE_NUMBER")
+        CallData.name = Lang('PHONE_PRIVATE_NUMBER')
     end
 
     if jobCall then
         CallData.name = jobCall
     end
 
-    PhoneData.CallData.CallType = "incoming"
+    PhoneData.CallData.CallType = 'incoming'
     PhoneData.CallData.InCall = true
     PhoneData.CallData.AnsweredCall = false
     PhoneData.CallData.TargetData = CallData
@@ -378,12 +378,12 @@ AddEventHandler('qs-smartphone:client:GetCalled', function(CallerNumber, CallId,
     TriggerServerEvent('qs-smartphone:server:SetCallState', true)
 
     SendNUIMessage({
-        action = "SetupHomeCall",
+        action = 'SetupHomeCall',
         CallData = PhoneData.CallData,
     })
 
     SendNUIMessage({
-        action = "CallAlertAppear",
+        action = 'CallAlertAppear',
     })
 
     for i = 1, Config.CallRepeats + 1, 1 do
@@ -398,34 +398,34 @@ AddEventHandler('qs-smartphone:client:GetCalled', function(CallerNumber, CallId,
                     end
 
                     SendNUIMessage({
-                        action = "IncomingCallAlert",
+                        action = 'IncomingCallAlert',
                         CallData = PhoneData.CallData.TargetData,
                         Canceled = false,
                         AnonymousCall = AnonymousCall,
                     })
                 else
                     SendNUIMessage({
-                        action = "IncomingCallAlert",
+                        action = 'IncomingCallAlert',
                         CallData = PhoneData.CallData.TargetData,
                         Canceled = true,
                         AnonymousCall = AnonymousCall,
                     })
-                    TriggerServerEvent('qs-smartphone:server:AddRecentCall', "missed", CallData)
+                    TriggerServerEvent('qs-smartphone:server:AddRecentCall', 'missed', CallData)
                     break
                 end
-                Citizen.Wait(Config.RepeatTimeout)
+                Wait(Config.RepeatTimeout)
             else
                 SendNUIMessage({
-                    action = "IncomingCallAlert",
+                    action = 'IncomingCallAlert',
                     CallData = PhoneData.CallData.TargetData,
                     Canceled = true,
                     AnonymousCall = AnonymousCall,
                 })
-                TriggerServerEvent('qs-smartphone:server:AddRecentCall', "missed", CallData)
+                TriggerServerEvent('qs-smartphone:server:AddRecentCall', 'missed', CallData)
                 break
             end
         else
-            TriggerServerEvent('qs-smartphone:server:AddRecentCall', "missed", CallData)
+            TriggerServerEvent('qs-smartphone:server:AddRecentCall', 'missed', CallData)
             break
         end
     end

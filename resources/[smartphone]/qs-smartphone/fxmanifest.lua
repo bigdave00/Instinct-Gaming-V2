@@ -4,9 +4,9 @@ game 'gta5'
 
 lua54 'yes'
 
-version '2.5.5'
+version '2.6.0'
 
-ui_page "html/index.html"
+ui_page 'html/index.html'
 
 shared_scripts {
     'config/*.lua',
@@ -16,18 +16,18 @@ shared_scripts {
 
 client_scripts {
     '@PolyZone/client.lua',
-	'@PolyZone/BoxZone.lua',
-	'@PolyZone/EntityZone.lua',
-	'@PolyZone/CircleZone.lua',
-	'@PolyZone/ComboZone.lua',
+    '@PolyZone/BoxZone.lua',
+    '@PolyZone/EntityZone.lua',
+    '@PolyZone/CircleZone.lua',
+    '@PolyZone/ComboZone.lua',
 
-	'client/custom/framework/*.lua',
+    'client/custom/framework/*.lua',
     'client/*.lua',
     'client/custom/misc/target.lua',
     'client/modules/*.lua',
     'client/apps/*.lua',
     'client/custom/**/*.lua',
-    --'@cs-video-call/client/hooks/core.lua' 
+    --'@cs-video-call/client/hooks/core.lua'
 }
 
 server_scripts {
@@ -37,7 +37,7 @@ server_scripts {
     'server/apps/*.lua',
     'server/modules/*.lua',
     'server/custom/**/*.lua',
-    --'@cs-video-call/server/hooks/core.lua' 
+    --'@cs-video-call/server/hooks/core.lua'
 }
 
 files {
@@ -58,7 +58,7 @@ files {
     'html/img/garage/*.jpg',
     'html/img/backgrounds/*.png',
     'html/img/apps/*.png',
-	'html/img/app_details/*.png',
+    'html/img/app_details/*.png',
     'html/img/zoo/*.gif',
     'html/img/zoo/*.png',
     'html/img/business/*.png',
@@ -78,10 +78,10 @@ exports {
 
 dependencies {
     '/assetpacks',
-    '/server:4752', -- ⚠️PLEASE READ⚠️ This requires at least server build 4700 or higher
-    'xsound', -- Required.
-	'screenshot-basic', -- Required.
-    'PolyZone', -- Required.
+    '/server:4752',     -- ⚠️PLEASE READ⚠️ This requires at least server build 4700 or higher
+    'xsound',           -- Required.
+    'screenshot-basic', -- Required.
+    'PolyZone',         -- Required.
 }
 
 dependency '/assetpacks'

@@ -42,7 +42,7 @@ function newPhoneProp(model)
 	deletePhone()
 	RequestModel(phoneModel)
 	while not HasModelLoaded(phoneModel) do
-		Citizen.Wait(100)
+		Wait(100)
 	end
 	phoneProp = CreateObject(phoneModel, 1.0, 1.0, 1.0, 1, 1, 0)
 	netid = ObjToNet(phoneProp)
@@ -61,7 +61,7 @@ end
 function deletePhone()
 	if netid then
 		DetachEntity(NetToObj(netid), 1, 1)
-    	DeleteEntity(NetToObj(netid))
+		DeleteEntity(NetToObj(netid))
 		phoneProp = nil
 		netid = nil
 	end
@@ -70,48 +70,48 @@ end
 function LoadAnimation(dict)
 	RequestAnimDict(dict)
 	while not HasAnimDictLoaded(dict) do
-		Citizen.Wait(1)
+		Wait(1)
 	end
 end
 
 function CancelPhoneAnim()
-    local ped = PlayerPedId()
-    local AnimationLib = 'cellphone@'
-    local AnimationStatus = "cellphone_call_listen_base"
+	local ped = PlayerPedId()
+	local AnimationLib = 'cellphone@'
+	local AnimationStatus = 'cellphone_call_listen_base'
 
-    if IsPedInAnyVehicle(ped, false) then
-        AnimationLib = 'anim@cellphone@in_car@ps'
-    end
+	if IsPedInAnyVehicle(ped, false) then
+		AnimationLib = 'anim@cellphone@in_car@ps'
+	end
 
-    if PhoneData.isOpen then
-        AnimationStatus = "cellphone_call_to_text"
-    end
+	if PhoneData.isOpen then
+		AnimationStatus = 'cellphone_call_to_text'
+	end
 
-    LoadAnimation(AnimationLib)
-    TaskPlayAnim(ped, AnimationLib, AnimationStatus, 3.0, 3.0, -1, 50, 0, false, false, false)
+	LoadAnimation(AnimationLib)
+	TaskPlayAnim(ped, AnimationLib, AnimationStatus, 3.0, 3.0, -1, 50, 0, false, false, false)
 
-    if not PhoneData.isOpen then
-        deletePhone()
-    end
+	if not PhoneData.isOpen then
+		deletePhone()
+	end
 end
 
 function DoPhoneAnimation(anim)
-    local ped = PlayerPedId()
-    local AnimationLib = 'cellphone@'
-    local AnimationStatus = anim
+	local ped = PlayerPedId()
+	local AnimationLib = 'cellphone@'
+	local AnimationStatus = anim
 
-    if IsPedInAnyVehicle(ped, false) then
-        AnimationLib = 'anim@cellphone@in_car@ps'
-    end
+	if IsPedInAnyVehicle(ped, false) then
+		AnimationLib = 'anim@cellphone@in_car@ps'
+	end
 
-    LoadAnimation(AnimationLib)
-    TaskPlayAnim(ped, AnimationLib, AnimationStatus, 3.0, 3.0, -1, 50, 0, false, false, false)
+	LoadAnimation(AnimationLib)
+	TaskPlayAnim(ped, AnimationLib, AnimationStatus, 3.0, 3.0, -1, 50, 0, false, false, false)
 
-    PhoneData.AnimationData.lib = AnimationLib
-    PhoneData.AnimationData.anim = AnimationStatus
+	PhoneData.AnimationData.lib = AnimationLib
+	PhoneData.AnimationData.anim = AnimationStatus
 end
 
-function PhonePlayAnim (status, freeze, force)
+function PhonePlayAnim(status, freeze, force)
 	if currentStatus == status and force ~= true then
 		return
 	end
@@ -119,9 +119,9 @@ function PhonePlayAnim (status, freeze, force)
 	myPedId = PlayerPedId()
 	local freeze = freeze or false
 
-	local dict = "cellphone@"
+	local dict = 'cellphone@'
 	if IsPedInAnyVehicle(myPedId, false) then
-		dict = "anim@cellphone@in_car@ps"
+		dict = 'anim@cellphone@in_car@ps'
 	end
 	loadAnimDict(dict)
 
@@ -136,7 +136,7 @@ function PhonePlayAnim (status, freeze, force)
 	TaskPlayAnim(myPedId, dict, anim, 3.0, -1, -1, flag, 0, false, false, false)
 
 	if status ~= 'out' and currentStatus == 'out' then
-		Citizen.Wait(380)
+		Wait(380)
 		newPhoneProp()
 	end
 
@@ -146,26 +146,25 @@ function PhonePlayAnim (status, freeze, force)
 	currentStatus = status
 
 	if status == 'out' then
-		Citizen.Wait(180)
+		Wait(180)
 		deletePhone()
 		StopAnimTask(myPedId, lastDict, lastAnim, 1.0)
 	end
-
 end
 
-function PhonePlayOut ()
+function PhonePlayOut()
 	PhonePlayAnim('out')
 end
 
-function PhonePlayText ()
+function PhonePlayText()
 	PhonePlayAnim('text')
 end
 
-function PhonePlayCall (freeze)
+function PhonePlayCall(freeze)
 	PhonePlayAnim('call', freeze)
 end
 
-function PhonePlayIn () 
+function PhonePlayIn()
 	if currentStatus == 'out' then
 		PhonePlayText()
 	end
@@ -174,6 +173,6 @@ end
 function loadAnimDict(dict)
 	RequestAnimDict(dict)
 	while not HasAnimDictLoaded(dict) do
-		Citizen.Wait(1)
+		Wait(1)
 	end
 end

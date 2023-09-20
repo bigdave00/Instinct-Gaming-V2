@@ -2,12 +2,12 @@ local up = 0
 local mainLoop = false
 local disableInGames = false
 
-RegisterNUICallback("MainDisableMovement", function(data)
+RegisterNUICallback('MainDisableMovement', function(data)
     up = up + 1
     mainLoop = true
 end)
 
-RegisterNUICallback("GamesDisableMovement", function(data)
+RegisterNUICallback('GamesDisableMovement', function(data)
     up = up + 1
     mainLoop = false
     disableInGames = true
@@ -19,7 +19,7 @@ RegisterNUICallback('GameEnableMovement', function()
     peruLoop = false
     EnableAllControlActions(0)
 
-    Citizen.Wait(150)
+    Wait(150)
     mainLoop = false
 end)
 
@@ -31,17 +31,17 @@ function EnableMovementPhotos()
     EnableAllControlActions(0)
 end
 
-Citizen.CreateThread(function() -- This runs when you are on the phone
+CreateThread(function() -- This runs when you are on the phone
     while true do
         if mainLoop then
             -- Player
             DisableAllControlActions(0)
-            EnableControlAction(0, 30, true) -- WS
-            EnableControlAction(0, 31, true) -- AD
+            EnableControlAction(0, 30, true)  -- WS
+            EnableControlAction(0, 31, true)  -- AD
             EnableControlAction(0, 249, true) -- Voice
-            EnableControlAction(0, 22, true) -- Jump
-            EnableControlAction(0, 21, true) -- Sprint
-            EnableControlAction(0, 23, true) -- Enter vehicle
+            EnableControlAction(0, 22, true)  -- Jump
+            EnableControlAction(0, 21, true)  -- Sprint
+            EnableControlAction(0, 23, true)  -- Enter vehicle
 
             -- Vehicle
             EnableControlAction(0, 71, true) -- W
@@ -50,25 +50,24 @@ Citizen.CreateThread(function() -- This runs when you are on the phone
             EnableControlAction(0, 76, true) -- Handbrake
             EnableControlAction(0, 75, true) -- Exit from vehicle
         end
-        Citizen.Wait(0)
+        Wait(0)
     end
 end)
 
-Citizen.CreateThread(function() -- This runs when you are on the phone and in a game
+CreateThread(function() -- This runs when you are on the phone and in a game
     while true do
         if disableInGames then
             -- Player
             DisableAllControlActions(0)
-            EnableControlAction(0, 30, true) -- WS
-            EnableControlAction(0, 31, true) -- AD
+            EnableControlAction(0, 30, true)  -- WS
+            EnableControlAction(0, 31, true)  -- AD
             EnableControlAction(0, 249, true) -- Voice
 
             -- Vehicle
             EnableControlAction(0, 71, true) -- W
             EnableControlAction(0, 72, true) -- S
             EnableControlAction(0, 59, true) -- AD
-
         end
-        Citizen.Wait(0)
+        Wait(0)
     end
 end)

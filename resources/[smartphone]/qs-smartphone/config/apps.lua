@@ -82,8 +82,8 @@ Config.PhoneApplications = {
     [4] = {
         custom = false,
         app = "safari",
-        color = "img/apps/safari.png",
-        tooltipText = "Safari",
+        color = "img/apps/zoo.png",
+        tooltipText = "Zoo",
         tooltipPos = "top",
         job = false,
         blockedjobs = {},
@@ -153,19 +153,19 @@ Config.PhoneApplications = {
     },
     [11] = {
         custom = false,
-        app = "tips",
-        color = "img/apps/tips.png",
-        tooltipText = "Tips",
-        job = false,
-        slot = 11,
-        blockedjobs = {},
-        Alerts = 1
-    },
-    [12] = {
-        custom = false,
         app = "calculator",
         color = "img/apps/calculator.png",
         tooltipText = "Calculator",
+        job = false,
+        blockedjobs = {},
+        slot = 11,
+        Alerts = 0
+    },
+    [12] = {
+        custom = false,
+        app = "bank",
+        color = "img/apps/bank.png",
+        tooltipText = "Wallet",
         job = false,
         blockedjobs = {},
         slot = 12,
@@ -173,19 +173,19 @@ Config.PhoneApplications = {
     },
     [13] = {
         custom = false,
-        app = "bank",
-        color = "img/apps/bank.png",
-        tooltipText = "Wallet",
+        app = "weather",
+        color = "img/apps/weather.png",
+        tooltipText = "Weather",
         job = false,
-        blockedjobs = {},
         slot = 13,
+        blockedjobs = {},
         Alerts = 0
     },
     [14] = {
         custom = false,
-        app = "weather",
-        color = "img/apps/weather.png",
-        tooltipText = "Weather",
+        app = "notes",
+        color = "img/apps/notes.png",
+        tooltipText = "Notes",
         job = false,
         slot = 14,
         blockedjobs = {},
@@ -193,34 +193,34 @@ Config.PhoneApplications = {
     },
     [15] = {
         custom = false,
-        app = "notes",
-        color = "img/apps/notes.png",
-        tooltipText = "Notes",
-        job = false,
-        slot = 15,
-        blockedjobs = {},
-        Alerts = 0
-    },
-    [16] = {
-        custom = false,
         app = "settings",
         color = "img/apps/settings.png",
         tooltipText = "Settings",
         job = false,
         blockedjobs = {},
-        slot = 16,
+        slot = 15,
         Alerts = 0
     },
-    [17] = {
+    [16] = {
         custom = false,
         app = "business",
         color = "img/apps/business.png",
         tooltipText = "Business",
         job = false,
-        slot = 17,
+        slot = 16,
         blockedjobs = {},
         Alerts = 0
     },
+    --[[ [17] = {
+        custom = false,
+        app = "tips",
+        color = "img/apps/tips.png",
+        tooltipText = "Tips",
+        job = false,
+        slot = 17,
+        blockedjobs = {},
+        Alerts = 1
+    }, ]]
 
     -- Temple for custom app!
     -- Check in docuementation for more info.
@@ -248,13 +248,6 @@ Config.PhoneApplications = {
 
 Config.StoreAppToday = {
     {
-        header = 'TIKTOK',
-        head = 'Discover, watch and experience!',
-        image = 'https://i.imgur.com/nHoGMo4.jpeg',
-        footer = 'TikTok is a global short video community.',
-        textcolor = 'white'
-    },
-    {
         header = 'NEW VERSION!',
         head = 'Enjoy iQS 2.0 and its beautiful design',
         image = 'https://i.imgur.com/uPLQMVZ.png',
@@ -268,14 +261,14 @@ Config.StoreApps = {
     ["instagram"] = {
         custom = false, -- Is custom app?
         app = "instagram", -- App label.
-        color = "img/apps/instagram.png", -- App visual image.
-        tooltipText = "Instagram", -- Visual app name.
+        color = "img/apps/instagraph.png", -- App visual image.
+        tooltipText = "Instagraph", -- Visual app name.
         tooltipPos = "top", -- Ignore.
         job = false, -- If you want this app to work only with jobs, put them inside ' '.
         blockedjobs = {}, -- If you want this app to crash with jobs, put them inside {}.
         slot = 18, -- Slot where the app will be installed.
         Alerts = 0, -- Ignore.
-        creator = "Instagram, Inc.​",
+        creator = "Instagraph, Inc.​",
         password = false,
         isGame = false,
         description = "Free - Offers In-App Purchases.",
@@ -284,10 +277,10 @@ Config.StoreApps = {
         age = "16+",
         extraDescription = {
             {
-                header = "INSTAGRAM",
+                header = "INSTAGRAPH",
                 head = "Enjoy with your friends!",
-                image = "https://i.imgur.com/nhyfbJs.png",
-                footer = "Bringing you closer to the people and things you love. — Instagram from Facebook",
+                image = "https://img.freepik.com/premium-photo/group-diverse-friends-taking-selfie-beach_53876-91925.jpg?w=2000",
+                footer = "Bringing you closer to the people and things you love!",
                 textcolor = 'white'
             }
         }
@@ -322,13 +315,13 @@ Config.StoreApps = {
     ["whatsapp"] = {
         custom = false,
         app = "whatsapp",
-        color = "img/apps/whatsapp.png",
-        tooltipText = "WhatsApp",
+        color = "img/apps/chitchat.png",
+        tooltipText = "ChitChat",
         tooltipPos = "top",
         job = false,
         blockedjobs = {},
         slot = 20,
-        creator = "WhatsApp Inc.",
+        creator = "ChitChat Inc.",
         Alerts = 0,
         password = false,
         isGame = false,
@@ -338,10 +331,10 @@ Config.StoreApps = {
         age = "16+",
         extraDescription = {
             {
-                header = "WHATSAPP",
+                header = "CHITCHAT",
                 head = "#3 in Social Networking",
-                image = "https://www.cronista.com/files/image/336/336154/60cb8a40b2548.jpg",
-                footer = "WhatsApp from Facebook is a FREE messaging and video calling app.",
+                image = "https://img.freepik.com/premium-photo/happy-indian-guy-using-mobile-phone-blue-studio-background_116547-20423.jpg?w=360",
+                footer = "ChitChat from Facebook is a FREE messaging and video calling app.",
                 textcolor = 'white'
             }
         }
@@ -349,13 +342,13 @@ Config.StoreApps = {
     ["twitter"] = {
         custom = false,
         app = "twitter",
-        color = "img/apps/twitter.png",
-        tooltipText = "Twitter",
+        color = "img/apps/tweedle.png",
+        tooltipText = "Tweedle",
         tooltipPos = "top",
         job = false,
         blockedjobs = {},
         slot = 21,
-        creator = "Twitter, Inc.",
+        creator = "Tweedle, Inc.",
         Alerts = 0,
         password = false,
         isGame = false,
@@ -365,9 +358,9 @@ Config.StoreApps = {
         age = "17+",
         extraDescription = {
             {
-                header = "TWITTER",
+                header = "TWEEDLE",
                 head = "Are you ready to Tweet?",
-                image = "https://d500.epimg.net/cincodias/imagenes/2022/01/07/gadgets/1641568079_017034_1641569592_noticia_normal.jpg",
+                image = "https://heraldodemexico.com.mx/u/fotografias/m/2022/12/12/f425x230-634931_648913_0.png",
                 footer = "Expand your social network and stay updated on whats trending now.",
                 textcolor = 'white'
             }
@@ -403,13 +396,13 @@ Config.StoreApps = {
     ["tinder"] = {
         custom = false,
         app = "tinder",
-        color = "img/apps/tinder.png",
-        tooltipText = "Tinder",
+        color = "img/apps/finder.png",
+        tooltipText = "Finder",
         tooltipPos = "top",
         job = false,
         blockedjobs = {},
         slot = 23,
-        creator = "Tinder Inc.​",
+        creator = "Finder Inc.​",
         Alerts = 0,
         password = false,
         isGame = false,
@@ -419,10 +412,10 @@ Config.StoreApps = {
         age = "16+",
         extraDescription = {
             {
-                header = "TINDER",
+                header = "FINDER",
                 head = "With 30 billion matches to date!",
-                image = "https://d500.epimg.net/cincodias/imagenes/2020/01/23/lifestyle/1579788462_071828_1579788504_noticia_normal.jpg",
-                footer = "Tinder is the most popular app in the world to meet new people.",
+                image = "https://www.lavanguardia.com/files/og_thumbnail/uploads/2018/07/10/5fa43bdde7073.jpeg",
+                footer = "Finder is the most popular app in the world to meet new people.",
                 textcolor = 'white'
             }
         }
@@ -430,13 +423,13 @@ Config.StoreApps = {
     ["youtube"] = {
         custom = false,
         app = "youtube",
-        color = "img/apps/youtube.png",
-        tooltipText = "YouTube",
+        color = "img/apps/youlink.png",
+        tooltipText = "YouLink",
         tooltipPos = "top",
         job = false,
         blockedjobs = {},
         slot = 24,
-        creator = "Google LLC.​",
+        creator = "YouLink LLC.​",
         Alerts = 0,
         password = false,
         isGame = false,
@@ -446,9 +439,9 @@ Config.StoreApps = {
         age = "17+",
         extraDescription = {
             {
-                header = "YOUTUBE",
+                header = "YOULINK",
                 head = "Your favorite videos and creators.",
-                image = "https://f.hellowork.com/blogdumoderateur/2021/05/youtube-mobile-pc.jpg",
+                image = "https://us.123rf.com/450wm/ufabizphoto/ufabizphoto1808/ufabizphoto180800224/105916085-mesa-de-trabajo-del-fot%C3%B3grafo.jpg?ver=6",
                 footer = "Discover a large number of videos and content creators!",
                 textcolor = 'white'
             }
@@ -457,13 +450,13 @@ Config.StoreApps = {
     ["uber"] = {
         custom = false,
         app = "uber",
-        color = "img/apps/uber.png",
-        tooltipText = "Uber Eats",
+        color = "img/apps/doorRun.png",
+        tooltipText = "doorRun",
         tooltipPos = "top",
         job = false,
         blockedjobs = {},
         slot = 25,
-        creator = "Uber Technologies, Inc.​",
+        creator = "doorRun Technologies, Inc.​",
         Alerts = 0,
         password = false,
         isGame = false,
@@ -473,9 +466,9 @@ Config.StoreApps = {
         age = "12+",
         extraDescription = {
             {
-                header = "UBER EATS",
+                header = "DOOR RUN",
                 head = "Find food delivery on your budget.",
-                image = "https://s03.s3c.es/imag/_v0/770x420/e/5/f/uber-eats.jpg",
+                image = "https://www.galgo.com/wp-content/uploads/2023/01/Ventajas-de-comprar-una-moto-para-delivery.webp",
                 footer = "Start working now, with a simple click!",
                 textcolor = 'white'
             }
@@ -508,33 +501,33 @@ Config.StoreApps = {
             }
         }
     },
-   --- ["state"] = {
-   ---     custom = false,
-   ---     app = "state",
-   ---     color = "img/apps/workspace.png",
-   ---     tooltipText = "State",
-   ---     tooltipPos = "top",
-   ---     job = false,
-   ---     blockedjobs = {},
-   ---     slot = 28,
-   ---     creator = "Los Santos Inc.​",
-   ---     Alerts = 0,
-   ---     password = false,
-   ---     isGame = false,
-   ---     description = "Contact Los Santos employees.",
-   ---     score = "4.25", -- Options: 0, 0.25, 0.5, 0.75, 1, 1.25, 1.50, 1.75, 2, 2.25, 2.50, 2.75, 3, 3.25, 3.50, 3.75, 4, 4.25, 4.50, 4.75, 5
-   ---     rating = " 12M Ratings",
-   ---     age = "4+",
-   ---     extraDescription = {
-   ---         {
-   ---             header = "STATE",
-   ---             head = "Police, ambulances and much more here",
-   ---             image = "https://cdn.oldskull.net/wp-content/uploads/2014/12/los-santos-ciudad-de-gta.jpg",
-   ---             footer = "Contact them directly now.",
-   ---             textcolor = 'white'
-   ---         }
-   ---     }
-   --- },
+    --["state"] = {
+    --    custom = false,
+    --    app = "state",
+    --    color = "img/apps/workspace.png",
+    --    tooltipText = "State",
+    --    tooltipPos = "top",
+    --    job = false,
+    --    blockedjobs = {},
+    --    slot = 28,
+    --    creator = "Los Santos Inc.​",
+    --    Alerts = 0,
+    --    password = false,
+    --    isGame = false,
+    --    description = "Contact Los Santos employees.",
+    --    score = "4.25", -- Options: 0, 0.25, 0.5, 0.75, 1, 1.25, 1.50, 1.75, 2, 2.25, 2.50, 2.75, 3, 3.25, 3.50, 3.75, 4, 4.25, 4.50, 4.75, 5
+    --    rating = " 12M Ratings",
+    --    age = "4+",
+    --    extraDescription = {
+    --        {
+    --            header = "STATE",
+    --            head = "Police, ambulances and much more here",
+    --            image = "https://cdn.oldskull.net/wp-content/uploads/2014/12/los-santos-ciudad-de-gta.jpg",
+    --            footer = "Contact them directly now.",
+    --            textcolor = 'white'
+    --        }
+    --    }
+    --},
     ["meos"] = {
         custom = false,
         app = "meos",
@@ -589,33 +582,33 @@ Config.StoreApps = {
             }
         }
     },
-   ---["spotify"] = {
-   ---    custom = false,
-   ---    app = "spotify",
-   ---    color = "img/apps/spotify.png",
-   ---    tooltipText = "Spotify",
-   ---    tooltipPos = "top",
-   ---    job = false,
-   ---    blockedjobs = {},
-   ---    slot = 31,
-   ---    creator = "Spotify AB.​",
-   ---    Alerts = 0,
-   ---    password = false,
-   ---    isGame = false,
-   ---    description = "Play your music!",
-   ---    score = "4.75", -- Options: 0, 0.25, 0.5, 0.75, 1, 1.25, 1.50, 1.75, 2, 2.25, 2.50, 2.75, 3, 3.25, 3.50, 3.75, 4, 4.25, 4.50, 4.75, 5
-   ---    rating = "25M Ratings",
-   ---    age = "12+",
-   ---    extraDescription = {
-   ---        {
-   ---            header = "SPOTIFY",
-   ---            head = 'Play your music"',
-   ---            image = "https://indiehoy.com/wp-content/uploads/2021/04/spotify-logo.jpg",
-   ---            footer = "Listen to some tunes on spotify radio.",
-   ---            textcolor = 'white'
-   ---        }
-   ---    }
-   ---},
+   --["spotify"] = {
+   --    custom = false,
+   --    app = "spotify",
+   --    color = "img/apps/soundfy.png",
+   --    tooltipText = "Soundfy",
+   --    tooltipPos = "top",
+   --    job = false,
+   --    blockedjobs = {},
+   --    slot = 31,
+   --    creator = "Soundfy AB.​",
+   --    Alerts = 0,
+   --    password = false,
+   --    isGame = false,
+   --    description = "Play your music!",
+   --    score = "4.75", -- Options: 0, 0.25, 0.5, 0.75, 1, 1.25, 1.50, 1.75, 2, 2.25, 2.50, 2.75, 3, 3.25, 3.50, 3.75, 4, 4.25, 4.50, 4.75, 5
+   --    rating = "25M Ratings",
+   --    age = "12+",
+   --    extraDescription = {
+   --        {
+   --            header = "SOUNDFY",
+   --            head = 'Play your music"',
+   --            image = "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+   --            footer = "Listen to some tunes on Soundfy radio.",
+   --            textcolor = 'white'
+   --        }
+   --    }
+   --},
     ["flappy"] = {
         custom = false,
         app = "flappy",
@@ -700,13 +693,13 @@ Config.StoreApps = {
     ["uberDriver"] = {
         custom = false,
         app = "uberDriver",
-        color = "img/apps/uberDriver.png",
-        tooltipText = "Uber",
+        color = "img/apps/drivenow.png",
+        tooltipText = "Drive Now",
         tooltipPos = "top",
         job = false,
         blockedjobs = {},
         slot = 36,
-        creator = "Uber Technologies, Inc.",
+        creator = "Drive Now, Inc.",
         Alerts = 0,
         password = false,
         isGame = false,
@@ -716,10 +709,10 @@ Config.StoreApps = {
         age = "16+",
         extraDescription = {
             {
-                header = "Uber",
+                header = "DRIVE NOW",
                 head = "Request trips whenever you want",
-                image = "https://www.autofacil.es/wp-content/uploads/2021/05/coche_uber.jpg",
-                footer = "In Uber we commit ourselves to your security.",
+                image = "https://www.acunor.es/wp-content/uploads/elementor/thumbs/shutterstock_2045581154FILEminimizer-pu611nm0zd2qyrj4p5mdneydbdm3yslsn9p6mk7mcw.jpg",
+                footer = "In Drive Now we commit ourselves to your security.",
                 textcolor = 'white'
             }
         }
@@ -727,13 +720,13 @@ Config.StoreApps = {
     ["weazel"] = {
         custom = false,
         app = "weazel",
-        color = "img/apps/weazel.png",
+        color = "img/apps/news.png",
         tooltipText = "News",
         tooltipPos = "top",
         job = false,
         blockedjobs = {},
         slot = 37,
-        creator = "iOS Basics",
+        creator = "iQS Basics",
         Alerts = 0,
         password = false,
         isGame = false,
@@ -754,25 +747,25 @@ Config.StoreApps = {
     ["tiktok"] = {
         custom = false,
         app = "tiktok",
-        color = "img/apps/tiktok.png",
-        tooltipText = "Tiktok",
+        color = "img/apps/ticktock.png",
+        tooltipText = "TickTock",
         tooltipPos = "top",
         job = false,
         blockedjobs = {},
         slot = 38,
-        creator = "TikTok Pte. Ltd.",
+        creator = "TickTock Pte. Ltd.",
         Alerts = 0,
         password = false,
         isGame = false,
-        description = "TikTok is a global short video community.",
+        description = "TickTock is a global short video community.",
         score = "5", -- Options: 0, 0.25, 0.5, 0.75, 1, 1.25, 1.50, 1.75, 2, 2.25, 2.50, 2.75, 3, 3.25, 3.50, 3.75, 4, 4.25, 4.50, 4.75, 5
         rating = "900M Ratings",
         age = "9+",
         extraDescription = {
             {
-                header = "TikTok",
-                head = "TikTok is a global short video community.",
-                image = "https://images.squarespace-cdn.com/content/v1/5bdb42a389c17245c5eb0aea/1606778098553-58GZBC84IKL7Z38WV0KC/TikTok-Case-Study-Header.gif?format=2500w",
+                header = "TickTock",
+                head = "TickTock is a global short video community.",
+                image = "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTc0MzA4OTQ1ODc0NjU5MTk2/soul-line-dances.jpg",
                 footer = "With this app you can discover, create and edit incredible videos",
                 textcolor = 'white'
             }
@@ -945,7 +938,7 @@ Config.StoreApps = {
         }
     },
 
-     ["sellix"] = { -- Sellix DLC.
+    --[[ ["sellix"] = { -- Sellix DLC.
         custom = false,
         app = "sellix",
         color = "img/apps/sellix.png",
@@ -971,7 +964,7 @@ Config.StoreApps = {
                 textcolor = 'black'
             }
         }
-    },
+    }, ]]
 
      ["crypto"] = {
         custom = false,
@@ -999,5 +992,5 @@ Config.StoreApps = {
                 textcolor = 'white'
             }
         }
-    },
+    }, 
 }

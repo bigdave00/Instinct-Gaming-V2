@@ -6,9 +6,8 @@
 // ╚██████╔╝███████╗██║░╚███║███████╗██║░░██║██║░░██║███████╗  ╚█████╔╝██████╔╝
 // ░╚═════╝░╚══════╝╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝  ░╚════╝░╚═════╝░
 
-Config = []
+let Config = []
 
-Config.PreloadScreen = false // Loading screen the first time you open the phone, it helps performance as it is a preload.
 Config.LockscreenFirstDay = false // if true = Saturday, 22 October, if false = Saturday, October 22 (In app store too).
 
 // Only run this if your country has blocks with YouTube (this disables any sound system, therefore removes spotify or youtube app)
@@ -33,11 +32,11 @@ Config.SafariFavorite_4 = "https://www.quasar-store.com/"
 
 // Images routes
 
- // Garage APP
+// Garage APP
 Config.GarageImages = './img/garage/' // Config.GarageImgaes = 'nui://qs-images/html/img/garage_jpg/'
 Config.GarageExtension = '.jpg'
 
- // BlackMarket
+// BlackMarket
 Config.DarkWebImages = 'img/darkweb_items/' // Config.DarkWebImages = 'nui://qs-images/html/img/BlackMarket/'
 Config.DarkWebExtension = '.png'
 
@@ -46,7 +45,7 @@ Config.DarkWebExtension = '.png'
 const VideosArray = [
     {
         url: 'https://www.youtube.com/watch?v=DZiaXEIQgkE',
-    }, 
+    },
     {
         url: 'https://www.youtube.com/watch?v=2eaIxuJxxm8'
     },
@@ -79,32 +78,32 @@ const SpotifyArray = [{ // Don't touch this
     description: 'The best pop music in English of 2022 for u!',
     thumbnail: 'https://i1.sndcdn.com/artworks-i9YJYo6ag1fpym6b-tD6LVA-t500x500.jpg',
     playlists: [{
-            url: "https://www.youtube.com/watch?v=CboIIxKd12Q",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=rBG-z-vtZfI",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=Ia6NYheR8Eo",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=1qjuKXw0tC4",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=M7uof6Im6Do",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=oRUZ5AqD-Gc",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=xN5SarTkWd8",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=tg4EhjKKKco",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=C9sg8MBg-uM",
-        },
+        url: "https://www.youtube.com/watch?v=CboIIxKd12Q",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=rBG-z-vtZfI",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=Ia6NYheR8Eo",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=1qjuKXw0tC4",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=M7uof6Im6Do",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=oRUZ5AqD-Gc",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=xN5SarTkWd8",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=tg4EhjKKKco",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=C9sg8MBg-uM",
+    },
     ]
 },
 {
@@ -112,29 +111,29 @@ const SpotifyArray = [{ // Don't touch this
     description: 'The best trap music in English of 2022 for u!',
     thumbnail: 'https://assets1.sharedplaylists.cdn.crowds.dk/playlists/03/09/34/sz300x300_trap-and-bass-trending-now-magic-music-c36184d472.jpeg',
     playlists: [{
-            url: "https://www.youtube.com/watch?v=yvCYWPe8-bM"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=IcJgCuWmhlM"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=cErCZLTrLQU"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=vLZ67WT84oA"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=75k6zia27Hs"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=uemkb0PpW3c"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=rXoTj6mHHaQ"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=UJIQWLxN4j0"
-        },
+        url: "https://www.youtube.com/watch?v=yvCYWPe8-bM"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=IcJgCuWmhlM"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=cErCZLTrLQU"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=vLZ67WT84oA"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=75k6zia27Hs"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=uemkb0PpW3c"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=rXoTj6mHHaQ"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=UJIQWLxN4j0"
+    },
     ]
 },
 {
@@ -142,35 +141,35 @@ const SpotifyArray = [{ // Don't touch this
     description: 'The best tech music in English of 2022 for u!',
     thumbnail: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720__340.jpg',
     playlists: [{
-            url: "https://www.youtube.com/watch?v=Tr_7Iu3xVvA",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=V2E2aF1qQ4E"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=m-gLFcfPCts"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=HujNQRTxrxk"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=JOzAentQ3d8"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=myU2NXvlvVU"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=Y2Lu0o3S2sU"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=vE4h9Z_tLYk"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=nNqCvnDTSDo"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=UJz6nhAPIR8"
-        },
+        url: "https://www.youtube.com/watch?v=Tr_7Iu3xVvA",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=V2E2aF1qQ4E"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=m-gLFcfPCts"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=HujNQRTxrxk"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=JOzAentQ3d8"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=myU2NXvlvVU"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=Y2Lu0o3S2sU"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=vE4h9Z_tLYk"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=nNqCvnDTSDo"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=UJz6nhAPIR8"
+    },
     ]
 },
 {
@@ -178,29 +177,29 @@ const SpotifyArray = [{ // Don't touch this
     description: 'The best synth music in English of 2022 for u!',
     thumbnail: 'https://i.scdn.co/image/ab67706c0000bebb0d93adc83a4e3bc895242d37',
     playlists: [{
-            url: "https://www.youtube.com/watch?v=DxPg6YQIqWE",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=G3HT7JLcUhs"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=Gv0OSpS2ABU"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=HMojqnyB_zs"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=rKUXexTmqAQ"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=3lF8Op_3YtU"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=nQ1GVX66P-A"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=vt2JwpP3A3g"
-        },
+        url: "https://www.youtube.com/watch?v=DxPg6YQIqWE",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=G3HT7JLcUhs"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=Gv0OSpS2ABU"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=HMojqnyB_zs"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=rKUXexTmqAQ"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=3lF8Op_3YtU"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=nQ1GVX66P-A"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=vt2JwpP3A3g"
+    },
     ]
 },
 {
@@ -208,29 +207,29 @@ const SpotifyArray = [{ // Don't touch this
     description: 'The best dubs music in English of 2022 for u!',
     thumbnail: 'https://i.scdn.co/image/ab67706c0000bebb11a2fa646c9d882e2f52579e',
     playlists: [{
-            url: "https://www.youtube.com/watch?v=49mZuZ7De58",
-        },
-        {
-            url: "https://www.youtube.com/watch?v=dko41CQGgbE"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=zfyklFvstck"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=U0Qi6Zaxr8A"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=6ZIyvPr1lvw"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=omONxdFuntg"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=QSJljnPhiHI"
-        },
-        {
-            url: "https://www.youtube.com/watch?v=KZ_eXk5t0r0"
-        },
+        url: "https://www.youtube.com/watch?v=49mZuZ7De58",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=dko41CQGgbE"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=zfyklFvstck"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=U0Qi6Zaxr8A"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=6ZIyvPr1lvw"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=omONxdFuntg"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=QSJljnPhiHI"
+    },
+    {
+        url: "https://www.youtube.com/watch?v=KZ_eXk5t0r0"
+    },
     ]
 },
 ]

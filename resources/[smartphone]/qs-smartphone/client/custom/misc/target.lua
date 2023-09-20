@@ -26,7 +26,7 @@ function OpenTechMenu(crafter)
         }
          exports.ox_target:addLocalEntity(crafter, options)
     elseif Config.TargetScript == 'qb' then 
-        exports['ox_target']:AddTargetEntity(crafter, { 
+        exports['qb-target']:AddTargetEntity(crafter, { 
             options = {
                 {
                     num = 1,
@@ -69,7 +69,7 @@ function OpenBoothMenu()
         }
         exports.ox_target:addModel(Config.listBooth, options) 
     elseif Config.TargetScript == 'qb' then  
-        exports['ox_target']:AddTargetModel(Config.listBooth, { 
+        exports['qb-target']:AddTargetModel(Config.listBooth, { 
             options = {
                 {
                     num = 1,

@@ -1,7 +1,7 @@
 Config = Config or {}
 Locales = Locales or {}
 
---[[ 
+--[[
     Welcome to the qs-smartphone configuration!
     To start configuring your new asset, please read carefully
     each step in the documentation that we will attach at the end of this message.
@@ -26,33 +26,33 @@ Locales = Locales or {}
 --╚██████╔╝███████╗██║░╚███║███████╗██║░░██║██║░░██║███████╗
 --░╚═════╝░╚══════╝╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝
 
-Config.Language = "en" -- Set your lang in locales folder
-Config.Framework = "qb" -- 'esx' or 'qb'
+Config.Language = 'en'   -- Set your lang in locales folder
+Config.Framework = 'qb' -- 'esx' or 'qb'
 
---[[                                    
+--[[
     'old' (Esx 1.1).
     'new' (Esx 1.2, v1 final, legacy or extendedmode).
 ]]
 
-Config.esxVersion = 'new' 
+Config.esxVersion = 'new'
 
--- SET IN TRUE IF YOU USE qb-inventory
+-- SET IN TRUE IF YOU USE ox_inventory
 Config.ox_inventory = false
 
 -- Leave it as default if you dont know what you are doing
-Config.ScreenshotBasic = 'screenshot-basic' 
-Config.RepeatTimeout = 2000 -- Don't touch here
-Config.CallRepeats = 999999 -- Don't touch here
-Config.WhatsappMaxMessages = 50 -- Recommended 50, More than 50 poor performance 
+Config.ScreenshotBasic = 'screenshot-basic'
+Config.RepeatTimeout = 2000            -- Don't touch here
+Config.CallRepeats = 999999            -- Don't touch here
+Config.WhatsappMaxMessages = 50        -- Recommended 50, More than 50 poor performance
 Config.DeleteStoriesAndNotifies = true -- Do you want the notifications and stories to be deleted after a certain time?
-Config.MaxApp = 40 -- Dont touch.
-Config.RequiredPhone = true -- Do you need the item to be able to use your smartphone
-Config.DisableMovement = false -- Block all the movement while you are using the smartphone
+Config.MaxApp = 40                     -- Dont touch.
+Config.RequiredPhone = true            -- Do you need the item to be able to use your smartphone
+Config.DisableMovement = false         -- Block all the movement while you are using the smartphone
 
 Config.okokTextUI = {
-    enable = false, -- If you use false, by default there will be DrawText3D
+    enable = false,       -- If you use false, by default there will be DrawText3D
     colour = 'darkgreen', -- Change the color of your TextUI here
-    position = 'left', -- Change the position of the TextUI here
+    position = 'left',    -- Change the position of the TextUI here
 }
 
 -- Choose the default ringtones for your players!
@@ -61,21 +61,21 @@ Config.setVolumeMax = 0.2 -- Volume
 Config.Ringtones = {
     defaultRingtone = 'https://www.youtube.com/watch?v=HRtC2sDiKqM',
     ringtones = {
-        { url = 'https://www.youtube.com/watch?v=AoWVtJQBgYs', name = 'Cradles'},
-        { url = 'https://www.youtube.com/watch?v=iLBBRuVDOo4', name = 'Astronomia'},
-        { url = 'https://www.youtube.com/watch?v=t6-cCh9bTG4', name = 'Oh no'},
-        { url = 'https://www.youtube.com/watch?v=Z6dqIYKIBSU', name = 'Funkytown'},
-        { url = 'https://www.youtube.com/watch?v=cR2XilcGYOo', name = 'Bangarang'},
-        { url = 'https://www.youtube.com/watch?v=OT216Rrg0jY', name = 'Life Goes On'},
+        { url = 'https://www.youtube.com/watch?v=AoWVtJQBgYs', name = 'Cradles' },
+        { url = 'https://www.youtube.com/watch?v=iLBBRuVDOo4', name = 'Astronomia' },
+        { url = 'https://www.youtube.com/watch?v=t6-cCh9bTG4', name = 'Oh no' },
+        { url = 'https://www.youtube.com/watch?v=Z6dqIYKIBSU', name = 'Funkytown' },
+        { url = 'https://www.youtube.com/watch?v=cR2XilcGYOo', name = 'Bangarang' },
+        { url = 'https://www.youtube.com/watch?v=OT216Rrg0jY', name = 'Life Goes On' },
     }
 }
 
---[[ 
+--[[
     Be careful editing this because every phone need to have a frame, prop and wallpaper sets to work properly.
     Name of the items with the frame.
 ]]
 
-Config.Phones = {                          
+Config.Phones = {
     ['classic_phone'] = 'classic_frame.png', -- Never remove or delete this from the first position.
     ['black_phone'] = 'black_frame.png',
     ['blue_phone'] = 'blue_frame.png',
@@ -103,7 +103,7 @@ Config.PhonesProps = {
 }
 
 -- Name of the item with the default wallpaper.
-Config.PhonesCustomWallpaper = { 
+Config.PhonesCustomWallpaper = {
     ['classic_frame.png'] = 'b5', -- Never remove or delete this from the first position.
     ['black_frame.png'] = 'b4',
     ['blue_frame.png'] = 'b4',
@@ -122,7 +122,7 @@ Config.PhonesCustomWallpaper = {
 --░░╚██╔╝░░╚█████╔╝██║╚█████╔╝███████╗
 --░░░╚═╝░░░░╚════╝░╚═╝░╚════╝░╚══════╝
 
---[[             
+--[[
     It is very important that you choose the name of your script and what voice script you use on your server.
     If your voice system does not appear here, you can configure in config_calls_client and config_calls_server
 
@@ -135,7 +135,7 @@ Config.PhonesCustomWallpaper = {
 Config.Voice = 'pma'
 
 -- That is only to verify that your script is started, it is necessary that you put the name of the folder of your script
-Config.VoiceScriptName = 'pma-voice' 
+Config.VoiceScriptName = 'pma-voice'
 
 --██████╗░░█████╗░███╗░░██╗██╗░░██╗██╗███╗░░██╗░██████╗░
 --██╔══██╗██╔══██╗████╗░██║██║░██╔╝██║████╗░██║██╔════╝░
@@ -144,7 +144,7 @@ Config.VoiceScriptName = 'pma-voice'
 --██████╦╝██║░░██║██║░╚███║██║░╚██╗██║██║░╚███║╚██████╔╝
 --╚═════╝░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░
 
---[[ 
+--[[
     YOU CAN ONLY CHOOSE ONE
 
     'id'            to use the ID of the player.
@@ -161,7 +161,7 @@ Config.BankSystem = 'id'
 --██████╦╝██║███████╗███████╗██║██║░╚███║╚██████╔╝
 --╚═════╝░╚═╝╚══════╝╚══════╝╚═╝╚═╝░░╚══╝░╚═════╝░
 
---[[ 
+--[[
     'false'            if you are not using one
     'default'          Works with default QBCore and ESX system
     'okokBilling'      Works on ESX (QBCore compatible but dont have code) https://okok.tebex.io/package/5246431
@@ -169,9 +169,9 @@ Config.BankSystem = 'id'
     'jim-payments'     Free QBCore billing (https://github.com/jimathy/jim-payments)
     'billing_ui'       Works on ESX and QBCore (https://jaksam1074-fivem-scripts.tebex.io/package/5369991)
 ]]
-Config.billingSystem = 'jim-payments'
---[[ 
-    ESX                     = 'esx_billing:payBill' 
+Config.billingSystem = 'im-payments'
+--[[
+    ESX                     = 'esx_billing:payBill'
     okokBilling             = 'okokBilling:PayInvoice'
     rcoreBilling            = 'rcore_billing'
     qbcore or jim-payments  = 'nothing'
@@ -188,22 +188,22 @@ Config.billingpayBillEvent = 'esx_billing:payBill'
 --╚██████╔╝██║░░██║██║░░██║██║░░██║╚██████╔╝███████╗██████╔╝
 --░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░╚═════╝░╚══════╝╚═════╝░
 
-Config.AvailableValet = true -- Enable or disable the Valet button from here
-Config.ValetNPC = true -- An NPC comes and leaves it next to you. If it is false it appears near you without NPC
+Config.AvailableValet = true   -- Enable or disable the Valet button from here
+Config.ValetNPC = true         -- An NPC comes and leaves it next to you. If it is false it appears near you without NPC
 Config.ValetKeysBefore = true -- Does he give you the keys when you call the car, or when the car is delivered to you?
-Config.ValetPrice = 150 -- Price to bring your vehicle to you
+Config.ValetPrice = 150       -- Price to bring your vehicle to you
 
 ---@param This option is for impound system
-    -- 'default'
-    -- 'cd_garage'
-    -- 'loaf_garage'
-    -- 'qb-garages'
-    -- 'esx_garages'
-    -- 'okokGarage'
-    -- 'jg-advanced-garages'
-    -- 'rcore_garages'
-    -- 'qs-garages
-    -- 'qs-advancedgarages'
+-- 'default'
+-- 'cd_garage'
+-- 'loaf_garage'
+-- 'qb-garages'
+-- 'esx_garages'
+-- 'okokGarage'
+-- 'jg-advanced-garages'
+-- 'rcore_garages'
+-- 'qs-garages'
+-- 'qs-advancedgarages'
 
 Config.GarageScript = 'cd_garage'
 
@@ -219,17 +219,13 @@ Config.GarageScript = 'cd_garage'
 ---@param plate Return the plate of vehicle
 ---@param model Give the model IsNamedRendertargetLinked
 function VehicleKeys(vehicle, hash, plate, model)
-    
-    if GetResourceState('qs-vehiclekeys') == 'started' then -- QS VEHICLEKEYS
+    if GetResourceState('qs-vehiclekeys') == 'started' then     -- QS VEHICLEKEYS
         exports['qs-vehiclekeys']:GiveKeys(plate, model)
-        
     elseif GetResourceState('qb-vehiclekeys') == 'started' then -- QB VEHICLEKEYS
-        TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(vehicle))
-
-    elseif GetResourceState('vehicles_keys') == 'started' then -- JAKSAM VEHICLEKEYS
-        TriggerServerEvent("vehicles_keys:selfGiveVehicleKeys", plate)
-
-    else 
+        TriggerEvent('vehiclekeys:client:SetOwner', QBCore.Functions.GetPlate(vehicle))
+    elseif GetResourceState('vehicles_keys') == 'started' then  -- JAKSAM VEHICLEKEYS
+        TriggerServerEvent('vehicles_keys:selfGiveVehicleKeys', plate)
+    else
         print('^4[QS Smartphone] ^3[Debug]^0: If you have any vehiclekeys remember to add your vehiclekeys event in config.lua line 1249...') -- You can remove this.
     end
 end
@@ -240,11 +236,11 @@ end
 --░░████╔═████║░██╔══╝░░░░░██║░░░  ██╔═══╝░██╔══██║██║░░██║██║╚████║██╔══╝░░
 --░░╚██╔╝░╚██╔╝░███████╗░░░██║░░░  ██║░░░░░██║░░██║╚█████╔╝██║░╚███║███████╗
 --░░░╚═╝░░░╚═╝░░╚══════╝░░░╚═╝░░░  ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝╚══════╝
-                                                
-Config.WetPhone = true -- Being in the water, the phone will break and will give you the same item but with the prefix "wet_".
-Config.RepairWetPhone = 'phone_module' -- With said item, we can repair the wet phone.
-Config.RepairWetPhoneNpc = true -- Be able to repair your phone with the NPC Telephone Technician.
-Config.RepairWetPhoneNpcPrice = 250 -- Price to repair a wet phone in the Technician.
+
+Config.WetPhone = true                  -- Being in the water, the phone will break and will give you the same item but with the prefix "wet_".
+Config.RepairWetPhone = 'phone_module'   -- With said item, we can repair the wet phone.
+Config.RepairWetPhoneNpc = true          -- Be able to repair your phone with the NPC Telephone Technician.
+Config.RepairWetPhoneNpcPrice = 100      -- Price to repair a wet phone in the Technician.
 Config.RepairWetPhoneNpcAccount = 'bank' -- Choose here the account to pay the technician for repairing the wet phone.
 
 
@@ -256,7 +252,7 @@ Config.RepairWetPhoneNpcAccount = 'bank' -- Choose here the account to pay the t
 --░╚════╝░░╚════╝░╚═════╝░╚═════╝░  ╚═╝░░╚═╝╚═╝░░░░░╚═╝░░░░░╚═════╝░
 
 -- These works will have permission to publish in the News app.
-Config.WeazelJob = { 
+Config.WeazelJob = {
     'weazelnews',
     'police',
     'weazel',
@@ -266,29 +262,25 @@ Config.WeazelJob = {
 Config.PoliceAppJobs = {
     [1] = 'police',
     -- [2] = 'sheriff',
-} 
+}
 
 --- @param job 'Name of job who will receive the message'
 --- @param name 'Visible label'
 --- @param img  'Image of contact'
 Config.Jobs = {
-    { job = 'police',    name = 'MET police' , img = './img/apps/police.png'   },
-    { job = 'ambulance', name = 'NHS',      img = './img/apps/ambulance.png'},
-    { job = 'bennys',  name = 'Bennys Mechanics', img = './img/apps/mechanic.png' },
-    { job = 'aa',  name = 'AA Mechanics', img = './img/apps/mechanic.png' },
-    { job = 'eastcustom',  name = 'East Customs', img = './img/apps/mechanic.png' },
+    { job = 'police',    name = 'Met Police',  img = './img/apps/police.png' },
+    { job = 'ambulance', name = 'NHS',      img = './img/apps/ambulance.png' },
+    { job = 'mechanic',  name = 'IG Mechanics', img = './img/apps/mechanic.png' },
 }
 
---[[ 
+--[[
     IMPORTANT these are commands to receive or not receive messages NO MESSAGE IS SENT WITH THESE.
     to put it another way it is to enter and exit of duty.
 ]]
 Config.jobCommands = { -- Just enter a number here, this is the number that will appear when you call.
-    ["police"] = "999",
-    ["ambulance"] = "111",
-    ["aa"] = "114",
-    ["bennys"] = "115",
-    ["eastcustom"] = "116",
+    ['police'] = '112',
+    ['ambulance'] = '113',
+    ['mechanic'] = '114',
 }
 
 --██████╗░██╗░░░██╗░██████╗██╗███╗░░██╗███████╗░██████╗░██████╗
@@ -388,10 +380,10 @@ Config.JobsInPhone = {
 -- ╚█████╔╝██║░╚███║██║╚█████╔╝██║░╚███║  ██║░░██║██║░░░░░██║░░░░░
 -- ░╚════╝░╚═╝░░╚══╝╚═╝░╚════╝░╚═╝░░╚══╝  ╚═╝░░╚═╝╚═╝░░░░░╚═╝░░░░░
 
-Config.WeaponsItems = true -- This will work for Onion Browser, weapons are items?
+Config.WeaponsItems = true         -- This will work for Onion Browser, weapons are items?
 Config.BlackMarketAccount = 'bank' -- Account with which you want to pay in Onion Browser.
 
---[[ 
+--[[
     Onion browser items!
     It is important that you follow the order of the numbers [1], [2], [3]...
 
@@ -401,8 +393,8 @@ Config.BlackMarketAccount = 'bank' -- Account with which you want to pay in Onio
     price    'Price of the product'
 ]]
 
-Config.Darkweb = { 
-    List = { 
+Config.Darkweb = {
+    List = {
         [1] = { item = 'electronickit',     label = 'Electronic Kit',       isItem = true, price = 30000},
         [2] = { item = 'trojanusb',     label = 'Trojan USB',       isItem = true, price = 15000},   
         -- [9] = { item = 'laptop', label = 'Hacker Laptop', isItem = true, price = 700}, -- If you use `Config.WeaponsItems = false` then you can choose if it's an item with `isItem = true`.
@@ -415,11 +407,11 @@ Config.Darkweb = {
 --██╔══██╗██║░░██║██║░░██║░░░██║░░░██╔══██║  ░╚═══██╗░░╚██╔╝░░░╚═══██╗░░░██║░░░██╔══╝░░██║╚██╔╝██║
 --██████╦╝╚█████╔╝╚█████╔╝░░░██║░░░██║░░██║  ██████╔╝░░░██║░░░██████╔╝░░░██║░░░███████╗██║░╚═╝░██║
 --╚═════╝░░╚════╝░░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝  ╚═════╝░░░░╚═╝░░░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░░░░╚═╝
-                 
+
 Config.EnableBooth = true -- Do you want to enable the phone booths?
 
 -- Configure here the props that will be phone booths.
-Config.Booth = { 
+Config.Booth = {
     [1158960338] = true, -- Hash of booths
     [1511539537] = true,
     [1281992692] = true,
@@ -442,11 +434,11 @@ Config.EnableBattery = true -- Do you want to enable the battery?
 Config.HousingCharge = true -- Phone charger inside the houses?
 
 -- Only load battery information when a player enters the server: playerLoaded, !! Don't restart the live resource because it will break. !!
-Config.BatteryPersistData = true -- Persist data on battery.json
+Config.BatteryPersistData = true   -- Persist data on battery.json
 Config.TimeSavePersistData = 20000 -- x 20 sec - less than this number is not recommended
 
-Config.PowerBank = 'powerbank' -- Item name?
-Config.RemoveItemPowerBank = true -- Do you want the powerbank to be removed once used?
+Config.PowerBank = 'powerbank'     -- Item name?
+Config.RemoveItemPowerBank = true  -- Do you want the powerbank to be removed once used?
 
 -- Usage /adminbattery id ammount
 Config.AdminCommand = true -- Recharge the batery for admins?
@@ -454,20 +446,19 @@ Config.AdminCommandName = 'adminbattery'
 Config.AdminCommandDescription = 'Recharge your battery like a elon musk'
 Config.AdminPermissions = 'admin'
 
---Customize your own marker or disable it. 
+--Customize your own marker or disable it.
 -- Remember that here is the charger marker inside your house too.
-Config.ChargerMarker = { 
+Config.ChargerMarker = {
     enable = true,
-    type = 2, 
-    scale = {x = 0.2, y = 0.2, z = 0.1}, 
-    colour = {r = 71, g = 181, b = 255, a = 120},
+    type = 2,
+    scale = { x = 0.2, y = 0.2, z = 0.1 },
+    colour = { r = 71, g = 181, b = 255, a = 120 },
     movement = 1 --Use 0 to disable movement.
 }
 
 Config.Battery = {
-    debug = false, -- If you use true, you will be able to see the log in F8 of your battery going down.
     default = 0.01, -- This is the rate at which the battery drains by default.
-    apps = { -- The following applications will make your battery go down faster.
+    apps = {        -- The following applications will make your battery go down faster.
         ['phone'] = 0.02,
         ['photos'] = 0.02,
         ['messages'] = 0.02,
@@ -522,7 +513,7 @@ Config.HouseChargeCoords = {
 }
 
 Config.DefaultChargeCoords = #Config.HouseChargeCoords -- Don't touch this please.
-Config.PowerbankSpeed = 1.0 -- Charging speed of the item `powerbank`.
+Config.PowerbankSpeed = 1.0                            -- Charging speed of the item `powerbank`.
 
 
 --░█████╗░░█████╗░███╗░░██╗███╗░░██╗███████╗░█████╗░████████╗██╗░█████╗░███╗░░██╗
@@ -532,10 +523,10 @@ Config.PowerbankSpeed = 1.0 -- Charging speed of the item `powerbank`.
 --╚█████╔╝╚█████╔╝██║░╚███║██║░╚███║███████╗╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║
 --░╚════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝
 
-Config.Signal = true -- If you want to enable this system, use true.
+Config.Signal = true      -- If you want to enable this system, use true.
 Config.visibleZone = false -- Leave this false whenever you are going to use the server, it is only for zone testing.
 
---[[ 
+--[[
     Mountains and zones blocked for low signal, here is the complete PolyZone.
     Within this PolyZone, you will not be able to use certain apps or receive calls.
 ]]
@@ -600,22 +591,22 @@ Config.Mountains = {
 --╚██████╔╝██████╦╝███████╗██║░░██║  ██████╔╝██║░░██║██║░░╚██╔╝░░███████╗██║░░██║
 --░╚═════╝░╚═════╝░╚══════╝╚═╝░░╚═╝  ╚═════╝░╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
 
-Config.Decimals = false -- Use decimal numbers?
-Config.UberMinimumMoney = 5000 -- Minimum money to enter service or to request a vehicle.
-Config.UberMaximumMoney = 8000 -- Maximum price per trip, you can not earn more than this for each trip.
+Config.Decimals = false           -- Use decimal numbers?
+Config.UberMinimumMoney = 5000    -- Minimum money to enter service or to request a vehicle.
+Config.UberMaximumMoney = 8000    -- Maximum price per trip, you can not earn more than this for each trip.
 Config.UberDriverAccount = 'bank' -- Remember that if you use QBCore, the account 'money' does not exist, it is 'cash'.
 
-Config.Classes = { -- You can ignore this setting, it will be executed in future updates.
-	[0] = 'COMPACT', -- Compacts
-	[1] = 'SEDAN', -- Sedans
-	[2] = 'SUV', -- SUVs
-	[3] = 'COUPE', -- Coupes
-	[4] = 'MUSCLE', -- Muscle
-	[5] = 'SPORT CLASSIC', -- Sports Classics
-	[6] = 'SPORT', -- Sports
-	[7] = 'SUPER', -- Super
-	[8] = 'MOTOR', -- Motorcycles
-	[9] = 'OFFROAD', -- Off-road
+Config.Classes = {                -- You can ignore this setting, it will be executed in future updates.
+    [0] = 'COMPACT',              -- Compacts
+    [1] = 'SEDAN',                -- Sedans
+    [2] = 'SUV',                  -- SUVs
+    [3] = 'COUPE',                -- Coupes
+    [4] = 'MUSCLE',               -- Muscle
+    [5] = 'SPORT CLASSIC',        -- Sports Classics
+    [6] = 'SPORT',                -- Sports
+    [7] = 'SUPER',                -- Super
+    [8] = 'MOTOR',                -- Motorcycles
+    [9] = 'OFFROAD',              -- Off-road
 }
 
 --██╗░░░██╗██████╗░███████╗██████╗░  ███████╗░█████╗░████████╗░██████╗
@@ -625,43 +616,43 @@ Config.Classes = { -- You can ignore this setting, it will be executed in future
 --╚██████╔╝██████╦╝███████╗██║░░██║  ███████╗██║░░██║░░░██║░░░██████╔╝
 --░╚═════╝░╚═════╝░╚══════╝╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝░░░╚═╝░░░╚═════╝░
 
-Config.uberPriceMultiplier = 1.5 
-Config.uberTipMin = 30 
-Config.uberTipMax = 50 
+Config.uberPriceMultiplier = 1.5
+Config.uberTipMin = 30
+Config.uberTipMax = 50
 
 Config.uberDelivery = {
-    [1] = {["x"] = 8.69, ["y"] = -243.09, ["z"] = 47.66},
-    [2] = {["x"] = 113.74, ["y"] = -277.95, ["z"] = 54.51},
-    [3] = {["x"] = 201.56, ["y"] = -148.76, ["z"] = 61.47},
-    [4] = {["x"] = -206.84, ["y"] = 159.49, ["z"] = 74.08},
-    [5] = {["x"] = 38.83, ["y"] = -71.64, ["z"] = 63.83},
-    [6] = {["x"] = 47.84, ["y"] = -29.16, ["z"] = 73.71},
-    [7] = {["x"] = -264.41, ["y"] = 98.82, ["z"] = 69.27},
-    [8] = {["x"] = -419.34, ["y"] = 221.12, ["z"] = 83.6},
-    [9] = {["x"] = -998.43, ["y"] = 158.42, ["z"] = 62.31},
-    [10] = {["x"] = -1026.57, ["y"] = 360.64, ["z"] = 71.36},
-    [11] = {["x"] = -967.06, ["y"] = 510.76, ["z"] = 82.07},
-    [12] = {["x"] = -1009.64, ["y"] = 478.93, ["z"] = 79.41},
-    [13] = {["x"] = -1308.05, ["y"] = 448.59, ["z"] = 100.86},
-    [14] = {["x"] = 557.39, ["y"] = -1759.57, ["z"] = 29.31},
-    [15] = {["x"] = 325.1, ["y"] = -229.59, ["z"] = 54.22},
-    [16] = {["x"] = 414.82, ["y"] = -217.57, ["z"] = 59.91},
-    [17] = {["x"] = 430.85, ["y"] = -941.91, ["z"] = 29.19},
-    [18] = {["x"] = -587.79, ["y"] = -783.53, ["z"] = 25.4},
-    [19] = {["x"] = -741.54, ["y"] = -982.28, ["z"] = 17.44},
-    [20] = {["x"] = -668.23, ["y"] = -971.58, ["z"] = 22.34},
-    [21] = {["x"] = -664.21, ["y"] = -1218.25, ["z"] = 11.81},
-    [22] = {["x"] = 249.99, ["y"] = -1730.79, ["z"] = 29.67},
-    [23] = {["x"] = 405.77, ["y"] = -1751.18, ["z"] = 29.71 },
-    [24] = {["x"] = 454.96, ["y"] = -1580.25, ["z"] = 32.82},
-    [25] = {["x"] = 278.81, ["y"] = -1117.96, ["z"] = 29.42},
-    [26] = {["x"] = 101.82, ["y"] = -819.49, ["z"] = 31.31},
-    [27] = {["x"] = -416.72, ["y"] = -186.79, ["z"] = 37.45},
+    [1] = { ['x'] = 8.69, ['y'] = -243.09, ['z'] = 47.66 },
+    [2] = { ['x'] = 113.74, ['y'] = -277.95, ['z'] = 54.51 },
+    [3] = { ['x'] = 201.56, ['y'] = -148.76, ['z'] = 61.47 },
+    [4] = { ['x'] = -206.84, ['y'] = 159.49, ['z'] = 74.08 },
+    [5] = { ['x'] = 38.83, ['y'] = -71.64, ['z'] = 63.83 },
+    [6] = { ['x'] = 47.84, ['y'] = -29.16, ['z'] = 73.71 },
+    [7] = { ['x'] = -264.41, ['y'] = 98.82, ['z'] = 69.27 },
+    [8] = { ['x'] = -419.34, ['y'] = 221.12, ['z'] = 83.6 },
+    [9] = { ['x'] = -998.43, ['y'] = 158.42, ['z'] = 62.31 },
+    [10] = { ['x'] = -1026.57, ['y'] = 360.64, ['z'] = 71.36 },
+    [11] = { ['x'] = -967.06, ['y'] = 510.76, ['z'] = 82.07 },
+    [12] = { ['x'] = -1009.64, ['y'] = 478.93, ['z'] = 79.41 },
+    [13] = { ['x'] = -1308.05, ['y'] = 448.59, ['z'] = 100.86 },
+    [14] = { ['x'] = 557.39, ['y'] = -1759.57, ['z'] = 29.31 },
+    [15] = { ['x'] = 325.1, ['y'] = -229.59, ['z'] = 54.22 },
+    [16] = { ['x'] = 414.82, ['y'] = -217.57, ['z'] = 59.91 },
+    [17] = { ['x'] = 430.85, ['y'] = -941.91, ['z'] = 29.19 },
+    [18] = { ['x'] = -587.79, ['y'] = -783.53, ['z'] = 25.4 },
+    [19] = { ['x'] = -741.54, ['y'] = -982.28, ['z'] = 17.44 },
+    [20] = { ['x'] = -668.23, ['y'] = -971.58, ['z'] = 22.34 },
+    [21] = { ['x'] = -664.21, ['y'] = -1218.25, ['z'] = 11.81 },
+    [22] = { ['x'] = 249.99, ['y'] = -1730.79, ['z'] = 29.67 },
+    [23] = { ['x'] = 405.77, ['y'] = -1751.18, ['z'] = 29.71 },
+    [24] = { ['x'] = 454.96, ['y'] = -1580.25, ['z'] = 32.82 },
+    [25] = { ['x'] = 278.81, ['y'] = -1117.96, ['z'] = 29.42 },
+    [26] = { ['x'] = 101.82, ['y'] = -819.49, ['z'] = 31.31 },
+    [27] = { ['x'] = -416.72, ['y'] = -186.79, ['z'] = 37.45 },
 }
 
 Config.uberItems = {
-	[1] = {["item"] = "bread", ["name"] = "Sandwich", ["price"] = 100},
-    [2] = {["item"] = "classic_phone", ["name"] = "Phone", ["price"] = 200},
+    [1] = { ['item'] = 'bread', ['name'] = 'Sandwich', ['price'] = 100 },
+    -- [2] = {["item"] = "classic_phone", ["name"] = "Phone", ["price"] = 200},
 }
 
 --████████╗███████╗░█████╗░██╗░░██╗███╗░░██╗██╗░█████╗░██╗░█████╗░███╗░░██╗
@@ -672,22 +663,50 @@ Config.uberItems = {
 --░░░╚═╝░░░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░╚════╝░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
 
 Config.ResetPassword = {
-    spawnNPC = true, -- Spawn a NPC?
-    coords = vector3(-1209.6, -1498.74, 4.37),
-    money = 500,
-    text = "[E] - Phone Repair Man",
-    ped = {
-        coords = vector3(-1209.6, -1498.74, 4.37),
-        h = 230.65,
-        model = `hc_hacker`
+    spawnNPC = true,
+    spots = {
+        {
+            spawnNPC = true, -- Spawn a NPC?
+            coords = vector3(-1209.6, -1498.74, 4.37),
+            money = 500,
+            text = "[E] - Phone Repair Man",
+            ped = {
+                coords = vector3(-1209.6, -1498.74, 4.37),
+                h = 230.65,
+                model = `hc_hacker`
+            },
+            blip = {
+                coords = vector3(-1209.6, -1498.74, 4.37),
+                name = 'Phone Repair Mann',
+                sprite = 89,
+                color = 1,
+                scale = 0.7
+            }
+        },
+
+        --[[ {
+            coords = vec3(-1500.553833, -432.039551, 35.547974),
+            money = 500,
+            text = '[E] - Telephone Technician',
+            ped = {
+                h = 230.65,
+                model = `hc_hacker`
+            },
+            blip = {
+                name = 'Telephone technician',
+                sprite = 89,
+                color = 1,
+                scale = 0.7
+            }
+        }, ]]
+
+        -- Add more spots here
     },
-    blip = {
-        coords = vector3(-1209.6, -1498.74, 4.37),
-        name = 'Phone Repair Mann',
-        sprite = 89,
-        color = 1,
-        scale = 0.7
-    },
+    okokTextUI = {
+        enable = false,                                   -- Habilitar el sistema de UI de texto
+        colour = { r = 255, g = 255, b = 255, a = 255 }, -- Color del texto UI
+        position = 'center'                              -- Posición del texto UI
+    }
 }
 
 -- ██████╗ ██╗███████╗██████╗  █████╗ ████████╗ ██████╗██╗  ██╗
@@ -696,13 +715,13 @@ Config.ResetPassword = {
 -- ██║  ██║██║╚════██║██╔═══╝ ██╔══██║   ██║   ██║     ██╔══██║
 -- ██████╔╝██║███████║██║     ██║  ██║   ██║   ╚██████╗██║  ██║
 -- ╚═════╝ ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝
-                                                            
-Config.CustomDispatch = false -- Use a custom dispatch script? (Jobs message only) 
---[[ 
+
+Config.CustomDispatch = false -- Use a custom dispatch script? (Jobs message only)
+--[[
     'client' excute on client side go to (qs-smartphone/client/custom/misc/dispatch.lua 'qs-smartphone:client:CustomClientDispatch')
     'server' excute on server side go to (qs-smartphone/server/custom/misc/dispatch.lua 'qs-smartphone:sever:CustomServerDispatch')
 ]]
-Config.CustomDispatchSide = 'client' 
+Config.CustomDispatchSide = 'client'
 
 
 Config.Debug = false -- Debug mode, only for development.
