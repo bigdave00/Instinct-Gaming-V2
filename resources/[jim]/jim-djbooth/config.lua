@@ -38,6 +38,13 @@ Config = {
 			radius = 30,
 			coords = vec3(-549.68, 282.64, 82.98),
 		},
+		{ -- Tequilala bar (ingame mlo)
+			job = "uwu",
+			enableBooth = true,
+			DefaultVolume = 0.1,
+			radius = 30,
+			coords = vec3(-549.68, 282.64, 82.98),
+		},
 		{ -- GabzTuners Radio Prop
 			job = "mechanic",
 			enableBooth = true,
