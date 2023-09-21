@@ -66,12 +66,20 @@ Config.Locations = {
       useZ = true, -- Use Z coord above to place zone
       debugPoly = false -- Debug zone
 },
-['thedons'] = { -- Ensure gang name here matches your shared/gangs.lua vector3(180.608, -252.442, 53.87) --[vector4(180.608, -252.442, 53.87, 0.0)]-- vector3(-2673.937, 1312.63, 147.445) --[vector4(-2673.937, 1312.63, 147.445, 0.0)]--
+['thedons'] = { -- Ensure gang name here matches your shared/gangs.lua vector3(1275.989, -1710.043, 54.471) --[vector4(1275.989, -1710.043, 54.471, 0.0)]--
       grade = 3, -- Grade able to view target option 
       coords = vector3(439.648, -1895.501, 31.736), -- Coords for circlezone
       radius = 0.5, -- Radius of circlezone
-      distance = 1.5, -- Distance zone can be targeted thedom vector3(433.25, -1884.762, 31.837) --[vector4(433.25, -1884.762, 31.837, 0.0)]--
-      useZ = true, -- Use Z coord above to place zone vector3vector3(439.648, -1895.501, 31.736) --[vector4(439.648, -1895.501, 31.736, 0.0)]--
+      distance = 1.5, -- Distance zone can be targeted t
+      useZ = true, -- Use Z coord above to place zone 
+      debugPoly = false -- Debug zone
+},
+['davisgang'] = { -- Ensure gang name here matches your shared/gangs.lua vector3(1275.989, -1710.043, 54.471) --[vector4(1275.989, -1710.043, 54.471, 0.0)]--
+      grade = 3, -- Grade able to view target option 
+      coords = vector3(1275.989, -1710.043, 54.471), -- Coords for circlezone
+      radius = 0.5, -- Radius of circlezone
+      distance = 1.5, -- Distance zone can be targeted t
+      useZ = true, -- Use Z coord above to place zone 
       debugPoly = false -- Debug zone
 }
   },
@@ -154,9 +162,21 @@ Config.Locations = {
       size = 1000000, -- Stash storage size vector3(434.01, -1885.799, 31.536) --[vector4(434.01, -1885.799, 31.536, 0.0)]--
       slots = 300, -- Stash storage slots
       raidtime = math.random(10,20), -- Time taken for service jobs to raid stash
-      coords = vector3(434.01, -1885.799, 31.536), -- Coords for circlezone vector3(184.164, -244.761, 54.07) --[vector4(184.164, -244.761, 54.07, 0.0)]-- vector3(-2679.51, 1312.922, 147.445) --[vector4(-2679.51, 1312.922, 147.445, 0.0)]--
+      coords = vector3(434.01, -1885.799, 31.536), -- Coords for circlezone vector3(1279.578, -1717.899, 55.271) --[vector4(1279.578, -1717.899, 55.271, 0.0)]--
       radius = 0.5, -- Radius of circlezone
       distance = 1.5, -- Distance zone can be targeted
+      useZ = true, -- Use Z coord above to place zone
+      debugPoly = false -- Debug zone
+},
+['davisgang'] = { -- Ensure gang name here matches your shared/gangs.lua
+      label = 'Davis Gang Stash', -- Label used by inventory
+      grade = 0, -- Grade able to view target option
+      size = 1000000, -- Stash storage size vector3(434.01, -1885.799, 31.536) --[vector4(434.01, -1885.799, 31.536, 0.0)]--
+      slots = 300, -- Stash storage slots
+      raidtime = math.random(10,20), -- Time taken for service jobs to raid stash
+      coords = vector3(1279.578, -1717.899, 55.271), -- Coords for circlezone vector3(1279.578, -1717.899, 55.271) --[vector4(1279.578, -1717.899, 55.271, 0.0)]--
+      radius = 0.5, -- Radius of circlezone
+      distance = 1.5, -- Distance zone can be targeted vector3(1279.578, -1717.899, 55.271) --[vector4(1279.578, -1717.899, 55.271, 0.0)]--
       useZ = true, -- Use Z coord above to place zone
       debugPoly = false -- Debug zone
 }
@@ -216,6 +236,14 @@ Config.Locations = {
      radius = 0.5, -- Radius of circlezone
      distance = 1.5, -- Distance zone can be targeted
      useZ = true, -- Use Z coord above to place zone vector3(436.672, -1889.425, 31.737) --[vector4(436.672, -1889.425, 31.737, 0.0)]--
+     debugPoly = false -- Debug zone
+},
+['davisgang'] = { -- Ensure gang name here matches your shared/gangs.lua
+     grade = 0, -- Grade able to view target option
+     coords = vector3(1271.529, -1715.517, 54.771), -- Coords for circlezone vector3(-2675.963, 1304.602, 152.014) --[vector4(-2675.963, 1304.602, 152.014, 0.0)]--
+     radius = 0.5, -- Radius of circlezone
+     distance = 1.5, -- Distance zone can be targeted
+     useZ = true, -- Use Z coord above to place zone vector3(436.672, -1889.425, 31.737) --[vector4(436.672, -1889.425, 31.737, 0.0)]-- vector3(1271.529, -1715.517, 54.771) --[vector4(1271.529, -1715.517, 54.771, 0.0)]--
      debugPoly = false -- Debug zone
 }
 },
