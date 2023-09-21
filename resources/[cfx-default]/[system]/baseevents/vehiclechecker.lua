@@ -16,9 +16,11 @@ Citizen.CreateThread(function()
 				local seat = GetSeatPedIsTryingToEnter(ped)
 				local netId = VehToNet(vehicle)
 				isEnteringVehicle = true
+				TriggerEvent('baseevents:enterVehicle', vehicle,seat,GetDisplayNameFromVehicleModel(GetEntityModel(vehicle)), netId)
 				TriggerServerEvent('baseevents:enteringVehicle', vehicle, seat, GetDisplayNameFromVehicleModel(GetEntityModel(vehicle)), netId)
 			elseif not DoesEntityExist(GetVehiclePedIsTryingToEnter(ped)) and not IsPedInAnyVehicle(ped, true) and isEnteringVehicle then
 				-- vehicle entering aborted
+				TriggerEvent('baseevents:enteringAborted')
 				TriggerServerEvent('baseevents:enteringAborted')
 				isEnteringVehicle = false
 			elseif IsPedInAnyVehicle(ped, false) then
@@ -30,6 +32,7 @@ Citizen.CreateThread(function()
 				local model = GetEntityModel(currentVehicle)
 				local name = GetDisplayNameFromVehicleModel()
 				local netId = VehToNet(currentVehicle)
+				TriggerEvent('baseevents:enterVehicle', vehicle,seat,GetDisplayNameFromVehicleModel(GetEntityModel(vehicle)), netId)
 				TriggerServerEvent('baseevents:enteredVehicle', currentVehicle, currentSeat, GetDisplayNameFromVehicleModel(GetEntityModel(currentVehicle)), netId)
 			end
 		elseif isInVehicle then
@@ -38,6 +41,7 @@ Citizen.CreateThread(function()
 				local model = GetEntityModel(currentVehicle)
 				local name = GetDisplayNameFromVehicleModel()
 				local netId = VehToNet(currentVehicle)
+				TriggerEvent('baseevents:leftVehicle')
 				TriggerServerEvent('baseevents:leftVehicle', currentVehicle, currentSeat, GetDisplayNameFromVehicleModel(GetEntityModel(currentVehicle)), netId)
 				isInVehicle = false
 				currentVehicle = 0
