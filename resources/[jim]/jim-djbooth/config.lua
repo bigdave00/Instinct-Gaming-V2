@@ -43,7 +43,8 @@ Config = {
 			enableBooth = true,
 			DefaultVolume = 0.1,
 			radius = 30,
-			coords = vec3(-549.68, 282.64, 82.98),
+			coords = vec3(-584.341, -1056.293, 22.444), 
+			soundLoc = vec3(-580.177, -1061.001, 23.347),
 		},
 		{ -- GabzTuners Radio Prop
 			job = "mechanic",
