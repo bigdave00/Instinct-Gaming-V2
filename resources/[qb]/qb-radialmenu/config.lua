@@ -256,6 +256,11 @@ newSubMenus = {
         icon = "#car",
         functionName = "vehcontrol:openExtraMenu"
     },
+    ['vehicle:control'] = {
+        title = "Vehicle Control",
+        icon = "#car",
+        functionName = "vehcontrol:openExternal"
+    },
     -- actions
     ['actions:rob'] = {
         title = "Rob",
