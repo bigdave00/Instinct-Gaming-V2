@@ -68,10 +68,10 @@ Config.Locations = {
 },
 ['thedons'] = { -- Ensure gang name here matches your shared/gangs.lua vector3(180.608, -252.442, 53.87) --[vector4(180.608, -252.442, 53.87, 0.0)]-- vector3(-2673.937, 1312.63, 147.445) --[vector4(-2673.937, 1312.63, 147.445, 0.0)]--
       grade = 3, -- Grade able to view target option 
-      coords = vector3(433.25, -1884.762, 31.837), -- Coords for circlezone
+      coords = vector3(439.648, -1895.501, 31.736), -- Coords for circlezone
       radius = 0.5, -- Radius of circlezone
       distance = 1.5, -- Distance zone can be targeted thedom vector3(433.25, -1884.762, 31.837) --[vector4(433.25, -1884.762, 31.837, 0.0)]--
-      useZ = true, -- Use Z coord above to place zone
+      useZ = true, -- Use Z coord above to place zone vector3vector3(439.648, -1895.501, 31.736) --[vector4(439.648, -1895.501, 31.736, 0.0)]--
       debugPoly = false -- Debug zone
 }
   },
