@@ -10265,6 +10265,30 @@ QBShared.Items = {
   ["combinable"] = nil,
   ["description"] = "Joeys Key" 
 },
+["keysthedon"] = {
+  ["name"] = "keysthedon", 
+  ["label"] = "The Dons Key",
+  ["weight"] = 5,
+  ["type"] = "item",
+   ["image"] = "images/keysthedon.png", 
+  ['unique'] = true,
+  ['useable'] = true,
+  ['shouldClose'] = true,
+  ["combinable"] = nil,
+  ["description"] = "The Dons Key" 
+},
+["keysdavisgang"] = {
+  ["name"] = "keysdavisgang", 
+  ["label"] = "Davis Gang Key",
+  ["weight"] = 5,
+  ["type"] = "item",
+   ["image"] = "images/keysdavisgang.png", 
+  ['unique'] = true,
+  ['useable'] = true,
+  ['shouldClose'] = true,
+  ["combinable"] = nil,
+  ["description"] = "Davis Gang Key" 
+},
 ["drug_scales"] = { 
   ["name"] = "drug_scales",
   ["label"] = "Drug Scales",
