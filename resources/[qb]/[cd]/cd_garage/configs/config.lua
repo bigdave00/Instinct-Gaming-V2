@@ -679,10 +679,10 @@ Config.GangGarages = {
 
     Locations = {
         --gang: The gang name, not gang label.
-        --garage_id: The unique id of the garage (this can not be named same as other normal garages).
+        --garage_id: The unique id of the garage (this can not be named same as other normal garages).vector3(443.77, -1921.508, 24.585) --[vector4(443.77, -1921.508, 24.585, 0.0)]--
         --coords: Where the gang garage can be accessed from.
         --spawn_coords: Where the chosen vehicle will spawn.
-        --distance: If the player is within the 'distance' of these coords ^, they can open the gang garage UI.
+        --distance: If the player is within the 'distance' of these coords ^, they can open the gang garage UI.vector3(449.703, -1916.164, 24.732) --[vector4(449.703, -1916.164, 24.732, 0.0)]--
         --garage_type: The type of vehicles that can be accessed from this location ('car' / 'boat', 'air').
 
         [1] = {gang = 'thecartel', garage_id = 'The Cartel ( Best Gang )', coords = vector3(-1531.23, 92.93, 56.68), spawn_coords = vector4(-1517.43, 86.52, 56.26, 254.45), distance = 10, garage_type = 'car'}, --Ranch
@@ -690,6 +690,8 @@ Config.GangGarages = {
         [3] = {gang = 'iyt', garage_id = 'IYT', coords = vector3(-334.83, -1349.94, 31.33), spawn_coords = vector4(-336.62, -1368.63, 31.3, 171.77), distance = 10, garage_type = 'car'}, -- Lost MC Compound Next to Casino
         [4] = {gang = 'theskins', garage_id = 'The Skins', coords = vector3(-2660.21, 1306.88, 147.12), spawn_coords = vector4(-2646.3, 1306.71, 146.12, 271.91), distance = 10, garage_type = 'car'}, -- Lost MC Compound Next to Casino
         [5] = {gang = 'lostmc', garage_id = 'Lost MC', coords = vector3(64.51, 2783.12, 57.89), spawn_coords = vector4(45.18, 2781.15, 57.88, 74.76), distance = 10, garage_type = 'car'}, -- Lost MC Compound Next to Casino
+        [6] = {gang = 'thedons', garage_id = 'The Dons', coords = vector3(449.703, -1916.164, 24.732), spawn_coords = vector4(443.77, -1921.508, 24.585, 0.0), distance = 10, garage_type = 'car'}, -- Lost MC Compound Next to Casino
+        
     },
 }
 
