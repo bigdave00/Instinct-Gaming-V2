@@ -69,8 +69,8 @@ QBShared.Gangs = {
 			['3'] = { name = 'Boss', isboss = true },
         },
 	},
-	['vagos'] = {
-		label = 'Vagos',
+	['davisgang'] = {
+		label = 'Davis Gang',
 		grades = {
             ['0'] = { name = 'Recruit' },
 			['1'] = { name = 'Enforcer' },
