@@ -4808,18 +4808,6 @@ QBShared.Items = {
     ['combinable'] = nil,
     ['description'] = 'A microfiber cloth with some soap will let your car sparkle again!'
   },
-  ['tunerlaptop'] = {
-    ['name'] = 'tunerlaptop',
-    ['label'] = 'Tunerchip',
-    ['weight'] = 2000,
-    ['type'] = 'item',
-    ['image'] = 'images/tunerchip.png',
-    ['unique'] = true,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = 'With this tunerchip you can get your car on steroids... If you know what you\'re doing'
-  },
   ['harness'] = {
     ['name'] = 'harness',
     ['label'] = 'Race Harness',
