@@ -691,7 +691,7 @@ Config.GangGarages = {
         [4] = {gang = 'theskins', garage_id = 'The Skins', coords = vector3(-2660.21, 1306.88, 147.12), spawn_coords = vector4(-2646.3, 1306.71, 146.12, 271.91), distance = 10, garage_type = 'car'}, -- Lost MC Compound Next to Casino
         [5] = {gang = 'lostmc', garage_id = 'Lost MC', coords = vector3(64.51, 2783.12, 57.89), spawn_coords = vector4(45.18, 2781.15, 57.88, 74.76), distance = 10, garage_type = 'car'}, -- Lost MC Compound Next to Casino
         [6] = {gang = 'thedons', garage_id = 'The Dons', coords = vector3(449.703, -1916.164, 24.732), spawn_coords = vector4(443.77, -1921.508, 24.585, 0.0), distance = 10, garage_type = 'car'}, -- Lost MC Compound Next to Casino
-        [7] = {gang = 'davisgang', garage_id = 'Davis Gang', coords = vector3(1279.77, -1724.16, 54.66), spawn_coords = vector4(1285.03, -1730.86, 52.9, 112.52), distance = 10, garage_type = 'car'}, -- Lost MC Compound Next to Casino
+        [7] = {gang = 'davisgang', garage_id = 'Davis Gang', coords = vector3(1279.77, -1724.16, 54.66), spawn_coords = vector4(1285.03, -1730.86, 52.9, 112.52), distance = 5, garage_type = 'car'}, -- Lost MC Compound Next to Casino
     },
 }
 
