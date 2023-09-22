@@ -74,14 +74,14 @@ Crafting = {
 		{ ['pizza'] = { ['flour'] = 1, ['milk'] = 1, }, },
 	},
 	Coffee = {
-		{ ['catcoffee'] = {['coffee'] = 1, ['milk'] = 1, ['sugar'] = 1, } },
-		{ ['nekolatte'] = {['coffee'] = 1, ['milk'] = 1, ['sugar'] = 1, } },
+		{ ['catcoffee'] = {['beancoffee'] = 1, ['milk'] = 1, ['sugar'] = 1, } },
+		{ ['nekolatte'] = {['beancoffee'] = 1, ['milk'] = 1, ['sugar'] = 1, } },
 		{ ['bobatea'] = { ['boba'] = 1, ['milk'] = 1, }, },
 		{ ['bbobatea'] = { ['boba'] = 1, ['milk'] = 1, ['sugar'] = 1, ['blueberry'] = 1, }, },
 		{ ['gbobatea'] = { ['boba'] = 1, ['milk'] = 1, ['mint'] = 1, }, },
 		{ ['obobatea'] = { ['boba'] = 1, ['milk'] = 1, ['orange'] = 1, }, },
 		{ ['pbobatea'] = { ['boba'] = 1, ['milk'] = 1, ['strawberry'] = 1, }, },
-		{ ['mocha'] = { ['coffee'] = 1, ['milk'] = 1, ['sugar'] = 1, ['chocolate'] = 1, }, },
+		{ ['mocha'] = { ['beancoffee'] = 1, ['milk'] = 1, ['sugar'] = 1, ['chocolate'] = 1, }, },
 	},
 	Hob = {
 		{ ['miso'] = { ['nori'] = 1, ['tofu'] = 1, ['onion'] = 1, }, },

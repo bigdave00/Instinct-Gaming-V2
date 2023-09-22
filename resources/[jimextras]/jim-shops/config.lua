@@ -268,7 +268,7 @@ Config = {
 		},
 		["organic"] = {
 			[1] = {
-				name = "coffeebean",
+				name = "beancoffee",
 				price = 2,
 				amount = 400,
 				info = {},
