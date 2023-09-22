@@ -4,7 +4,7 @@ Config.account = {								-- Account configs
 	['trucker'] = 'bank',						-- Change here the account that should be used with trucker expenses
 }
 
-Config.job = "true"							-- Required job name to open the menu (set as false to disable the permission)
+Config.job = "false"							-- Required job name to open the menu (set as false to disable the permission)
 
 Config.disable_loans = false					-- Set this to true if you want to disable the loans
 Config.disable_drivers = false					-- Set this to true if you want to disable the NPC drivers
