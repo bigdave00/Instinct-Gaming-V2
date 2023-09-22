@@ -2909,13 +2909,13 @@ QBShared.Vehicles = {
 		['shop'] = 'luxury',
 		['image'] = 'https://cdn.discordapp.com/attachments/1039700240250437672/1082056879032782848/image.png',
 	},
-	['mf380'] = {
-		['name'] = 'BWM mf380',
+	['m3f80'] = {
+		['name'] = 'BWM m3f80',
 		['brand'] = 'BWM',
-		['model'] = 'mf380',
+		['model'] = 'm3f80',
 		['price'] = 95000,
 		['category'] = 'sports',
-		['hash'] = `mf380`,
+		['hash'] = `m3f80`,
 		['shop'] = 'luxury',
 		['image'] = 'https://cdn.discordapp.com/attachments/1039700240250437672/1082056879032782848/image.png',
 	},
