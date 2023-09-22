@@ -11,7 +11,7 @@ function Utils.Framework.giveVehicleKeys(vehicle, plate, model)
 		local class = GetVehicleClass(vehicle) == 20
         if not class then return end -- Wasabi does not support giving keys to trailers? why?
 		exports['wasabi_carlock']:GiveKey(plate)
-	elseif Config.custom_scripts_compatibility.keys == "default" or Config.custom_scripts_compatibility.keys == "jaksam" then
+	elseif Config.custom_scripts_compatibility.keys == "default" or Config.custom_scripts_compatibility.keys == "qb-vehiclekeys" then
 		TriggerEvent("vehiclekeys:client:SetOwner", plate)
 	else
 		Utils.CustomScripts.giveVehicleKeys(vehicle, plate, model)
@@ -25,7 +25,7 @@ function Utils.Framework.removeVehicleKeys(vehicle)
 		exports['qs-vehiclekeys']:RemoveKeys(plate, model)
 	elseif Config.custom_scripts_compatibility.keys == "wasabi_carlock" then
 		exports['wasabi_carlock']:RemoveKey(plate)
-	elseif Config.custom_scripts_compatibility.keys == "default" or Config.custom_scripts_compatibility.keys == "cd_garage" or Config.custom_scripts_compatibility.keys == "jaksam" then
+	elseif Config.custom_scripts_compatibility.keys == "default" or Config.custom_scripts_compatibility.keys == "cd_garage" or Config.custom_scripts_compatibility.keys == "qb-vehiclekeys" then
 		-- Do nothing :)
 	else
 		Utils.CustomScripts.removeVehicleKeys(vehicle)
