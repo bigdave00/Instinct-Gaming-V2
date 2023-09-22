@@ -1,5 +1,5 @@
-local PoliceWebhookURL = '' -- webhook URL HERE
-local AmbulanceWebhookURL = '' -- webhook URL HERE
+local PoliceWebhookURL = 'https://discord.com/api/webhooks/1139312215917334651/zeGNXKe3X1BPud42LTt9Ah6O1WhnbOwFQaxt7nZUmU-9OqmU1RmSOxIL0D9ElWqQbAWn' -- webhook URL HERE
+local AmbulanceWebhookURL = 'https://discord.com/api/webhooks/1139312215917334651/zeGNXKe3X1BPud42LTt9Ah6O1WhnbOwFQaxt7nZUmU-9OqmU1RmSOxIL0D9ElWqQbAWn' -- webhook URL HERE
 
 function OnCallEvent(job, callLocation, callCode, message, flashes, image, ThisCount)
 
