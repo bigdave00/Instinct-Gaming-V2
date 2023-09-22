@@ -16,8 +16,8 @@ QBShared.Items = {
 
 ["rope"]                             = {["name"] = "rope",	                ["label"] = "Rope",               ["weight"] = 1500,      ["type"] = "item",       ["image"] = "images/rope.png",          ["unique"] = true,      ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "maybe somewhere to attached"},
 
-['cash'] 						= {['name'] = 'cash', 			 	  	  		['label'] = 'Cash', 					['weight'] = 1, 		['type'] = 'item', 		['image'] = 'cash.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Cash to be used within the city!'},
-['dirtycash'] 					= {['name'] = 'dirtycash', 			 	  	  	['label'] = 'Dirty Cash', 				['weight'] = 1, 		['type'] = 'item', 		['image'] = 'dirtycash.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Dirty cash? You should find someone to clean this for you!'},
+['cash'] 						= {['name'] = 'cash', 			 	  	  		['label'] = 'Cash', 					['weight'] = 0, 		['type'] = 'item', 		['image'] = 'cash.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Cash to be used within the city!'},
+['dirtycash'] 					= {['name'] = 'dirtycash', 			 	  	  	['label'] = 'Dirty Cash', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'dirtycash.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Dirty cash? You should find someone to clean this for you!'},
 
 -- crafting-blueprint
 ["blueprint_document"] = {
