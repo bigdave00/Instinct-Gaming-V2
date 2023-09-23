@@ -792,7 +792,7 @@ local weapons_recipe = {
                     name = 'w_pi_combatpistol',
                     rotation = vector3(45.0, 0.0, 0.0)
                },
-               level = 650,
+               level = 300,
                job = {
                     allowed_list = {},
                     allowed_grades = {}
