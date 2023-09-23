@@ -6,7 +6,7 @@ local keybindControls = {
 local MAX_MENU_ITEMS = 7
 
 Citizen.CreateThread(function()
-    local keyBind = "F3"
+    local keyBind = "Z"
     local keyBind2 = "-"
     while true do
         Citizen.Wait(50)

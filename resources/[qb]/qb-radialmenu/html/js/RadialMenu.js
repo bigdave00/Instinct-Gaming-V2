@@ -13,7 +13,7 @@ function RadialMenu(params) {
     self.onClick   = params.onClick || null;
     self.menuItems = params.menuItems ? params.menuItems : [{id: 'one', title: 'One'}, {id: 'two', title: 'Two'}];
 
-    self.radius      = 42;
+    self.radius      = 55;
     self.innerRadius = self.radius * 0.35;
     self.sectorSpace = self.radius * 0.05;
     self.sectorCount = Math.max(self.menuItems.length, MIN_SECTORS);

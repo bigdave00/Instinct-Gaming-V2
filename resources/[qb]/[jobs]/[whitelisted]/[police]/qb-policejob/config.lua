@@ -641,17 +641,8 @@ Config.CarItems = {
         slot = 4,
         authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12} 
     },
-    [5] = {
-        name = "tunerlaptop",
-        price = 0,
-        amount = 1,
-        info = {},
-        type = "item",
-        slot = 5,
-        authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12} 
-    },
     [6] = {
-        name = "WEAPON_FIREEXTINGUISHER",
+        name = "weapon_fireextinguisher",
         price = 0,
         amount = 1,
         info = {},

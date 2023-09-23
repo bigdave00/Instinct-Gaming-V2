@@ -7,7 +7,7 @@ Config.MaxInventorySlots = 64 -- Max inventory slots for a player
 
 Config.KeyBinds = {
     Inventory = 'TAB',
-    HotBar = 'z'
+    HotBar = 'I'
 }
 
 Config.CleanupDropTime = 15 * 60 -- How many seconds it takes for drops to be untouched before being deleted
