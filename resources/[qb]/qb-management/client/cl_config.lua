@@ -25,6 +25,9 @@ Config.BossMenus = {
     ['burgershot'] = {
         vector3(-1196.808, -901.766, 13.895),
     },
+    ['lawyer'] = {
+        vector3(-582.641, -347.258, 34.955),
+    },
     ['whitewidow'] = {
         vector3(183.39, -251.191, 53.971),
     },
@@ -60,6 +63,9 @@ Config.BossMenuZones = {
     },
     ['burgershot'] = {
         { coords =  vector3(-1196.808, -901.766, 13.895), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    },
+    ['lawyer'] = {
+        { coords =  vector3(-582.641, -347.258, 34.955), length = 1.0, width = 1.0, heading = 0.0, minZ = 34.455, maxZ = 35.455 }, 
     },
     ['whitewidow'] = {
         { coords = vector3(183.39, -251.191, 53.971), length = 1.0, width = 2.6, heading = 353.0, minZ = 53.471, maxZ = 54.471 },
