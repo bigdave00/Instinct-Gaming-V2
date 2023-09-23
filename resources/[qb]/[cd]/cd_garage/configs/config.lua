@@ -893,6 +893,23 @@ Config.Locations = {
     },
 
 
+    ---Job Garages
+    {
+        Garage_ID = 'AA', --PALETO
+        Type = 'car',
+        Dist = 10,
+        x_1 = -600.23, y_1 = -335.06, z_1 = 34.87,
+        EventName1 = 'cd_garage:QuickChoose',
+        EventName2 = 'cd_garage:EnterGarage',
+        Name = UIText,
+        x_2 = -594.42, y_2 = -332.07, z_2 = 31.86, h_2 = 34.9,
+        EnableBlip = true,
+        JobRestricted = {'lawyer'},
+        ShellType = '10cargarage_shell',
+    },
+
+
+
 
 
 
