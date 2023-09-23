@@ -781,6 +781,35 @@ local weapons_recipe = {
                exp_per_craft = 40
           }
      },
+     ['weapon_pistol50'] = {
+          categories = {
+               sub = 'pistol',
+          },
+          item_settings = {
+               label = '50Cal Pistol',
+               image = 'weapon_pistol50', -- use inventory's images
+               object = {
+                    name = 'w_pi_combatpistol',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 650,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 260,
+               materials = {
+                    ["aluminum"] = 100,
+                    ["steel"] = 90,
+                    ["rubber"] = 50,
+               },
+               exp_per_craft = 40
+          }
+     },
      ['pistol_suppressor'] = {
           categories = {
                sub = 'smg',
