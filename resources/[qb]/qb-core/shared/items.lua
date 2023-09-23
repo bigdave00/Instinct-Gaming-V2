@@ -10340,6 +10340,18 @@ QBShared.Items = {
   ["combinable"] = nil,
   ["description"] = "Davis Gang Key" 
 },
+["keyslawyer"] = {
+  ["name"] = "keyslawyer", 
+  ["label"] = "Lawyer Key",
+  ["weight"] = 5,
+  ["type"] = "item",
+   ["image"] = "images/keyslawyer.png", 
+  ['unique'] = true,
+  ['useable'] = true,
+  ['shouldClose'] = true,
+  ["combinable"] = nil,
+  ["description"] = "Lawyer Key" 
+},
 ["drug_scales"] = { 
   ["name"] = "drug_scales",
   ["label"] = "Drug Scales",
