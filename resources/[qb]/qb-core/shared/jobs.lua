@@ -119,7 +119,11 @@ QBShared.Jobs = {
 		defaultDuty = true,
 		offDutyPay = true,
 		grades = {
-            ['0'] = { name = 'Lawyer', payment = 50 },
+			['0'] = { name = 'Intern', payment = 50 },
+			['1'] = { name = 'Solicitor', payment = 75 },
+			['2'] = { name = 'Prosecution', payment = 100 },
+			['3'] = { name = 'Boss', payment = 125 },
+            ['4'] = { name = 'CEO', isboss = true, payment = 150 },
         },
 	},
 	['taxi'] = {
