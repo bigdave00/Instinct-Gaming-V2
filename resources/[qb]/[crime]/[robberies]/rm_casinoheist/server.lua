@@ -60,8 +60,8 @@ AddEventHandler('casinoheist:server:policeAlert', function(coords)
     for i = 1, #players do
         local player = QBCore.Functions.GetPlayer(players[i])
         if (player.PlayerData.job.name == 'police' and player.PlayerData.job.onduty) then
-            exports['ps-dispatch']:UnionRobbery()
             TriggerClientEvent('casinoheist:client:policeAlert', players[i], coords)
+            exports['ps-dispatch']:UnionRobbery()
         end
     end
 end)
