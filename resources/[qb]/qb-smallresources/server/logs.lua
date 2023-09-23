@@ -29,6 +29,7 @@ local Webhooks = {
     ['bans'] = 'https://discord.com/api/webhooks/1125804695923998770/zejaBBIGRvznlKznKrrtew7NvXQNEYwYM7rOkvyuRfDVzXzcZ1oIF2jUoQtrhOYsz3pY',
     ['anticheat'] = 'https://discord.com/api/webhooks/1125804695923998770/zejaBBIGRvznlKznKrrtew7NvXQNEYwYM7rOkvyuRfDVzXzcZ1oIF2jUoQtrhOYsz3pY',
     ['weather'] = 'https://discord.com/api/webhooks/1125804761443221514/BUdRl_d6LRC59pvCk5jiSagPd8K00ag_ym2J3J6ZxbUJhD_xJE82uyVW0-RSgilossWF',
+    ['crafting'] = 'https://discord.com/api/webhooks/1125804761443221514/BUdRl_d6LRC59pvCk5jiSagPd8K00ag_ym2J3J6ZxbUJhD_xJE82uyVW0-RSgilossWF',
     ['moneysafes'] = 'https://discord.com/api/webhooks/1125804806867537982/BEpUkt-cIZGd9IfOz47ilXwD9Mn72OFrAbg6E8hkYaZ4BqzO4KmyJuti-DGmD3aE8M-S',
     ['bennys'] = 'https://discord.com/api/webhooks/1125804925008498729/DaDcIsaQdPEi8zWuvfZU9qD0lklOHH-I8RAnnpa3XSgGxcO2rPJTOaeDykAEMA9C7Do-',
     ['bossmenu'] = 'https://discord.com/api/webhooks/1125804925008498729/DaDcIsaQdPEi8zWuvfZU9qD0lklOHH-I8RAnnpa3XSgGxcO2rPJTOaeDykAEMA9C7Do-',
