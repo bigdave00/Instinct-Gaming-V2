@@ -1,5 +1,8 @@
 resource_manifest_version "44febabe-d386-4d18-afbe-5e627f4af937"
 
+author 'QuirkyCarlos XD'
+description 'One Of Quirky Packs'
+
 files {
   'audioconfig/avesvv12_game.dat151.rel',
   'audioconfig/avesvv12_sounds.dat54.rel',

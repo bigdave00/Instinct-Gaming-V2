@@ -2,7 +2,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'IG-Carlos'
+author 'QuirkyCarlos XD'
+description 'One Of Quirky Packs'
 
 files {
     'data/**/*.meta',
