@@ -734,7 +734,7 @@ local weapons_recipe = {
                     name = 'w_pi_pistol50',
                     rotation = vector3(45.0, 0.0, 0.0)
                },
-               level = 120,
+               level = 900,
                job = {
                     allowed_list = {},
                     allowed_grades = {}
@@ -763,7 +763,7 @@ local weapons_recipe = {
                     name = 'w_pi_combatpistol',
                     rotation = vector3(45.0, 0.0, 0.0)
                },
-               level = 200,
+               level = 900,
                job = {
                     allowed_list = {},
                     allowed_grades = {}
@@ -792,7 +792,7 @@ local weapons_recipe = {
                     name = 'w_pi_combatpistol',
                     rotation = vector3(45.0, 0.0, 0.0)
                },
-               level = 300,
+               level = 900,
                job = {
                     allowed_list = {},
                     allowed_grades = {}
