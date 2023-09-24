@@ -634,6 +634,37 @@ local weapons_recipe = {
                exp_per_craft = 5
           }
      },
+     ['harness'] = {
+          categories = {
+               main = 'tools',
+          },
+          item_settings = {
+               label = 'harness',
+               image = 'harness', -- use inventory's images
+               object = {
+                    name = 'xm_prop_x17_laptop_lester_01',
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 10,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               },
+
+          },
+          crafting = {
+               show_level_in_mail = true,
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 5,
+               materials = {
+                    ["steel"] = 20,
+                     ["rubber"] = 20,
+                    --["weapon_wrench"] = 1,
+               },
+               exp_per_craft = 5
+          }
+     },
      ['trojan_usb'] = {
           categories = {
                main = 'tools',
