@@ -371,6 +371,14 @@ Config.JobsInPhone = {
         score = '2',
         duty = false,
     },
+    ["lawyer"] = {
+        order = 13,
+        name = 'lawyer',
+        label = "Davis Lawyer and Protection",
+        info = 'All Your legal Needs',
+        score = '2',
+        duty = false,
+    },
 }
 
 -- ░█████╗░███╗░░██╗██╗░█████╗░███╗░░██╗  ░█████╗░██████╗░██████╗░
