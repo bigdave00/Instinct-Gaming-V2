@@ -32,7 +32,7 @@ RegisterNetEvent('qb-drugsales:initiatedrug', function(ZoneDrug)
 			end
 		end
 		Wait(500) -- Just to make sure the item is removed and them money is provided to the player		
-		Player.Functions.AddMoney("markedbills", price)
+		Player.Functions.AddMoney("dirtycash", price)
 		TriggerClientEvent('qb-drugsales:notify', src, 'You recieved £'..price)
 		if Config.Debug then print('You got 1 '..ZoneDrug.item..' for £'..price) end
 	end
