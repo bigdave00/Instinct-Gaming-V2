@@ -452,7 +452,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Tiny Fish", -- THE APPARENT NAME OF THE FISH
         itemName = "fish", -- ITEM NAME OF THE FISH
-        fishPrice = 100, -- SALE PRICE OF FISH
+        fishPrice = 30, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/fish.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -460,7 +460,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Anchovy", -- THE APPARENT NAME OF THE FISH
         itemName = "anchovy", -- ITEM NAME OF THE FISH
-        fishPrice = 160, -- SALE PRICE OF FISH
+        fishPrice = 75, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/anchovy.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -468,7 +468,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 2, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Little Bluefish", -- THE APPARENT NAME OF THE FISH
         itemName = "smallbluefish", -- ITEM NAME OF THE FISH
-        fishPrice = 800, -- SALE PRICE OF FISH
+        fishPrice = 200, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/smallbluefish.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -476,7 +476,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 5, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Bluefish", -- THE APPARENT NAME OF THE FISH
         itemName = "bluefish", -- ITEM NAME OF THE FISH
-        fishPrice = 1000, -- SALE PRICE OF FISH
+        fishPrice = 300, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/bluefish.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -484,7 +484,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 9, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "bonito", -- THE APPARENT NAME OF THE FISH
         itemName = "bonitosfish", -- ITEM NAME OF THE FISH
-        fishPrice = 1200, -- SALE PRICE OF FISH
+        fishPrice = 400, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/bonitosfish.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -492,7 +492,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 11, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Zargana", -- THE APPARENT NAME OF THE FISH
         itemName = "garfish", -- ITEM NAME OF THE FISH
-        fishPrice = 1400, -- SALE PRICE OF FISH
+        fishPrice = 500, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/garfish.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -500,7 +500,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 13, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Sea bass", -- THE APPARENT NAME OF THE FISH
         itemName = "perch", -- ITEM NAME OF THE FISH
-        fishPrice = 1600, -- SALE PRICE OF FISH
+        fishPrice = 600, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/perch.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -508,7 +508,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 15, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Sea Turtle", -- THE APPARENT NAME OF THE FISH
         itemName = "carettacaretta", -- ITEM NAME OF THE FISH
-        fishPrice = 2200, -- SALE PRICE OF FISH
+        fishPrice = 700, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/carettacaretta.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -516,7 +516,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 18, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "pants fish", -- THE APPARENT NAME OF THE FISH
         itemName = "pantfish", -- ITEM NAME OF THE FISH
-        fishPrice = 2500, -- SALE PRICE OF FISH
+        fishPrice = 800, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/pantfish.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -524,7 +524,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 20, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Shark", -- THE APPARENT NAME OF THE FISH
         itemName = "sharkfish", -- ITEM NAME OF THE FISH
-        fishPrice = 10000, -- SALE PRICE OF FISH
+        fishPrice = 900, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/sharkfish.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -532,7 +532,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "White Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "whitepearl", -- ITEM NAME OF THE FISH
-        fishPrice = 200, -- SALE PRICE OF FISH
+        fishPrice = 1000, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/whitepearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },    
     {
@@ -540,7 +540,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Blue Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "bluepearl", -- ITEM NAME OF THE FISH
-        fishPrice = 270, -- SALE PRICE OF FISH
+        fishPrice = 1100, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/bluepearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },   
     {
@@ -548,7 +548,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Red Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "redpearl", -- ITEM NAME OF THE FISH
-        fishPrice = 340, -- SALE PRICE OF FISH
+        fishPrice = 1200, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/redpearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },   
     {
@@ -556,7 +556,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Yellow Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "yellowpearl", -- ITEM NAME OF THE FISH
-        fishPrice = 410, -- SALE PRICE OF FISH
+        fishPrice = 1300, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/yellowpearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -564,7 +564,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Green Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "greenpearl", -- ITEM NAME OF THE FISH
-        fishPrice = 480, -- SALE PRICE OF FISH
+        fishPrice = 1400, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/greenpearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     }, 
 }
