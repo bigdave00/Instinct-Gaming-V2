@@ -2,7 +2,7 @@ Shared = Shared or {}
 
 --- Other
 Shared.Debug = false
-Shared.CopJob = "leo"
+Shared.CopJob = "police"
 Shared.Dispatch = "ps-dispatch"
 
 --- Items
@@ -63,13 +63,13 @@ Shared.WaterThreshold = 40
 Shared.HealthBaseDecay = {7, 10} -- Min/Max Amount of health decay when the plant is below the above thresholds for water and nutrition
 
 --- Weedrun Related Settings
-Shared.WeedRunStart = vector4(428.19, -1515.52, 29.29, 203.72)
+Shared.WeedRunStart = vector4(-1151.32, -2035.59, 13.16, 135.9)
 Shared.PedModel = 'a_m_y_breakdance_01'
 Shared.PackageAmount = 20 -- Amount of Shared.WeedItem required to create a package
 Shared.PackageTime = 2 -- Time in minutes to wait for packaging
 Shared.DeliveryWaitTime = {8, 12} -- Time in seconds (min, max) the player has to wait to receive a new delivery location
 Shared.CallCopsChance = 20 -- 20%
-Shared.PayOut = {16000, 20000} -- Min/max payout for delivering a suspicious package
+Shared.PayOut = {2500, 3500} -- Min/max payout for delivering a suspicious package
 
 Shared.DropOffLocations = { -- Drop-off locations
     vector4(74.5, -762.17, 31.68, 160.98),
