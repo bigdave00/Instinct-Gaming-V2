@@ -152,19 +152,19 @@ Config = {
 
 ------------------------------------------------------------
 	SellItems = { -- Selling Prices
-		['copperore'] = 100,
-		['goldore'] = 100,
-		['silverore'] = 100,
-		['ironore'] = 100,
-		['carbon'] = 100,
+		['copperore'] = 10,
+		['goldore'] = 10,
+		['silverore'] = 10,
+		['ironore'] = 10,
+		['carbon'] = 10,
 
-		['goldingot'] = 10000,
-		['silveringot'] = 1000,
+		['goldingot'] = 5000,
+		['silveringot'] = 500,
 
-		['uncut_emerald'] = 100,
+		['uncut_emerald'] = 75,
 		['uncut_ruby'] = 100,
-		['uncut_diamond'] = 100,
-		['uncut_sapphire'] = 100,
+		['uncut_diamond'] = 125,
+		['uncut_sapphire'] = 150,
 
 		['emerald'] = 1000,
 		['ruby'] = 1000,
@@ -198,12 +198,12 @@ Config = {
 		['ruby_earring_silver'] = 1000,
 		['sapphire_earring_silver'] = 1000,
 
-		['gold_ring'] = 5000,
-		['goldchain'] = 5000,
-		['goldearring'] = 5000,
-		['silver_ring'] = 2500,
-		['silverchain'] = 2500,
-		['silverearring'] = 2500,
+		['gold_ring'] = 2000,
+		['goldchain'] = 1500,
+		['goldearring'] = 1250,
+		['silver_ring'] = 1000,
+		['silverchain'] = 750,
+		['silverearring'] = 500,
 
 	},
 
@@ -278,15 +278,12 @@ Config = {
 	Items = {
 		label = "Mining Store",  slots = 9,
 		items = {
-			{ name = "water_bottle", price = 0, amount = 100, info = {}, type = "item", slot = 1, },
-			{ name = "sandwich", price = 0, amount = 250, info = {}, type = "item", slot = 2, },
-			{ name = "bandage", price = 0, amount = 100, info = {}, type = "item", slot = 3, },
-			{ name = "weapon_flashlight", price = 0, amount = 100, info = {}, type = "item", slot = 4, },
-			{ name = "goldpan", price = 0, amount = 100, info = {}, type = "item", slot = 5, },
+			{ name = "water_bottle", price = 10, amount = 100, info = {}, type = "item", slot = 1, },
+			{ name = "sandwich", price = 10, amount = 250, info = {}, type = "item", slot = 2, },
+			{ name = "goldpan", price = 50, amount = 100, info = {}, type = "item", slot = 5, },
 			{ name = "pickaxe",	price = 100, amount = 100, info = {}, type = "item", slot = 6, },
 			{ name = "miningdrill",	price = 10000, amount = 50, info = {}, type = "item", slot = 7, },
-			{ name = "mininglaser",	price = 60000, amount = 5, info = {}, type = "item", slot = 8, },
-			{ name = "drillbit", price = 0, amount = 100, info = {}, type = "item", slot = 9, },
+			{ name = "drillbit", price = 20, amount = 100, info = {}, type = "item", slot = 8, },
 		},
 	},
 }
