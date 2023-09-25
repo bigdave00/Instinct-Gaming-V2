@@ -9,7 +9,7 @@ QBShared.Jobs = {
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
-            ['0'] = { name = 'Universal Credit', payment = 10 },
+            ['0'] = { name = 'Universal Credit', payment = 25 },
         },
 	},
 	['police'] = {
