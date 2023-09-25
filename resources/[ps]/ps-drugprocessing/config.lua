@@ -12,7 +12,7 @@ Config.Delays = {
 }
 
 Config.CircleZones = {
-	WeedField = {coords = vector3(-1745.1, 5053.61, 23.31), name = ('Weed Farm'), radius = 100.0},
+	WeedField = {coords = vector3(2893.48, 3688.57, 44.77), name = ('Weed Farm'), radius = 100.0},
 	WeedProcessing = {coords = vector3(1038.33, -3204.44, -38.17), name = ('Weed Process'), radius = 100.0},
 	
 	MethProcessing = {coords = vector3(978.17, -147.98, -48.53), name = ('Meth Process'), radius = 20.0},
@@ -78,11 +78,11 @@ Config.WeedLab = {
 
 Config.CokeProcessing = {
 	CokeLeaf = 1, -- Amount of Leaf Needed to Process
-	ProcessCokeLeaf = math.random(1,2), -- Amount of Coke Received
+	ProcessCokeLeaf = math.random(1), -- Amount of Coke Received
 	-- Processing Small Bricks --
 	Coke = 10, -- Amount of Coke Needed for Small Brick
 	BakingSoda = 5, -- Amount of Baking Soda Needed for Small Brick
-	SmallCokeBrick = math.random(1,2),
+	SmallCokeBrick = math.random(1),
 	-- Process Small Bricks Into Large Brick --
 	SmallBrick = 4, -- Amount of Small Bricks Required
 	LargeBrick = 1, -- Large Bricks Received
