@@ -283,7 +283,7 @@ Config.Tasks = { -- TASKS APPEARING ON THE FISH MENU
         taskId = 1, -- TASK NUMBER (ALL TASKS MUST BE NUMBERED DIFFERENTLY AND SEQUENTIALLY)
         taskName = "Catch 40 Small Bluefish", -- NAME OF THE TASK AS IT APPEARS IN THE MENU
         itemName = "smallbluefish", -- ITEM OF TASK
-        moneyRewards = 20000, -- TASK'S PRIZE MONEY
+        moneyRewards = 5000, -- TASK'S PRIZE MONEY
         xpRewards = 500, -- TASK'S XP REWARD
         requiredCount = 40, -- NUMBER OF FISH CATCHES REQUIRED TO COMPLETE THE TASK
         taskDescription = "Receive your reward after successfully completing the mission.",
@@ -292,7 +292,7 @@ Config.Tasks = { -- TASKS APPEARING ON THE FISH MENU
         taskId = 2, -- TASK NUMBER (ALL TASKS MUST BE NUMBERED DIFFERENTLY AND SEQUENTIALLY)
         taskName = "Catch 30 Bluefish", -- NAME OF THE TASK AS IT APPEARS IN THE MENU
         itemName = "bluefish", -- ITEM OF TASK
-        moneyRewards = 30000, -- TASK'S PRIZE MONEY
+        moneyRewards = 7500, -- TASK'S PRIZE MONEY
         xpRewards = 500, -- TASK'S XP REWARD
         requiredCount = 30, -- NUMBER OF FISH CATCHES REQUIRED TO COMPLETE THE TASK
         taskDescription = "Receive your reward after successfully completing the mission.",
@@ -301,7 +301,7 @@ Config.Tasks = { -- TASKS APPEARING ON THE FISH MENU
         taskId = 3, -- TASK NUMBER (ALL TASKS MUST BE NUMBERED DIFFERENTLY AND SEQUENTIALLY)
         taskName = "Catch 20 Bonito", -- NAME OF THE TASK AS IT APPEARS IN THE MENU
         itemName = "bonitosfish", -- ITEM OF TASK
-        moneyRewards = 40000, -- TASK'S PRIZE MONEY
+        moneyRewards = 11000, -- TASK'S PRIZE MONEY
         xpRewards = 500, -- TASK'S XP REWARD
         requiredCount = 20, -- NUMBER OF FISH CATCHES REQUIRED TO COMPLETE THE TASK
         taskDescription = "Receive your reward after successfully completing the mission.",
@@ -310,7 +310,7 @@ Config.Tasks = { -- TASKS APPEARING ON THE FISH MENU
         taskId = 4, -- TASK NUMBER (ALL TASKS MUST BE NUMBERED DIFFERENTLY AND SEQUENTIALLY)
         taskName = "15 Catch Zargana", -- NAME OF THE TASK AS IT APPEARS IN THE MENU
         itemName = "garfish", -- ITEM OF TASK
-        moneyRewards = 50000, -- TASK'S PRIZE MONEY
+        moneyRewards = 15000, -- TASK'S PRIZE MONEY
         xpRewards = 500, -- TASK'S XP REWARD
         requiredCount = 15, -- NUMBER OF FISH CATCHES REQUIRED TO COMPLETE THE TASK
         taskDescription = "Receive your reward after successfully completing the mission.",
@@ -319,7 +319,7 @@ Config.Tasks = { -- TASKS APPEARING ON THE FISH MENU
         taskId = 5, -- TASK NUMBER (ALL TASKS MUST BE NUMBERED DIFFERENTLY AND SEQUENTIALLY)
         taskName = "Catch 10 Sea Bass", -- NAME OF THE TASK AS IT APPEARS IN THE MENU
         itemName = "perch", -- ITEM OF TASK
-        moneyRewards = 60000, -- TASK'S PRIZE MONEY
+        moneyRewards = 16000, -- TASK'S PRIZE MONEY
         xpRewards = 500, -- TASK'S XP REWARD
         requiredCount = 10, -- NUMBER OF FISH CATCHES REQUIRED TO COMPLETE THE TASK
         taskDescription = "Receive your reward after successfully completing the mission.",
@@ -328,7 +328,7 @@ Config.Tasks = { -- TASKS APPEARING ON THE FISH MENU
         taskId = 6, -- TASK NUMBER (ALL TASKS MUST BE NUMBERED DIFFERENTLY AND SEQUENTIALLY)
         taskName = "20 Catch a Shark", -- NAME OF THE TASK AS IT APPEARS IN THE MENU
         itemName = "sharkfish", -- ITEM OF TASK
-        moneyRewards = 75000, -- TASK'S PRIZE MONEY
+        moneyRewards = 30000, -- TASK'S PRIZE MONEY
         xpRewards = 500, -- TASK'S XP REWARD
         requiredCount = 20, -- NUMBER OF FISH CATCHES REQUIRED TO COMPLETE THE TASK
         taskDescription = "Receive your reward after successfully completing the mission.",
@@ -532,7 +532,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "White Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "whitepearl", -- ITEM NAME OF THE FISH
-        fishPrice = 1000, -- SALE PRICE OF FISH
+        fishPrice = 300, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/whitepearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },    
     {
@@ -540,7 +540,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Blue Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "bluepearl", -- ITEM NAME OF THE FISH
-        fishPrice = 1100, -- SALE PRICE OF FISH
+        fishPrice = 310, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/bluepearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },   
     {
@@ -548,7 +548,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Red Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "redpearl", -- ITEM NAME OF THE FISH
-        fishPrice = 1200, -- SALE PRICE OF FISH
+        fishPrice = 320, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/redpearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },   
     {
@@ -556,7 +556,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Yellow Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "yellowpearl", -- ITEM NAME OF THE FISH
-        fishPrice = 1300, -- SALE PRICE OF FISH
+        fishPrice = 330, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/yellowpearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     },
     {
@@ -564,7 +564,7 @@ Config.sellMenuItems = { -- FISH ON THE FISH SALE MENU
         requiredLevel = 1, -- DESIRED LEVEL TO KEEP THE FISH (DON'T FORGET TO CHANGE FROM Config.FishLevels)
         fishName = "Green Pearl", -- THE APPARENT NAME OF THE FISH
         itemName = "greenpearl", -- ITEM NAME OF THE FISH
-        fishPrice = 1400, -- SALE PRICE OF FISH
+        fishPrice = 340, -- SALE PRICE OF FISH
         shopImage = "./css/imgs/greenpearl.png", -- PICTURE OF THE FISH ON THE SALES MENU
     }, 
 }
