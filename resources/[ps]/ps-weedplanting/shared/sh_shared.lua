@@ -69,7 +69,7 @@ Shared.PackageAmount = 20 -- Amount of Shared.WeedItem required to create a pack
 Shared.PackageTime = 2 -- Time in minutes to wait for packaging
 Shared.DeliveryWaitTime = {8, 12} -- Time in seconds (min, max) the player has to wait to receive a new delivery location
 Shared.CallCopsChance = 20 -- 20%
-Shared.PayOut = {2500, 3500} -- Min/max payout for delivering a suspicious package
+Shared.PayOut = {2000, 3000} -- Min/max payout for delivering a suspicious package
 
 Shared.DropOffLocations = { -- Drop-off locations
     vector4(74.5, -762.17, 31.68, 160.98),
