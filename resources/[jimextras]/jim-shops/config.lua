@@ -56,18 +56,9 @@ Config = {
 			{ name = "weapon_wrench", price = 250, amount = 250, },
 			{ name = "weapon_hammer", price = 250, amount = 250, },
 			{ name = "weapon_bat", price = 500, amount = 50, },  -- Gang only options in stores
-			{ name = "repairkit", price = 250, amount = 50, },
-			{ name = "screwdriverset", price = 350, amount = 50, },
-			{ name = "phone", price = 850, amount = 50, },
 			{ name = "radio", price = 250, amount = 50, },
 			{ name = "binoculars", price = 50, amount = 50, },
-			{ name = "firework1", price = 50, amount = 50, },
-			{ name = "firework2", price = 50, amount = 50, },
-			{ name = "firework3", price = 50, amount = 50, },
-			{ name = "powerbank", price = 50, amount = 50, },
 			{ name = "fitbit", price = 400, amount = 150, },
-			{ name = "cleaningkit", price = 150, amount = 150, },
-			{ name = "advancedrepairkit", price = 500, amount = 50, },
 			{ name = "harness", price = 5000, amount = 1, },
 		},
 		["weedshop"] = {
@@ -733,7 +724,7 @@ Config.Locations = {
 			`MP_F_BennyMech_01`,
 		},
 		["coords"] = {
-			vector4(46.52, -1749.55, 29.64, 50.82),
+			vector4(68.07, -1569.31, 29.6, 50.04),
 			vector4(2747.76, 3472.9, 55.67, 243.88),
 			vector4(-421.65, 6135.97, 31.88, 232.98),
 		},
