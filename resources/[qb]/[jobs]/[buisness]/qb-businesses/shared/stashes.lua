@@ -34,15 +34,19 @@ Config.Tables = {
     [38] = { coords = vector3(-298.69, 6261.05, 34.52), business = "henhouse"},
 
     -- burgershot
-    [39] = { coords = vector3(-1194.38, -893.99, 14.1), business = "burgershot"},
-    [40] = { coords = vector3(-1193.34, -895.32, 14.1), business = "burgershot"},
-    [41] = { coords = vector3(-1192.48, -896.94, 14.1), business = "burgershot"},
-    [42] = { coords = vector3(-1188.59, -895.73, 13.73), business = "burgershot"},
-    [43] = { coords = vector3(-1186.88, -894.35, 13.76), business = "burgershot"},
-    [44] = { coords = vector3(-1184.58, -893.31, 13.73), business = "burgershot"},
-    [45] = { coords = vector3(-1186.96, -889.7, 13.73), business = "burgershot"},
-    [46] = { coords = vector3(-1188.89, -891.17, 13.73), business = "burgershot"},
+    [39] = { coords = vector3(-1184.67, -894.42, 13.84), business = "burgershot"},
+    [40] = { coords = vector3(-1184.09, -894.75, 13.84), business = "burgershot"},
+    [41] = { coords = vector3(-1181.19, -892.67, 14.02), business = "burgershot"},
+    [42] = { coords = vector3(-1181.81, -892.41, 13.84), business = "burgershot"},
+    [43] = { coords = vector3(-1178.42, -894.7, 14.02), business = "burgershot"},
+    [44] = { coords = vector3(-1177.91, -895.13, 13.84), business = "burgershot"},
+    [45] = { coords = vector3(-1187.42, -883.96, 13.84), business = "burgershot"},
+    [46] = { coords = vector3(-1186.9, -884.17, 13.81), business = "burgershot"},
     [47] = { coords = vector3(-1192.08, -886.72, 13.75), business = "burgershot"},
+    [48] = { coords = vector3(-1190.33, -885.95, 13.84), business = "burgershot"},
+    [49] = { coords = vector3(-1189.57, -886.42, 14.02), business = "burgershot"},
+    [50] = { coords = vector3(-1196.6, -886.1, 13.81), business = "burgershot"},
+    [51] = { coords = vector3(-1197.13, -885.85, 14.01), business = "burgershot"},
 }
 
 

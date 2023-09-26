@@ -190,14 +190,6 @@ Config.Blips = { -- https://wiki.rage.mp/index.php?title=Blips
     },
 
     [2] = {
-        label = "Burgershot", -- Blip name
-        coords = vector3(-1190.31, -888.4, 13.97), -- Blip location
-        blip = 106, -- Blip icon
-        blipScale = 0.8, -- Blip scale
-        color = 5 -- Blip color
-    },
-
-    [3] = {
         label = "Hen house", -- Blip name
         coords = vector3(-294.48, 6265.72, 35.59), -- Blip location
         blip = 80, -- Blip icon
@@ -213,16 +205,6 @@ Config.BusinessManager = {
         label = Lang:t('target.manager_menu'), -- This is the manager_menu under the locales
         icon = "fa-solid fa-laptop", -- This is the favicon Icon I use 6.0 beta so if you need to change it do it here.
         job = {["pizza"] = 2}, -- Which job and grade should have access to change and access menu?
-        type = {Food = true, Drink = true} -- Type of items the business is authorized to sell
-    },
-
-
-    ["burgershot"] = {
-        coords = vector3(-1198.143, -898.536, 13.598), -- Coords of the place where buisnesses can create and manage menu items
-        polysize = 0.56, -- How big is the Sphere?
-        label = Lang:t('target.manager_menu'), -- This is the manager_menu under the locales
-        icon = "fa-solid fa-laptop", -- This is the favicon Icon I use 6.0 beta so if you need to change it do it here.
-        job = {["burgershot"] = 3}, -- Which job and grade should have access to change and access menu?
         type = {Food = true, Drink = true} -- Type of items the business is authorized to sell
     },
 
@@ -296,58 +278,7 @@ Config.DUI = {
             job = {["popsdiner"] = 0}, -- Which job and grade should have access to change texture?
             url = nil, -- Placeholder for current URL
             dui = nil -- Placeholder for DUI Handle
-        },
-    },
-
-    ["burgershot"] = { -- Match this with business zone and job name (Case Sensitive!)
-        [1] = { -- UwU Café paintings
-            coords = vector3(-1193.86, -898.55, 15.29), -- Coords for the qb-target where they can change image (Circlezone)
-            pSize = 1.5,
-            ytd = 'gn_burgershot_graphi', -- This has to be the Dictionsiary YTD File gn_burgershot_graphi
-            ytdname = "gn_tv_screen_b", -- This will be the name of the object INSIDE the YTD File
-            width = 1024, -- Width of the ytdname can be found next to the ytdname inside the YTD file
-            height = 1024, -- height of the ytdname can be found next to the ytdname inside the YTD file
-            id = 1, -- This is the ID of the shop, has to be unique
-            job = {["burgershot"] = 0}, -- Which job and grade should have access to change texture?
-            url = nil, -- Placeholder for current URL
-            dui = nil -- Placeholder for DUI Handle
-        },
-        [2] = { -- UwU Café paintings
-            coords = vector3(-1194.84, -897.2, 15.29), -- Coords for the qb-target where they can change image (Circlezone)
-            pSize = 1.5,
-            ytd = 'gn_burgershot_graphi', -- This has to be the Dictionsiary YTD File gn_burgershot_graphi
-            ytdname = "gn_tv_screen_scrolling", -- This will be the name of the object INSIDE the YTD File
-            width = 1024, -- Width of the ytdname can be found next to the ytdname inside the YTD file
-            height = 1024, -- height of the ytdname can be found next to the ytdname inside the YTD file
-            id = 2, -- This is the ID of the shop, has to be unique
-            job = {["burgershot"] = 0}, -- Which job and grade should have access to change texture?
-            url = nil, -- Placeholder for current URL
-            dui = nil -- Placeholder for DUI Handle
-        },
-        [3] = { -- UwU Café paintings
-            coords = vector3(-1195.97, -895.84, 15.45), -- Coords for the qb-target where they can change image (Circlezone)
-            pSize = 1.5,
-            ytd = 'gn_burgershot_graphi', -- This has to be the Dictionsiary YTD File gn_burgershot_graphi
-            ytdname = "gn_tv_screen_c", -- This will be the name of the object INSIDE the YTD File
-            width = 1024, -- Width of the ytdname can be found next to the ytdname inside the YTD file
-            height = 1024, -- height of the ytdname can be found next to the ytdname inside the YTD file
-            id = 3, -- This is the ID of the shop, has to be unique
-            job = {["burgershot"] = 0}, -- Which job and grade should have access to change texture?
-            url = nil, -- Placeholder for current URL
-            dui = nil -- Placeholder for DUI Handle
-        },
-        [4] = { -- UwU Café paintings
-            coords = vector3(-1196.7, -894.44, 15.47), -- Coords for the qb-target where they can change image (Circlezone)
-            pSize = 1.5,
-            ytd = 'gn_burgershot_graphi', -- This has to be the Dictionsiary YTD File gn_burgershot_graphi
-            ytdname = "gn_tv_screen_d", -- This will be the name of the object INSIDE the YTD File
-            width = 1024, -- Width of the ytdname can be found next to the ytdname inside the YTD file
-            height = 1024, -- height of the ytdname can be found next to the ytdname inside the YTD file
-            id = 4, -- This is the ID of the shop, has to be unique
-            job = {["burgershot"] = 0}, -- Which job and grade should have access to change texture?
-            url = nil, -- Placeholder for current URL
-            dui = nil -- Placeholder for DUI Handle
-        },
+        }
     },
 }
 
@@ -356,14 +287,6 @@ Config.Stations = {
         ["Pizza Oven"] = {  coords = vector3(813.79, -752.95, 27.28),   pSize = 0.9,    name = "Pizza Oven",    job = { ["pizza"] = 0},     icon = "fa-solid fa-circle",    emote = "bumbin",       headericon = "fa-solid fa-pizza-slice" },
         ["Stove Prep"] = {  coords = vector3(808.3, -760.18, 26.73),    pSize = 0.52,   name = "Stove Prep",    job = { ["pizza"] = 0 },    icon = "fa-solid fa-circle",    emote = "mechanic4",    headericon = "fa-solid fa-fire-burner" },
         ["Drinks"] = {      coords = vector3(813.54, -749.53, 27.05),   pSize = 0.52,   name = "Drinks",        job = { ["pizza"] = 0 },    icon = "fa-solid fa-circle",    emote = "mechanic4",    headericon = "fa-solid fa-bottle-droplet" },
-    },
-
-
-    ["burgershot"] = {
-        ["Grill"] = { coords = vector3(-1198.5, -895.21, 13.82), pSize = 0.60, name = "Grill", job = { ["burgershot"] = 0}, icon = "fa-solid fa-circle", emote = "mechanic4" },
-        ["Frier"] = { coords = vector3(-1200.85, -896.78, 13.72), pSize = 0.70, name = "Frier", job = { ["burgershot"] = 0}, icon = "fa-solid fa-circle", emote = "uncuff" },
-        ["Assembly Line"] = { coords = vector3(-1196.33, -899.09, 13.82), pSize = 0.5, name = "Assembly Line", job = { ["burgershot"] = 0}, icon = "fa-solid fa-circle", emote = "mechanic4" },
-        ["Drinks"] = { coords = vector3(-1196.52, -894.49, 14.54), pSize = 0.5, name = "Drinks", job = { ["burgershot"] = 0}, icon = "fa-solid fa-circle", emote = "mechanic4" },
     },
 
     ["henhouse"] = {
@@ -404,11 +327,6 @@ Config.Registers = {
         [1] = { coords = vector3(1589.11, 6458.2, 26.1), polysize = 0.30, icon = "fa-solid fa-circle" },
         [2] = { coords = vector3(1595.22, 6455.28, 26.12), polysize = 0.30, icon = "fa-solid fa-circle" }
     },
-    burgershot = {
-        [1] = { coords = vector3(-1192.98, -896.29, 14.15), polysize = 0.25, icon = "fa-solid fa-circle" },
-        [2] = { coords = vector3(-1193.96, -894.67, 14.32), polysize = 0.25, icon = "fa-solid fa-circle" },
-        [3] = { coords = vector3(-1194.98, -893.19, 14.03), polysize = 0.25, icon = "fa-solid fa-circle" }
-    },
     tequilala = {
         [1] = { coords = vector3(-562.98, 287.51, 82.23), polysize = 0.25, icon = "fa-solid fa-circle" }
     },
@@ -419,16 +337,13 @@ Config.CuttingBoardCoords = {
     [1] = { coords = vector3(810.48, -765.16, 26.68), job = "pizza", polysize = 0.5, icon = "fa-solid fa-circle" },
     [2] = { coords = vector3(809.21, -761.15, 26.68), job = "pizza", polysize = 0.5, icon = "fa-solid fa-circle" },
     -- UwU Cafe
-    [4]  = { coords = vector3(-591.07, -1063.04, 22.36), job = "catcafe", polysize = 0.55, icon = "fa-solid fa-circle" },
-
-    -- burgershot
-    [5]  = { coords = vector3(-1197.48, -898.29, 13.92), job = "burgershot", polysize = 0.45, icon = "fa-solid fa-circle" },
+    [3]  = { coords = vector3(-591.07, -1063.04, 22.36), job = "catcafe", polysize = 0.55, icon = "fa-solid fa-circle" },
 
     --henhouse
-    [6]  = { coords = vector3(-298.58, 6270.07, 31.5), job = "henhouse", polysize = 0.45, icon = "fa-solid fa-circle" },
+    [4]  = { coords = vector3(-298.58, 6270.07, 31.5), job = "henhouse", polysize = 0.45, icon = "fa-solid fa-circle" },
 
     --Pops Diner
-    [9] = { coords = vector3(1587.15, 6459.29, 26.16), job = "popsdiner", polysize = 0.45, icon = "fa-solid fa-circle" }
+    [5] = { coords = vector3(1587.15, 6459.29, 26.16), job = "popsdiner", polysize = 0.45, icon = "fa-solid fa-circle" }
 }
 
 Config.HandWash = {
@@ -444,8 +359,6 @@ Config.HandWash = {
     ---- UwU Cafe ** ----
     [9] = { coords = vector3(-587.79, -1062.57, 22.31), polysize = 0.5, icon = "fa-solid fa-hands-bubbles" },
 
-    ---- ** Burger Shot ** ----
-    [10] = { coords = vector3(-1197.6, -902.76, 13.67), polysize = 0.5, icon = "fa-solid fa-hands-bubbles" },
     --henhouse
     [11] = { coords = vector3(185.45, -248.21, 54.07), polysize = 0.5, icon = "fa-solid fa-hands-bubbles" },
     [12] = { coords = vector3(-300.02, 6270.46, 31.1), polysize = 0.5, icon = "fa-solid fa-hands-bubbles" },
@@ -471,18 +384,6 @@ Config.BusinessZone = {
     },
 
     [2] = {
-        label = "burgershot",
-        zones = {
-            vector2(-1189.3524169922, -871.67938232422),
-            vector2(-1215.9440917969, -889.21130371094),
-            vector2(-1198.2188720703, -914.12475585938),
-            vector2(-1169.4241943359, -899.88031005859)
-        },
-        minz = 11,
-        maxz = 19
-    },
-
-    [3] = {
         label = "henhouse",
         zones = {
             vector2(-306.78100585938, 6248.3935546875),
@@ -494,7 +395,7 @@ Config.BusinessZone = {
         maxz = 38.492126464844
     },
 
-    [4] = {
+    [3] = {
         label= "tequilala",
         zones = {
             vector2(-580.28, 271.2),
@@ -510,7 +411,7 @@ Config.BusinessZone = {
         maxz = 92.8
     },
 
-    [5] = {
+    [4] = {
         label= "popsdiner",
         zones = {
             vector2(1596.73, 6438.41),
