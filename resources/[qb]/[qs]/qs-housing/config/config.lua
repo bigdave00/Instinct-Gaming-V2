@@ -178,11 +178,11 @@ Config.Language = 'en'
 Config.Framework = 'qb'
 
 Config.MenuType = 'qb-menu'
-Config.Inventory = 'qs-inventory'
-Config.Wardrobe = 'esx_skin'
-Config.Garage = 'qs-advancedgarages' -- or some option above
+Config.Inventory = 'qb-inventory'
+Config.Wardrobe = 'illenium-appearance'
+Config.Garage = 'cd_garage' -- or some option above
 Config.Logout = 'drop'
-Config.Weather = 'cd_easytime'
+Config.Weather = 'qb-weathersync'
 Config.HelpNotification = 'DrawText3D'
 
 --[[
@@ -195,7 +195,7 @@ Config.HelpNotification = 'DrawText3D'
     you need to give it a description.
 ]]
 
-Config.Smartphone = false -- This enables dispatch email to real estate agents
+Config.Smartphone = true -- This enables dispatch email to real estate agents
 
 Config.RemoveRain = true
 Config.HideMapDecorateMode = true
@@ -268,7 +268,7 @@ Config.FreeModeKeys = {
 ]]
 
 Config.RealEstateMenu = true -- Enable keybind of Config.KeyHouseMenuRealEstate, if need changes go to client/modules/commands.lua
-Config.EnableBossMenu = false
+Config.EnableBossMenu = true
 Config.EnableDeleteHousesRealEstate = true
 Config.KeyHouseMenuRealEstate = 'F6'
 Config.HousingTypes = { mlo = true, shell = true, ipl = true }
@@ -288,7 +288,7 @@ Config.Realestatejob = {
         'none' -- Don't give money to anyone
 ]]
 
-Config.Society = 'none' -- or "Society" options.
+Config.Society = 'qb-management' -- or "Society" options.
 Config.SocietyPorcentage = 50
 Config.PercentageForSell = 50
 Config.Taxes = { AgencyFee = 7, BankFee = 10, TaxesFee = 20 }
@@ -320,7 +320,7 @@ Config.SellHouse = true     -- House sell option?
 Config.PercentageSell = 50
 Config.WordToSell = 'sell'
 
-Config.KeyHouseMenuMlo = 'F5' -- Key to open the housing menu in MLO
+Config.KeyHouseMenuMlo = 'F6' -- Key to open the housing menu in MLO
 Config.MenuOptions = {        -- Options to menus/radial!
     camera = true,
     invite = true,
@@ -330,7 +330,7 @@ Config.MenuOptions = {        -- Options to menus/radial!
     decorate = true,
     setwardrobe = true,
     setstash = true,
-    setcharger = false, -- only for Smartphone
+    setcharger = true, -- only for Smartphone
     setlogout = true,
     sellhouse = true,
     changetype = true
