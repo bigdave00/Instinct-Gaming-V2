@@ -210,7 +210,7 @@ RegisterNetEvent('police:client:PutPlayerInVehicle', function()
     local player, distance = QBCore.Functions.GetClosestPlayer()
     if player ~= -1 and distance < 2.5 then
         local playerId = GetPlayerServerId(player)
-        if not isHandcuffed and not isEscorted then
+        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] then
             TriggerServerEvent("police:server:PutPlayerInVehicle", playerId)
         end
     else
@@ -222,7 +222,7 @@ RegisterNetEvent('police:client:SetPlayerOutVehicle', function()
     local player, distance = QBCore.Functions.GetClosestPlayer()
     if player ~= -1 and distance < 2.5 then
         local playerId = GetPlayerServerId(player)
-        if not isHandcuffed and not isEscorted then
+        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] then
             TriggerServerEvent("police:server:SetPlayerOutVehicle", playerId)
         end
     else
@@ -234,7 +234,7 @@ RegisterNetEvent('police:client:EscortPlayer', function()
     local player, distance = QBCore.Functions.GetClosestPlayer()
     if player ~= -1 and distance < 2.5 then
         local playerId = GetPlayerServerId(player)
-        if not isHandcuffed and not isEscorted then
+        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] then
             TriggerServerEvent("police:server:EscortPlayer", playerId)
         end
     else
@@ -302,7 +302,7 @@ end)
 RegisterNetEvent('police:client:GetEscorted', function(playerId)
     local ped = PlayerPedId()
     QBCore.Functions.GetPlayerData(function(PlayerData)
-        if PlayerData.metadata["isdead"] or isHandcuffed or PlayerData.metadata["inlaststand"] then
+        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] then
             if not isEscorted then
                 isEscorted = true
                 local dragger = GetPlayerPed(GetPlayerFromServerId(playerId))
