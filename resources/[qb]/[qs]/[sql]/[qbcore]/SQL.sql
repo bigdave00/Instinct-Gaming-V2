@@ -22,7 +22,7 @@ CREATE TABLE `player_houses` (
   `citizenid` varchar(50) DEFAULT NULL,
   `insideId` varchar(50) DEFAULT NULL,
   `keyholders` text DEFAULT NULL,
-  `decorations` text DEFAULT NULL,
+  `decorations` LONGTEXT DEFAULT NULL,
   `stash` text DEFAULT NULL,
   `houseID` varchar(50) DEFAULT NULL,
   `outfit` text DEFAULT NULL,

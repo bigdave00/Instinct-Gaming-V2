@@ -2,7 +2,7 @@ fx_version 'bodacious'
 
 game 'gta5'
 
-version '2.6.5'
+version '2.7.6'
 
 lua54 'yes'
 

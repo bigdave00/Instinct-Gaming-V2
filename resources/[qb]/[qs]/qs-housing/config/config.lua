@@ -178,11 +178,11 @@ Config.Language = 'en'
 Config.Framework = 'qb'
 
 Config.MenuType = 'qb-menu'
-Config.Inventory = 'qb-inventory'
-Config.Wardrobe = 'illenium-appearance'
-Config.Garage = 'cd_garage' -- or some option above
+Config.Inventory = 'qs-inventory'
+Config.Wardrobe = 'esx_skin'
+Config.Garage = 'qs-advancedgarages' -- or some option above
 Config.Logout = 'drop'
-Config.Weather = 'qb-weathersync'
+Config.Weather = 'cd_easytime'
 Config.HelpNotification = 'DrawText3D'
 
 --[[
@@ -195,14 +195,16 @@ Config.HelpNotification = 'DrawText3D'
     you need to give it a description.
 ]]
 
-Config.RemoveRain = false
+Config.Smartphone = false -- This enables dispatch email to real estate agents
+
+Config.RemoveRain = true
 Config.HideMapDecorateMode = true
 Config.SetEntityVisible = true -- Be invisible inside decorate mode?
 Config.DecorateDistance = 100  -- Distance you can fly decorating.
 Config.VisitTime = 60000       -- In ms
 
 Config.LimitOfKeys = 10        -- Limit of keys that can be owned by house.
-Config.LimitOfHouses = 45      -- Limit of houses for each player.
+Config.LimitOfHouses = 5      -- Limit of houses for each player.
 
 Config.BlipsOptions = {
     OwnedHouses = true,    -- Shows the houses that the player bought
@@ -221,13 +223,13 @@ Config.Blips = {
     ['SetBlipColourOwner'] = 3,
 }
 
-Config.FreeModeKeys = {
-
-    --[[
+--[[
     If you press this key along with the MoveToTop key, the object will move upwards.
     However, if you press it alone or with other movement keys, the object will
     move in its current direction without changing its vertical position.
 ]]
+
+Config.FreeModeKeys = {
     ChangeKey = Keys['LEFTCTRL'],
 
     MoreSpeed = Keys['.'],
@@ -266,14 +268,14 @@ Config.FreeModeKeys = {
 ]]
 
 Config.RealEstateMenu = true -- Enable keybind of Config.KeyHouseMenuRealEstate, if need changes go to client/modules/commands.lua
-Config.EnableBossMenu = true
+Config.EnableBossMenu = false
 Config.EnableDeleteHousesRealEstate = true
 Config.KeyHouseMenuRealEstate = 'F6'
 Config.HousingTypes = { mlo = true, shell = true, ipl = true }
 Config.Realestatejob = {
     ['realestate'] = true,
     ['realestatejob'] = true,
-    ['police'] = false,
+    ['police'] = true,
 }
 
 --[[
@@ -286,7 +288,7 @@ Config.Realestatejob = {
         'none' -- Don't give money to anyone
 ]]
 
-Config.Society = 'qb-management' -- or "Society" options.
+Config.Society = 'none' -- or "Society" options.
 Config.SocietyPorcentage = 50
 Config.PercentageForSell = 50
 Config.Taxes = { AgencyFee = 7, BankFee = 10, TaxesFee = 20 }
@@ -331,7 +333,6 @@ Config.MenuOptions = {        -- Options to menus/radial!
     setcharger = false, -- only for Smartphone
     setlogout = true,
     sellhouse = true,
-    deletefuniture = true, -- Button to remove all decoration from the house
     changetype = true
 }
 
@@ -368,8 +369,19 @@ Config.PoliceJob = {
     or qs-weed, now integrated into the housing system by default!
 ]]
 
-Config.Plants = treu                           -- Enable weed plants?
-Config.PlantsLimit = 100                         -- Limit plants
+--[[  
+    Plant seed items:
+
+    weed_white-widow_seed
+    weed_skunk_seed
+    weed_purple-haze_seed
+    weed_og-kush_seed
+    weed_amnesia_seed
+    weed_ak47_seed
+]]
+
+Config.Plants = false                           -- Enable weed plants?
+Config.PlantsLimit = 5                         -- Limit plants
 Config.HarvestTime = 5                         -- Setting it by hours (1 = 60 minutes)
 Config.PoliceFirePlants = true                 -- Police can fire plants?
 Config.HarvestItem = 'empty_weed_bag'          -- Require item for harvestItem
@@ -384,6 +396,93 @@ Config.AdditionalItemsChances = 20 -- Chances of getting an additional item, pla
 Config.AdditionalItems = {
     ['empty_weed_bag'] = math.random(1, 2),
     -- ['water_bottle'] = 5,
+}
+
+Config.PlantsList = {
+    ['og-kush'] = {
+        ['label'] = 'OG Kush',
+        ['item'] = 'ogkush',
+        ['stages'] = {
+            ['stage-a'] = 'bkr_prop_weed_01_small_01c',
+            ['stage-b'] = 'bkr_prop_weed_01_small_01b',
+            ['stage-c'] = 'bkr_prop_weed_01_small_01a',
+            ['stage-d'] = 'bkr_prop_weed_med_01b',
+            ['stage-e'] = 'bkr_prop_weed_lrg_01a',
+            ['stage-f'] = 'bkr_prop_weed_lrg_01b',
+            ['stage-g'] = 'bkr_prop_weed_lrg_01b',
+        },
+        ['highestStage'] = 'stage-g'
+    },
+    ['amnesia'] = {
+        ['label'] = 'Amnesia',
+        ['item'] = 'amnesia',
+        ['stages'] = {
+            ['stage-a'] = 'bkr_prop_weed_01_small_01c',
+            ['stage-b'] = 'bkr_prop_weed_01_small_01b',
+            ['stage-c'] = 'bkr_prop_weed_01_small_01a',
+            ['stage-d'] = 'bkr_prop_weed_med_01b',
+            ['stage-e'] = 'bkr_prop_weed_lrg_01a',
+            ['stage-f'] = 'bkr_prop_weed_lrg_01b',
+            ['stage-g'] = 'bkr_prop_weed_lrg_01b',
+        },
+        ['highestStage'] = 'stage-g'
+    },
+    ['skunk'] = {
+        ['label'] = 'Skunk',
+        ['item'] = 'skunk',
+        ['stages'] = {
+            ['stage-a'] = 'bkr_prop_weed_01_small_01c',
+            ['stage-b'] = 'bkr_prop_weed_01_small_01b',
+            ['stage-c'] = 'bkr_prop_weed_01_small_01a',
+            ['stage-d'] = 'bkr_prop_weed_med_01b',
+            ['stage-e'] = 'bkr_prop_weed_lrg_01a',
+            ['stage-f'] = 'bkr_prop_weed_lrg_01b',
+            ['stage-g'] = 'bkr_prop_weed_lrg_01b',
+        },
+        ['highestStage'] = 'stage-g'
+    },
+    ['ak47'] = {
+        ['label'] = 'AK 47',
+        ['item'] = 'ak47',
+        ['stages'] = {
+            ['stage-a'] = 'bkr_prop_weed_01_small_01c',
+            ['stage-b'] = 'bkr_prop_weed_01_small_01b',
+            ['stage-c'] = 'bkr_prop_weed_01_small_01a',
+            ['stage-d'] = 'bkr_prop_weed_med_01b',
+            ['stage-e'] = 'bkr_prop_weed_lrg_01a',
+            ['stage-f'] = 'bkr_prop_weed_lrg_01b',
+            ['stage-g'] = 'bkr_prop_weed_lrg_01b',
+        },
+        ['highestStage'] = 'stage-g'
+    },
+    ['purple-haze'] = {
+        ['label'] = 'Purple Haze',
+        ['item'] = 'purplehaze',
+        ['stages'] = {
+            ['stage-a'] = 'bkr_prop_weed_01_small_01c',
+            ['stage-b'] = 'bkr_prop_weed_01_small_01b',
+            ['stage-c'] = 'bkr_prop_weed_01_small_01a',
+            ['stage-d'] = 'bkr_prop_weed_med_01b',
+            ['stage-e'] = 'bkr_prop_weed_lrg_01a',
+            ['stage-f'] = 'bkr_prop_weed_lrg_01b',
+            ['stage-g'] = 'bkr_prop_weed_lrg_01b',
+        },
+        ['highestStage'] = 'stage-g'
+    },
+    ['white-widow'] = {
+        ['label'] = 'White Widow',
+        ['item'] = 'whitewidow',
+        ['stages'] = {
+            ['stage-a'] = 'bkr_prop_weed_01_small_01c',
+            ['stage-b'] = 'bkr_prop_weed_01_small_01b',
+            ['stage-c'] = 'bkr_prop_weed_01_small_01a',
+            ['stage-d'] = 'bkr_prop_weed_med_01b',
+            ['stage-e'] = 'bkr_prop_weed_lrg_01a',
+            ['stage-f'] = 'bkr_prop_weed_lrg_01b',
+            ['stage-g'] = 'bkr_prop_weed_lrg_01b',
+        },
+        ['highestStage'] = 'stage-g'
+    },
 }
 
 --[[
@@ -410,7 +509,6 @@ Config.Commands = {
     ['checkhouse'] = 'checkhouse',         -- Server Callback housing:server:getCreditState
     ['housemenu'] = 'housemenu',           -- OpenHouseMenu()
     ['housingfix'] = 'housingfix',         -- Interan command
-    ['deletefuniture'] = 'deletefuniture', -- deletea all furniture from house command
 }
 
 --[[

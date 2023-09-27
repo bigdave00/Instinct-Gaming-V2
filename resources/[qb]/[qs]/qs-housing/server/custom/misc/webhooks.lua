@@ -1,7 +1,7 @@
 Config.Webhooks = { -- Place your Discord webhooks here.
-    ['createhouse'] = 'https://discord.com/api/webhooks/1137895721106935829/szwSRgnnHeK-aD2hXvNVD_Psp4AyvoWqrf7zrXNepv_cSZVg_35Ii54areL8wSLA-Yp7',
-    ['deletehouse'] = 'https://discord.com/api/webhooks/1137895721106935829/szwSRgnnHeK-aD2hXvNVD_Psp4AyvoWqrf7zrXNepv_cSZVg_35Ii54areL8wSLA-Yp7',
-    ['buyhouse'] = 'https://discord.com/api/webhooks/1137895721106935829/szwSRgnnHeK-aD2hXvNVD_Psp4AyvoWqrf7zrXNepv_cSZVg_35Ii54areL8wSLA-Yp7',
+    ['createhouse'] = '',
+    ['deletehouse'] = '',
+    ['buyhouse'] = '',
 }
 
 Config.WebhookMark = 'Quasar Housing Logs'
