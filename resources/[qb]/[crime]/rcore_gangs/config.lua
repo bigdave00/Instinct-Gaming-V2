@@ -117,7 +117,7 @@ Config.TargetOptions = {
 }
 
 Config.OtherOptions = {
-    dirtyMoney = false, -- Receive dirty cash instead of clean cash
+    dirtyMoney = true, -- Receive dirty cash instead of clean cash
     anonymousNames = false -- Whether or not to hide a name of a player in the menu and use source instead
 }
 
