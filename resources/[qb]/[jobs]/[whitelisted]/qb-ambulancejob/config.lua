@@ -289,6 +289,14 @@ items = {
         type = "item",
         slot = 18,
     },
+    [19] = {
+        name = "handcuffs",
+        price = 0,
+        amount = 50,
+        info = {},
+        type = "item",
+        slot = 19,
+    },
 }
 }
 
