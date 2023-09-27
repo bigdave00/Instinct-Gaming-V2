@@ -32,17 +32,17 @@ Config.CircleZones = {
 	CokeBrick = {coords = vector3(1099.57, -3194.35, -38.99), name = ('Brick Up Packages'), radius = 20.0},--vector3(1099.57, -3194.35, -38.99)
 	
 	HeroinField = {coords = vector3(479.13, -2464.05, 5.91), name = ('Heroin'), radius = 100.0},
-	HeroinProcessing = {coords = vector3(1231.53, -713.68, 60.65), name = ('Heroin Process'), radius = 100.0},
+	HeroinProcessing = {coords = vector3(1413.37, -2041.74, 52.0), name = ('Heroin Process'), radius = 100.0},
 
-	lsdProcessing = {coords = vector3(2578.65, 285.59, 108.61), name = ('LSD process'), radius = 100.0},
+	lsdProcessing = {coords = vector3(2503.84, -428.11, 92.99), name = ('LSD process'), radius = 100.0},
 
-	thionylchlorideProcessing = {coords = vector3(-753.9, 5579.18, 36.71), name = ('Thi Clo Process'), radius = 100.0},
+	thionylchlorideProcessing = {coords = vector3(-679.59, 5800.46, 17.33), name = ('Thi Clo Process'), radius = 100.0},
 }
 
 
 Config.MethLab = {
 	["enter"] = {
-        coords = vector4(-191.15, -2.36, 52.37, 252.77),
+        coords = vector4(-1187.17, -446.24, 43.91, 306.59),
     },
     ["exit"] = {
         coords = vector4(969.57, -147.07, -46.4, 267.52),  --vector3(969.57, -147.07, -46.4)
@@ -51,7 +51,7 @@ Config.MethLab = {
 
 Config.CokeLab = {
 	["enter"] = {
-        coords = vector4(1311.02, -514.11, 71.31, 340.42), --vector3(813.21, -2398.69, 23.66)
+        coords = vector4(813.21, -2398.69, 23.66, 171.51), --vector3(813.21, -2398.69, 23.66)
     },
     ["exit"] = {
         coords = vector4(1088.68, -3187.68, -38.99, 176.04), -- GTA DLC Biker Cocaine Lab -- vector3(1088.68, -3187.68, -38.99)
@@ -60,7 +60,7 @@ Config.CokeLab = {
 
 Config.WeedLab = {
 	["enter"] = {
-		coords = vector4(889.61, -1045.8, 35.17, 181.92), 
+		coords = vector4(102.07, 175.09, 104.59, 165.63), 
     },
     ["exit"] = {
         coords = vector4(1066.01, -3183.38, -39.16, 93.01), -- GTA DLC Weed Lab -- 
