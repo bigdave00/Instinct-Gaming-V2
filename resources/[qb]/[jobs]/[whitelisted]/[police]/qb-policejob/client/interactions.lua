@@ -1,5 +1,5 @@
 -- Variables
-local isEscorting = true
+local isEscorting = false
 
 -- Functions
 exports('IsHandcuffed', function()
@@ -65,25 +65,27 @@ RegisterNetEvent('police:client:SetOutVehicle', function()
     end
 end)
 
-RegisterNetEvent('police:client:PutInVehicle', function()
-    local ped = PlayerPedId()
-    if isHandcuffed or isEscorted then
-        local vehicle = QBCore.Functions.GetClosestVehicle()
-        if DoesEntityExist(vehicle) then
-            for i = GetVehicleMaxNumberOfPassengers(vehicle), 0, -1 do
-                if IsVehicleSeatFree(vehicle, i) then
-                    isEscorted = false
-                    TriggerEvent('hospital:client:isEscorted', isEscorted)
-                    ClearPedTasks(ped)
-                    DetachEntity(ped, true, false)
+RegisterNetEvent('police:client:PutInVehicle')
+AddEventHandler('police:client:PutInVehicle', function()
+    QBCore.Functions.GetPlayerData(function(PlayerData)
+        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] then
+            local vehicle = QBCore.Functions.GetClosestVehicle()
+            if DoesEntityExist(vehicle) then
+                for i = GetVehicleMaxNumberOfPassengers(vehicle), math.ceil(0, 2), -1 do
+                    if IsVehicleSeatFree(vehicle, i) then
+                        isEscorted = false
+                        TriggerEvent('hospital:client:isEscorted', isEscorted)
+                        ClearPedTasks(PlayerPedId())
+                        DetachEntity(PlayerPedId(), true, false)
 
-                    Wait(100)
-                    SetPedIntoVehicle(ped, vehicle, i)
-                    return
+                        Citizen.Wait(100)
+                        SetPedIntoVehicle(PlayerPedId(), vehicle, i)
+                        return
+                    end
                 end
             end
         end
-    end
+    end)
 end)
 
 RegisterNetEvent('police:client:SearchPlayer', function()
@@ -305,6 +307,7 @@ RegisterNetEvent('police:client:GetEscorted', function(playerId)
         if PlayerData.metadata["isdead"] or isHandcuffed or PlayerData.metadata["inlaststand"] then
             if not isEscorted then
                 isEscorted = true
+                draggerId = playerId
                 local dragger = GetPlayerPed(GetPlayerFromServerId(playerId))
                 SetEntityCoords(ped, GetOffsetFromEntityInWorldCoords(dragger, 0.0, 0.45, 0.0))
                 AttachEntityToEntity(ped, dragger, 11816, 0.45, 0.45, 0.0, 0.0, 0.0, 0.0, false, false, false, false, 2, true)
