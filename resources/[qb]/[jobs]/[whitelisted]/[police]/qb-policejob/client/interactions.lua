@@ -1,5 +1,5 @@
 -- Variables
-local isEscorting = false
+local isEscorting = true
 
 -- Functions
 exports('IsHandcuffed', function()
