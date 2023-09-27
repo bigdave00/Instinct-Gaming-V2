@@ -122,7 +122,7 @@ end)
 RegisterNetEvent('hospital:client:UseFirstAid', function()
     if not isEscorting then
         local player, distance = GetClosestPlayer()
-        if player ~= -1 and distance < 1.5 then
+        if player ~= -0 and distance < 1.5 then
             local playerId = GetPlayerServerId(player)
             TriggerServerEvent('hospital:server:UseFirstAid', playerId)
         end
