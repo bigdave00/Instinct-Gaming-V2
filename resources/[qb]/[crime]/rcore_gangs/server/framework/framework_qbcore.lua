@@ -77,7 +77,7 @@ if Config.Framework and Config.Framework == 2 then
 
         if Player then
             if Config.OtherOptions.dirtyMoney then
-                Player.Functions.AddMoney("dirtycash", price)
+                Inventory.AddPlayerItem(source, 'dirtycash', 1, false, { worth = amount })
             else
                 Player.Functions.AddMoney('cash', amount)
             end
