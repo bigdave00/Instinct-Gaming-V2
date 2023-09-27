@@ -67,7 +67,7 @@ end)
 
 RegisterNetEvent('police:client:PutInVehicle', function()
     local ped = PlayerPedId()
-    if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] or notisEscorted then
+    if isHandcuffed or isEscorted then
         local vehicle = QBCore.Functions.GetClosestVehicle()
         if DoesEntityExist(vehicle) then
             for i = GetVehicleMaxNumberOfPassengers(vehicle), 0, -1 do
@@ -210,7 +210,7 @@ RegisterNetEvent('police:client:PutPlayerInVehicle', function()
     local player, distance = QBCore.Functions.GetClosestPlayer()
     if player ~= -1 and distance < 2.5 then
         local playerId = GetPlayerServerId(player)
-        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] or notisEscorted then
+        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] then
             TriggerServerEvent("police:server:PutPlayerInVehicle", playerId)
         end
     else
@@ -222,7 +222,7 @@ RegisterNetEvent('police:client:SetPlayerOutVehicle', function()
     local player, distance = QBCore.Functions.GetClosestPlayer()
     if player ~= -1 and distance < 2.5 then
         local playerId = GetPlayerServerId(player)
-        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] or notisEscorted then
+        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] then
             TriggerServerEvent("police:server:SetPlayerOutVehicle", playerId)
         end
     else
@@ -234,7 +234,7 @@ RegisterNetEvent('police:client:EscortPlayer', function()
     local player, distance = QBCore.Functions.GetClosestPlayer()
     if player ~= -1 and distance < 2.5 then
         local playerId = GetPlayerServerId(player)
-        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] or notisEscorted then
+        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] then
             TriggerServerEvent("police:server:EscortPlayer", playerId)
         end
     else
@@ -302,7 +302,7 @@ end)
 RegisterNetEvent('police:client:GetEscorted', function(playerId)
     local ped = PlayerPedId()
     QBCore.Functions.GetPlayerData(function(PlayerData)
-        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] or notisEscorted then
+        if isHandcuffed or isEscorted or PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] then
             if not isEscorted then
                 isEscorted = true
                 local dragger = GetPlayerPed(GetPlayerFromServerId(playerId))
@@ -327,7 +327,7 @@ RegisterNetEvent('police:client:GetKidnappedTarget', function(playerId)
     local ped = PlayerPedId()
     QBCore.Functions.GetPlayerData(function(PlayerData)
         if PlayerData.metadata["isdead"] or PlayerData.metadata["inlaststand"] or isHandcuffed then
-            if notisEscorted then
+            if not isEscorted then
                 isEscorted = true
                 local dragger = GetPlayerPed(GetPlayerFromServerId(playerId))
                 RequestAnimDict("nm")
