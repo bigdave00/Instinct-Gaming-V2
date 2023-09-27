@@ -302,7 +302,6 @@ end)
 RegisterNetEvent('police:client:GetEscorted', function(playerId)
     local ped = PlayerPedId()
     QBCore.Functions.GetPlayerData(function(PlayerData)
-        if PlayerData.metadata["isdead"] or isHandcuffed or PlayerData.metadata["inlaststand"] then
             if not isEscorted then
                 isEscorted = true
                 local dragger = GetPlayerPed(GetPlayerFromServerId(playerId))
