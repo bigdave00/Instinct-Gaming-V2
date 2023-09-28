@@ -5,15 +5,15 @@ config = {
     text = {
         -- The text to display on-screen for the nearest postal. 
         -- Formatted using Lua strings, http://www.lua.org/pil/20.html
-        format = '~y~Nearest Postal~w~: %s (~g~%.2fm~w~)',
+        format = 'Nearest Postal Is~w~: %s',
 
         -- ScriptHook PLD Position
         --posX = 0.225,
         --posY = 0.963,
 
         -- vMenu PLD Position
-        posX = 0.95,
-        posY = 1
+        posX = 0.46,
+        posY = 0.963,
     },
 
     blip = {
