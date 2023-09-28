@@ -131,14 +131,7 @@ Config.Peds = {
         invincible = false,
         blockevents = false,
     },
-		{ --goldheist
-        model = 'mp_m_securoguard_01',
-        coords = vector4(1231.74, -713.83, 60.65, 280.82),
-        gender = 'male',
-        freeze = true,
-        invincible = true,
-        blockevents = false,
-    },
+
 }
 
 -------------------------------------------------------------------------------
