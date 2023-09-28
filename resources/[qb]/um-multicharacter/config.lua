@@ -103,7 +103,7 @@ Config.QBEvents = {
  -- UM - Multi Character | New Character | UM Spawn Last Location
 -----------------------------------------------------------------------------------------------------------------
 
-Config.ApartmentStart = true -- If you make it true, the [new character] will spawn at Apartment.
+Config.ApartmentStart = false -- If you make it true, the [new character] will spawn at Apartment.
 
 Config.DefaultSpawn = vector4(1865.04, 4890.81, 44.64, 162.95) -- If ApartmentStart is false, it spawns the [new character here]
 
@@ -111,7 +111,7 @@ Config.DefaultSpawn = vector4(1865.04, 4890.81, 44.64, 162.95) -- If ApartmentSt
     This simply means that when the character starts the game, it spawns in the last location and does not need any menu. 
     qb-spawn only works if ApartmentStart is true 
 --]]
-Config.UMSpawnLastLocation = false
+Config.UMSpawnLastLocation = true
 
 ----------------------------------------------------------------------------------------------------------------- 
  -- UM - Multi Character | Slots | Delete Button | PrivSlots
@@ -119,7 +119,7 @@ Config.UMSpawnLastLocation = false
 
 Config.DeleteButton = true -- true or false everyone the ability to delete their own characters
 
-Config.DefaultSlots = 5 -- How many total character slots everyone will have by default
+Config.DefaultSlots = 4 -- How many total character slots everyone will have by default
 
 Config.PrivSlots = Slots.List -- Set a custom total slots for the user whose license you are adding [list/slotslist.lua]
 
@@ -163,8 +163,8 @@ Config.Animation = {
 
 Config.TimeSettings = {
     SyncStatus = false, -- Synchronize with the weather on the server if you don't want to set custom weather and time in multicharacter
-    Time = 10, -- recommended 10-23 | not 00 or 00:00
-    Weather = 'EXTRASUNNY' -- CLEAR, EXTRASUNNY, CLOUDS, OVERCAST, RAIN, CLEARING , THUNDER, SMOG, FOGGY, XMAS , SNOWLIGHT, BLIZZARD
+    Time = 23, -- recommended 10-23 | not 00 or 00:00
+    Weather = 'thunder' -- CLEAR, EXTRASUNNY, CLOUDS, OVERCAST, RAIN, CLEARING , THUNDER, SMOG, FOGGY, XMAS , SNOWLIGHT, BLIZZARD
 }
 
 ----------------------------------------------------------------------------------------------------------------- 
@@ -172,7 +172,7 @@ Config.TimeSettings = {
 -----------------------------------------------------------------------------------------------------------------
 
 Config.Speech = {
-    Status = false, -- or true 
+    Status = true, -- or true 
     Volume = 1, -- A float that represents the volume value, between 0 (lowest) and 1 (highest.)
     Rate = 2, -- This feature is used to adjust the loudness or tone of speech. | Default 1 
     Pitch = 0, -- This feature is used to adjust the speed of speech. | Default 1 
