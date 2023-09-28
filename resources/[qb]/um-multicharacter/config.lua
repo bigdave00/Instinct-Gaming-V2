@@ -174,14 +174,13 @@ Config.TimeSettings = {
 Config.Speech = {
     Status = true, -- or true 
     Volume = 1, -- A float that represents the volume value, between 0 (lowest) and 1 (highest.)
-    Rate = 2, -- This feature is used to adjust the loudness or tone of speech. | Default 1 
-    Pitch = 0, -- This feature is used to adjust the speed of speech. | Default 1 
+    Rate = 1, -- This feature is used to adjust the loudness or tone of speech. | Default 1 
+    Pitch = 1, -- This feature is used to adjust the speed of speech. | Default 1 
 
     -- I suggest using commas
     -- Think of [name] as a variable and don't change its name, you can only change where it is, for example
     -- exp: 오늘 기분이 너무 안 좋아, [name] 넌 어때?
     Texts = {
-        "Hello [name], how are you today?",
-        "I love you [name], maybe you've never heard that before"
+        "Hello, [name], how are you today? i hope you enjoy Instinct Gaming! Any problems, Make a ticket please",
     }
 }
