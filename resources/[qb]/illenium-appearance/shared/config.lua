@@ -14,7 +14,7 @@ Config.RCoreTattoosCompatibility = false
 
 Config.AsynchronousLoading = false -- Change this to false if you want the NUI data to load before displaying the appearance UI
 
-Config.UseTarget = false
+Config.UseTarget = true
 
 Config.TextUIOptions = {
     position = "left-center"
@@ -38,8 +38,8 @@ Config.PedMenuGroup = "group.admin"
 
 Config.EnableJobOutfitsCommand = true -- Enables /joboutfits and /gangoutfits commands
 
-Config.ShowNearestShopOnly = false
-Config.HideRadar = false -- Hides the minimap while the appearance menu is open
+Config.ShowNearestShopOnly = true
+Config.HideRadar = true -- Hides the minimap while the appearance menu is open
 Config.NearestShopBlipUpdateDelay = 10000
 
 Config.InvincibleDuringCustomization = true
@@ -67,7 +67,7 @@ Config.AlwaysKeepProps = false
 Config.PersistUniforms = false -- Keeps Job / Gang Outfits on player reconnects / logout
 Config.OnDutyOnlyClothingRooms = false -- Set to `true` to make the clothing rooms accessible only to players who are On Duty
 
-Config.BossManagedOutfits = false -- Allows Job / Gang bosses to manage their own job / gang outfits
+Config.BossManagedOutfits = true -- Allows Job / Gang bosses to manage their own job / gang outfits
 
 Config.ReloadSkinCooldown = 5000
 

@@ -13,7 +13,7 @@ rootMenuConfig =  {
 
             return not inlaststand and not isdead
         end,
-        subMenus = {"general:givenum"}
+        subMenus = {"general:givenum",}
     },
     {
         id = "general:walk",
@@ -239,7 +239,7 @@ newSubMenus = {
         title = "Pass Number",
         icon = "#globe-phone",
         functionName = "qs-smartphone:client:GiveContactDetails"
-    }, 
+    },
     -- vehicle
     ['vehicle:putin'] = {
         title = "Seat Person",
