@@ -48,7 +48,7 @@ Config.categories = {
 }
 
 Config.permanent_items = {
-     ['weapon_wrench'] = true
+     ['weapon_wrench'] = false
 }
 
 local misc_recipe = {
