@@ -148,8 +148,8 @@ Config = {
 		--	{ name = "weapon_bzgas", price = 500, amount = 50 },
 		--},
 		["phonerepairshop"] = {
-			{ name = "phone_module", price = 50000, amount = 50 },
-			{ name = "phone_hack", price = 50000, amount = 50 },
+			{ name = "phone_module", price = 250, amount = 50 },
+			{ name = "phone_hack", price = 5000, amount = 50 },
 		},
 		["produce"] = {
 			[1] = {
