@@ -67,7 +67,7 @@ svg.menu.outer {
 }
 
 svg.menu > g > path {
-    fill: rgb(23 23 23 / 80%);
+    fill: rgb(23 23 23 / 100%);
     transition: 1.2s;
 }
 
@@ -96,7 +96,7 @@ svg.menu > g.center:hover > circle {
 
 svg.menu > g.center > circle {
     cursor: pointer;
-    fill: rgb(23 23 23 / 80%);
+    fill: rgb(23 23 23 / 100%);
     transition: 1.2s;
 }
 
