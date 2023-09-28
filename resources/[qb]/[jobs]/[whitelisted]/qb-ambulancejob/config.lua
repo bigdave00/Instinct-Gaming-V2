@@ -118,24 +118,83 @@ Config.Locations = { -- Edit the various interaction points for players or creat
 Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulance job grade level
 	-- Grade 0
 	[0] = {
-		["ambulance"] = "Ambulance",
+		["17wasambo"] = "Ambulance",
 	},
 	-- Grade 1
 	[1] = {
-		["ambulance"] = "Ambulance",
+		["17wasambo"] = "Ambulance",
 
 	},
 	-- Grade 2
 	[2] = {
-		["ambulance"] = "Ambulance",
+		["Nhsdoctor"] = "Nhsdoctor",
+        ["17wasambo"] = "Ambulance",
 	},
 	-- Grade 3
 	[3] = {
-		["ambulance"] = "Ambulance",
+		["Nhsv90"] = "Nhsv90",
+        ["17wasambo"] = "Ambulance",
 	},
 	-- Grade 4
 	[4] = {
-		["ambulance"] = "Ambulance",
+		["17wasambo"] = "Ambulance",
+        ["Nhsdoctor"] = "Nhsdoctor",
+	},
+    -- Grade 5
+	[5] = {
+		["17wasambo"] = "Ambulance",
+        ["Nhsvrs"] = "Nhsvrs",
+	},
+     -- Grade 6
+	[6] = {
+		["Nhsincident"] = "Nhsincident",
+        ["Nhssilver"] = "Nhssilver",
+	},
+     -- Grade 7
+	[7] = {
+		["Nhsskodavrs"] = "Nhsskodavrs",
+        ["Nhsvrs"] = "Nhsheli",
+	},
+     -- Grade 8
+	[8] = {
+		["17wasambo"] = "Ambulance",
+        ["Nhsx5"] = "Nhsx5",
+	},
+     -- Grade 9
+	[9] = {
+		["17wasambo"] = "Ambulance",
+        ["Nhsxc90"] = "Nhsxc90",
+	},
+     -- Grade 10
+	[10] = {
+		["17wasambo"] = "Ambulance",
+        ["Nhsvrs"] = "Nhsvrs",
+	},
+     -- Grade 11
+	[11] = {
+		["Nhsincident"] = "Nhsincident",
+        ["Nhssilver"] = "Nhssilver",
+	},
+     -- Grade 12
+	[12] = {
+		["Nhsheli"] = "Nhsheli",
+        ["Nhsskodavrs"] = "Nhsskodavrs",
+	},
+     -- Grade 13
+	[13] = {
+		["17wasambo"] = "Ambulance",
+        ["Nhsvrs"] = "Nhsvrs",
+        ["Nhsskodavrs"] = "Nhsskodavrs",
+        ["Nhsheli"] = "Nhsheli",
+        ["Nhssilver"] = "Nhssilver",
+        ["Hartcommand"] = "Hartcommand",
+        ["Nhsincident"] = "Nhsincident",
+        ["Csu"] = "Csu",
+	},
+     -- Grade 14
+	[14] = {
+		["17wasambo"] = "Ambulance",
+        ["Nhsvrs"] = "Nhsvrs",
 	}
 }
 
