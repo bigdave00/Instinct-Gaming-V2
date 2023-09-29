@@ -39,9 +39,14 @@ QBShared.Items = {
 
 ["rope"]                             = {["name"] = "rope",	                ["label"] = "Rope",               ["weight"] = 1500,      ["type"] = "item",       ["image"] = "images/rope.png",          ["unique"] = true,      ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "maybe somewhere to attached"},
 
-['cash'] 						= {['name'] = 'cash', 			 	  	  		['label'] = 'Cash', 					['weight'] = 0, 		['type'] = 'item', 		['image'] = 'cash.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Cash to be used within the city!'},
-['dirtycash'] 					= {['name'] = 'dirtycash', 			 	  	  	['label'] = 'Dirty Cash', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'dirtycash.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Dirty cash? You should find someone to clean this for you!'},
+['cash'] 						= {['name'] = 'cash', 			 	  	  		['label'] = 'Cash', 					['weight'] = 0, 		['type'] = 'item', 		['image'] = 'images/cash.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Cash to be used within the city!'},
+['dirtycash'] 					= {['name'] = 'dirtycash', 			 	  	  	['label'] = 'Dirty Cash', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'images/dirtycash.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Dirty cash? You should find someone to clean this for you!'},
 
+
+--Hospital tings
+['prescriptionpad'] 			 = {['name'] = 'prescriptionpad', 				['label'] = 'Prescription Pad', 		['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'images/prescriptionpad.png', 		['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Used to prescribe drugs'},
+	['prescription'] 				 = {['name'] = 'prescription', 					['label'] = 'Prescription', 			['weight'] = 500, 		['type'] = 'item', 		['image'] = 'images/prescription.png', 		['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A prescription for legal drugs'},
+	['amoxicillin'] 				 = {['name'] = 'amoxicillin', 					['label'] = 'Amoxicillin', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'images/amoxicillin.png', 			['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A prescribed antibiotic'},
 -- crafting-blueprint
 ["blueprint_document"] = {
   ["name"] = "pistol_suppressor",
