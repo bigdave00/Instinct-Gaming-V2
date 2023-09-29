@@ -195,7 +195,26 @@ Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulan
 	[14] = {
 		["17wasambo"] = "Ambulance",
         ["Nhsvrs"] = "Nhsvrs",
-	}
+        ["Nhsskodavrs"] = "Nhsskodavrs",
+        ["Nhssilver"] = "Nhssilver",
+        ["Nhsgold"] = "Nhsgold",
+        ["Csu"] = "Csu",
+        ["Goldskoda"] = "Goldskoda",
+        ["Nhsincident"] = "Nhsincident",
+        ["Hartcommand"] = "Hartcommand",
+	},
+      -- Grade 15
+	[15] = {
+		["17wasambo"] = "Ambulance",
+        ["Nhsvrs"] = "Nhsvrs",
+        ["Nhsskodavrs"] = "Nhsskodavrs",
+        ["Nhssilver"] = "Nhssilver",
+        ["Nhsgold"] = "Nhsgold",
+        ["Csu"] = "Csu",
+        ["Goldskoda"] = "Goldskoda",
+        ["Nhsincident"] = "Nhsincident",
+        ["Hartcommand"] = "Hartcommand",
+	},
 }
 
 Config.Items = { -- Items found in the ambulance shop for players with the ambulance job to purchase
