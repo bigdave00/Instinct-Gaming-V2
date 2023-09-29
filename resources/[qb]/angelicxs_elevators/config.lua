@@ -5,7 +5,7 @@ Config = {}
 Config.UseESX = false						-- Use ESX Framework
 Config.UseQBCore = true					-- Use QBCore Framework (Ignored if Config.UseESX = true)
 
-Config.UseThirdEye = true				-- If true uses third eye.
+Config.UseThirdEye = false				-- If true uses third eye.
 Config.ThirdEyeName = 'qb-target' 			-- Name of third eye aplication
 Config.Use3DText = true                        -- Use 3D text to interact
 Config.NHMenu = false						-- Use NH-Context [https://github.com/whooith/nh-context]
