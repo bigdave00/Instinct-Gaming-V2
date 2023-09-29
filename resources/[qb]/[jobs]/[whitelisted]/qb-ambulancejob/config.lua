@@ -356,6 +356,30 @@ items = {
         type = "item",
         slot = 19,
     },
+    [20] = {
+        name = "prescriptionpad",
+        price = 0,
+        amount = 50,
+        info = {},
+        type = "item",
+        slot = 20,
+    },
+    [21] = {
+        name = "prescription",
+        price = 0,
+        amount = 50,
+        info = {},
+        type = "item",
+        slot = 21,
+    },
+    [22] = {
+        name = "amoxicillin",
+        price = 0,
+        amount = 50,
+        info = {},
+        type = "item",
+        slot = 22,
+    },
 }
 }
 
