@@ -29,17 +29,17 @@ Config.MoneyWash = {
             },
             Item = {
                 Use = true, -- True = will take item to wash
-                Minimum = 10000, -- Minimum amount required to wash
+                Minimum = 100, -- Minimum amount required to wash
                 Item = {name = 'dirtycash', label = 'Dirty Cash'}
             }
         },
         Return = {
             Money = {
-                Use = true, -- True = will return money type below
+                Use = false, -- True = will return money type below
                 Type = 'cash' -- Money type; 'cash', 'bank', 'crypto'
             },
             Item = {
-                Use = false, -- True = will return item below
+                Use = true, -- True = will return item below
                 Item = {name = 'cash', label = 'Cash'}
             }
         }
