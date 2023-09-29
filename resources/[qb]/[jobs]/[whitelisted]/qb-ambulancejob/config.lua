@@ -65,10 +65,10 @@ Config.Locations = { -- Edit the various interaction points for players or creat
     [3] = vector3(-658.74157714844, 321.95965576172, 92.744346618652),
 },
 ["roof"] = {
-    [1] = vector4(338.5, -583.85, 74.16, 245.5), --- Nhs roof)
+    --[1] = vector4(338.5, -583.85, 74.16, 245.5), --- Nhs roof)
 },
 ["main"] = {
-    [1] = vector3(331.65252685547, -596.85882568359, 43.284099578857), -- nhs lobby
+    --[1] = vector3(331.65252685547, -596.85882568359, 43.284099578857), -- nhs lobby
 },
 ["stash"] = {
     [1] = vector3(303.13, -601.02, 43.28),
