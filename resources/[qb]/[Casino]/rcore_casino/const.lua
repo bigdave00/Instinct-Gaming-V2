@@ -1028,7 +1028,7 @@ LuckyWheelItems["Chips4"] = {
 
 LuckyWheelItems["Vehicle"] = {
     rotation = 37.0,
-    posibility = 10,
+    posibility = 1,
     soundName = "Win_Car",
     animName = "win_huge"
 }
