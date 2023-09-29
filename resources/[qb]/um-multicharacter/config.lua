@@ -103,7 +103,7 @@ Config.QBEvents = {
  -- UM - Multi Character | New Character | UM Spawn Last Location
 -----------------------------------------------------------------------------------------------------------------
 
-Config.ApartmentStart = false -- If you make it true, the [new character] will spawn at Apartment.
+Config.ApartmentStart = true -- If you make it true, the [new character] will spawn at Apartment.
 
 Config.DefaultSpawn = vector4(1865.04, 4890.81, 44.64, 162.95) -- If ApartmentStart is false, it spawns the [new character here]
 
@@ -172,7 +172,7 @@ Config.TimeSettings = {
 -----------------------------------------------------------------------------------------------------------------
 
 Config.Speech = {
-    Status = true, -- or true 
+    Status = false, -- or true 
     Volume = 1, -- A float that represents the volume value, between 0 (lowest) and 1 (highest.)
     Rate = 1, -- This feature is used to adjust the loudness or tone of speech. | Default 1 
     Pitch = 1, -- This feature is used to adjust the speed of speech. | Default 1 
