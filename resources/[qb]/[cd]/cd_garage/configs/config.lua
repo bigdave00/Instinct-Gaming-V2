@@ -497,20 +497,7 @@ Config.JobVehicles = {
         --coords: Where the job garage can be accessed from.
         --spawn_coords: Where the chosen vehicle will spawn.
         --distance: If the player is within the 'distance' of these coords ^, they can open the job garage UI.
-        --garage_type: The type of vehicles that can be accessed from this location.
-        --method: There are 3 different methods you can use (all 3 are explained below).
-        
-            --'regular' = This will use the vehicles from the Config.JobVehicles.RegularMethod table below. These are spawned in vehicles and are not owned by anyone.
-            --'personalowned' = This will use your personal job vehicles that you have purchased from the cardealer and only you can only access from your job spawn location. Vehicles in your owned_vehicles database table which have job_personalowned set to a players "job name" (not "job label") will be classed as personal owned job vehicles.
-            --'societyowned' = This will use society owned vehicles. This will search for your job instead of your steam/license identifier in the owned_vehicles database table and allow you to use all of the vehicles your job owns.
-            ['ambulance'] = {
-            --PILLBOX HOSPITAL
-            [1] = {coords = vector3(326.43844, -588.1996, 28.796857), spawn_coords = vector4(333.00421, -576.2763, 28.796857, 340.51226), distance = 10, garage_type = 'car', method = 'regular'}, --Pillbox Hospital (cars)
-            --[2] = {coords = vector3(352.22, -588.03, 74.17), spawn_coords = vector4(352.22, -588.03, 74.17, 74.5), distance = 10, garage_type = 'air', method = 'regular'}, --Pillbox Hospital (helipad)
-            --Sandy MEDICAL
-            [3] = {coords = vector3(1808.53, 3677.7, 34.28), spawn_coords = vector4(1805.42, 3681.13, 34.22, 298.45), distance = 10, garage_type = 'car', method = 'regular'}, --Sandy Medical (cars)
-            [4] = {coords = vector3(1830.74, 3634.77, 34.39), spawn_coords = vector4(1830.74, 3634.77, 34.39, 29.63), distance = 10, garage_type = 'air', method = 'regular'}, --Sandy Medical (helipad)
-        },
+
     },
 
     --This will only be used if any of the 'method'(s) in the table above are set to use 'regular' job vehicles.
