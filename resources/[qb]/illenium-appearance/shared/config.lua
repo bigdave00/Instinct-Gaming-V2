@@ -206,8 +206,21 @@ Config.Stores = {
         }
     },
     {
-        type = "clothing", --- NHS 
-        coords = vector4(300.96, -596.5, 43.28, 242.54),
+        type = "clothing", --- NHS Female
+        coords = vector4(-1819.99, -360.22, 49.45, 334.79),
+        size = vector3(4, 4, 4),
+        rotation = 45,
+        usePoly = false,
+        points = {
+            vector3(-719.86212158203, -147.83151245117, 37.42),
+            vector3(-709.10491943359, -141.53076171875, 37.42),
+            vector3(-699.94342041016, -157.44494628906, 37.42),
+            vector3(-710.68774414062, -163.64665222168, 37.42)
+        }
+    },
+    {
+        type = "clothing", --- NHS Male
+        coords = vector4(-1814.84, -357.23, 49.46, 324.75)
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
