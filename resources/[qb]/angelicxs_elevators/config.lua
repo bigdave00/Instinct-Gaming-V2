@@ -94,7 +94,7 @@ Config.Elevators = {
 			},
 		},
 		{
-			coords = vector3(338.972, -582.192, 74.262), heading = 0.0, level = "Floor 1", label = "Cafe & Wards",
+			coords = vector3(-1841.448, -335.658, 53.78), heading = 0.0, level = "Floor 1", label = "Cafe & Wards",
 			jobs = {
 				["ambulance"] = 0,
 			},
