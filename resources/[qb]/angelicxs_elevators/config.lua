@@ -82,12 +82,18 @@ Config.Elevators = {
 			},
 		},
 		{
-			coords = vector3(341.029, -582.524, 29.097), heading = 0.0, level = "Floor -1", label = "Garage",
+			coords = vector3(341.029, -582.524, 29.097), heading = 0.0, level = "Floor 0", label = "Main Lobby",
 			jobs = {
 				["ambulance"] = 0,
 			},
 		},
+	},
+	{
+		coords = vector3(-1871.826, -309.417, 41.358), heading = 0.0, level = "Floor -2", label = "Garage",
+		jobs = {
+			["ambulance"] = 0,
+		},
+	},
 
 	},
 
-}
