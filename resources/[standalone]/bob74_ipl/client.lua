@@ -25,8 +25,8 @@ Citizen.CreateThread(function()
     -- Bahama Mamas: -1388.0013, -618.41967, 30.819599
     -- BahamaMamas.Enable(true)
 
-    -- Pillbox hospital: 307.1680, -590.807, 43.280
-    -- PillboxHospital.Enable(false)--Pillbox map is installed by default when installing Config.Core. Check [default-maps] for the map.
+    Pillbox hospital: 307.1680, -590.807, 43.280
+    PillboxHospital.Enable(true)--Pillbox map is installed by default when installing Config.Core. Check [default-maps] for the map.
 
     -- Zancudo Gates (GTAO like): -1600.30100000, 2806.73100000, 18.79683000
     ZancudoGates.LoadDefault()
