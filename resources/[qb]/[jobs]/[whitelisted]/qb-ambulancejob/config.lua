@@ -109,7 +109,7 @@ Config.Locations = { -- Edit the various interaction points for players or creat
     [4] = {coords = vector4(1771.85, 2591.85, 45.66, 91.51), taken = false, model = 2117668672},
 },
 ["stations"] = {
-    [1] = {label = 'Hospital', coords = vector4(304.27, -600.33, 43.28, 272.249)},
+    [1] = {label = 'Hospital', coords = vector4(-1852.64, -340.99, 49.44, 45.72)},
     -- [2] = {label = "Hospital", coords = vector4(-672.49157714844, 315.7001953125, 83.614822387695, 351.20428466797)},
     [2] = {label = "Hospital", coords = vector4(-249.03359985352, 6331.8134765625, 32.42610168457, 286.56060791016)}
 }
