@@ -92,9 +92,9 @@ Config.Locations = { -- Edit the various interaction points for players or creat
    --[6] = {coords = vector4(322.79, -587.16, 43.53, 335.65), taken = false, model = 1631638868},
    --[7] = {coords = vector4(309.19, -577.21, 43.81, 155.5), taken = false, model = 1631638868},
     --- paleto
-    [6] = {coords = vector4(-260.23, 6319.58, 33.3, 40.5), taken = false, model = 1631638868},
-    [7] = {coords = vector4(-261.91, 6317.65, 33.3, 45.06), taken = false, model = 1631638868},
-    [8] = {coords = vector4(-265.84, 6319.62, 33.3, 225.47), taken = false, model = 1631638868},
+   --[6] = {coords = vector4(-260.23, 6319.58, 33.3, 40.5), taken = false, model = 1631638868},
+   --[7] = {coords = vector4(-261.91, 6317.65, 33.3, 45.06), taken = false, model = 1631638868},
+   --[8] = {coords = vector4(-265.84, 6319.62, 33.3, 225.47), taken = false, model = 1631638868},
     -- Los Eclipse
     -- [12] = {coords = vector4(-662.71118164063, 321.62747192383, 89.804618835449, 172.91630554199), taken = false, model = -925032225},
     -- [13] = {coords = vector4(-657.07244873047, 321.03860473633, 89.80451965332, 171.63873291016), taken = false, model = 2117668672},
@@ -111,7 +111,7 @@ Config.Locations = { -- Edit the various interaction points for players or creat
 ["stations"] = {
     [1] = {label = 'Hospital', coords = vector4(-1852.64, -340.99, 49.44, 45.72)},
     -- [2] = {label = "Hospital", coords = vector4(-672.49157714844, 315.7001953125, 83.614822387695, 351.20428466797)},
-    [2] = {label = "Hospital", coords = vector4(-249.03359985352, 6331.8134765625, 32.42610168457, 286.56060791016)}
+   -- [2] = {label = "Hospital", coords = vector4(-249.03359985352, 6331.8134765625, 32.42610168457, 286.56060791016)}
 }
 }
 
