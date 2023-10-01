@@ -220,7 +220,7 @@ Config.Stores = {
     },
     {
         type = "clothing", --- NHS Male
-        coords = vector4(-1814.84, -357.23, 49.46, 324.75)
+        coords = vector4(-1814.84, -357.23, 49.46, 324.75),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
