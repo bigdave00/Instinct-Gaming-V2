@@ -2,7 +2,7 @@ Config = {}
 Config.AllowedStretcherVehicles = {"nhsambul","nhsambu",}
 
 Config.UseBeds = true
-Config.NancyPos = vector3(-1852.9, -335.49, 49.45)
+Config.NancyPos = vector3(-1853.026, -335.536, 49.049)
 Config.NancyCost = 150
 
 Config.BedLocs = {-- Add more Beds here to be Tp'd into when using Nancy
