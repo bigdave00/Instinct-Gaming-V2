@@ -70,20 +70,8 @@ Config.Elevators = {
 
 	NHSElevator = {	
 		{
-			coords = vector3(-1877.193, -313.711, 84.042), heading = 0.0, level = "Floor 5", label = "Office", 
+			coords = vector3(-1877.193, -313.711, 84.042), heading = 0.0, level = "Floor 3", label = "Office", 
 			jobs = { 
-				["ambulance"] = 0,
-			},
-		},
-		{
-			coords = vector3(329.926, -602.632, 43.684), heading = 0.0, level = "Floor 4", label = "Wards", 
-			jobs = {
-				["ambulance"] = 0,
-			},
-		},
-		{
-			coords = vector3(329.926, -602.632, 43.684), heading = 0.0, level = "Floor 3", label = "Wards", 
-			jobs = {
 				["ambulance"] = 0,
 			},
 		},
