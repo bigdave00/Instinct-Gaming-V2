@@ -92,9 +92,9 @@ Config.Locations = { -- Edit the various interaction points for players or creat
    --[6] = {coords = vector4(322.79, -587.16, 43.53, 335.65), taken = false, model = 1631638868},
    --[7] = {coords = vector4(309.19, -577.21, 43.81, 155.5), taken = false, model = 1631638868},
     --- paleto
-    [1] = {coords = vector4(-260.23, 6319.58, 33.3, 40.5), taken = false, model = 1631638868},
-    [2] = {coords = vector4(-261.91, 6317.65, 33.3, 45.06), taken = false, model = 1631638868},
-    [3] = {coords = vector4(-265.84, 6319.62, 33.3, 225.47), taken = false, model = 1631638868},
+    [6] = {coords = vector4(-260.23, 6319.58, 33.3, 40.5), taken = false, model = 1631638868},
+    [7] = {coords = vector4(-261.91, 6317.65, 33.3, 45.06), taken = false, model = 1631638868},
+    [8] = {coords = vector4(-265.84, 6319.62, 33.3, 225.47), taken = false, model = 1631638868},
     -- Los Eclipse
     -- [12] = {coords = vector4(-662.71118164063, 321.62747192383, 89.804618835449, 172.91630554199), taken = false, model = -925032225},
     -- [13] = {coords = vector4(-657.07244873047, 321.03860473633, 89.80451965332, 171.63873291016), taken = false, model = 2117668672},
