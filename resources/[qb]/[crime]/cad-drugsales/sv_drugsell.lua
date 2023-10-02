@@ -44,7 +44,7 @@ RegisterNetEvent('cad-drugsales:initiatedrug', function(cad)
 			local item = exports.ox_inventory:GetItem(src, tostring(cad.item), nil, true)
 			if item and item >= cad.amt then
 				exports.ox_inventory:RemoveItem(src, tostring(cad.item), cad.amt)
-				Player.Functions.AddMoney("dirtycash", price)
+				Player.Functions.AddItem("dirtycash", price)
 				TriggerClientEvent('cad-drugsales:notify', src, 'You recieved £' .. price)
 				if Config.Debug then print('You got ' .. cad.amt .. ' ' .. cad.item .. ' for £' .. price) end
 			else
@@ -55,7 +55,7 @@ RegisterNetEvent('cad-drugsales:initiatedrug', function(cad)
 				if Player.Functions.RemoveItem(tostring(cad.item), cad.amt) then
 					TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[tostring(cad.item)], "remove",
 					cad.amt)
-					Player.Functions.AddMoney("dirtycash", price)
+					Player.Functions.AddItem("dirtycash", price)
 					TriggerClientEvent('cad-drugsales:notify', src, 'You recieved £' .. price)
 					if Config.Debug then print('You got ' .. cad.amt .. ' ' .. cad.item .. ' for £' .. price) end
 				else
