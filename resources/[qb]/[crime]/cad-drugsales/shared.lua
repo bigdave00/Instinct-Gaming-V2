@@ -125,21 +125,21 @@ Config.Zones = {                   -- \ Sell zones (these zones are linked with 
 Config.ZoneDrugs = {            -- \ Names should be same as zone names
     -- Multiple drugs can be added to a zone like shown below
     ["groove"] = {
-        { item = 'cokebaggy',    price = math.random(1000, 2000) },
-        { item = 'heroin',       price = math.random(1000, 2000) },
+        { item = 'cokebaggy',    price = math.random(900, 1000) },
+        { item = 'heroin',       price = math.random(1500, 2100) },
         { item = 'meth',         price = math.random(1000, 2000) },
         { item = 'lsd',         price = math.random(1000, 2000) },
     },
     ["vinewood"] = {
-        { item = 'cokebaggy',    price = math.random(1000, 2000) },
-        { item = 'heroin',       price = math.random(1000, 2000) },
+        { item = 'cokebaggy',    price = math.random(1500, 1100) },
+        { item = 'heroin',       price = math.random(900, 1000) },
         { item = 'meth',         price = math.random(1000, 2000) },
         { item = 'lsd',         price = math.random(1000, 2000) },
     },
     ["forumdr"] = {
-        { item = 'cokebaggy',    price = math.random(1000, 2000) },
-        { item = 'heroin',       price = math.random(1000, 2000) },
-        { item = 'meth',         price = math.random(1000, 2000) },
+        { item = 'cokebaggy',    price = math.random(900, 1000) },
+        { item = 'heroin',       price = math.random(1500, 2100) },
+        { item = 'meth',         price = math.random(1100, 1300) },
         { item = 'lsd',         price = math.random(1000, 2000) },
     },
 }
